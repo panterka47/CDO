@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ADC3CECB-BBC4-4E93-8729-0634FBEBE645}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ЦДО</RootNamespace>
+    <AssemblyName>ЦДО</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Формы\AddEditStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\AddEditStudents.Designer.cs">
+      <DependentUpon>AddEditStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="База данных\CDODataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CDODataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\Cources.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\Cources.Designer.cs">
+      <DependentUpon>Cources.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\EditEducation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\EditEducation.Designer.cs">
+      <DependentUpon>EditEducation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\EditStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\EditStudent.Designer.cs">
+      <DependentUpon>EditStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\NewCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\NewCourse.Designer.cs">
+      <DependentUpon>NewCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\AddEditEducation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\AddEditEducation.Designer.cs">
+      <DependentUpon>AddEditEducation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\NewTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\NewTeacher.Designer.cs">
+      <DependentUpon>NewTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Path.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Формы\Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\Students.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\Students.Designer.cs">
+      <DependentUpon>Students.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Формы\AddEditStudents.resx">
+      <DependentUpon>AddEditStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\Cources.resx">
+      <DependentUpon>Cources.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\EditEducation.resx">
+      <DependentUpon>EditEducation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\EditStudent.resx">
+      <DependentUpon>EditStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\NewCourse.resx">
+      <DependentUpon>NewCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\AddEditEducation.resx">
+      <DependentUpon>AddEditEducation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\NewTeacher.resx">
+      <DependentUpon>NewTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\Students.resx">
+      <DependentUpon>Students.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="База данных\CDODataSet.xsc">
+      <DependentUpon>CDODataSet.xsd</DependentUpon>
+    </None>
+    <None Include="База данных\CDODataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CDODataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="База данных\CDODataSet.xss">
+      <DependentUpon>CDODataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\студент2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\курсы1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\студент.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\курсы.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\значок.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
