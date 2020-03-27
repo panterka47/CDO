@@ -292,7 +292,7 @@ namespace ЦДО
                 doc.Bookmarks["nameprof"].Range.Text = CbNameProg.Text;
                 doc.Bookmarks["typeobuch"].Range.Text = CbTypeObuch.Text;
 
-                ////////дописать свое
+              
                 // Закрываем документ
                 doc.SaveAs2(@"D:\dogovor.docx");
 /*
