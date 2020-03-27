@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TbSurname = new System.Windows.Forms.TextBox();
             this.TbName = new System.Windows.Forms.TextBox();
             this.TbPatronymic = new System.Windows.Forms.TextBox();
@@ -83,6 +84,27 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
             this.TbDop = new System.Windows.Forms.TextBox();
+            this.CbTypeCourse = new System.Windows.Forms.ComboBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.CbTypeObuch = new System.Windows.Forms.ComboBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.cDODataSet = new ЦДО.База_данных.CDODataSet();
+            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.courseTableAdapter = new ЦДО.База_данных.CDODataSetTableAdapters.CourseTableAdapter();
+            this.typeObuchBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.typeObuchTableAdapter = new ЦДО.База_данных.CDODataSetTableAdapters.TypeObuchTableAdapter();
+            this.typeProgBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.typeProgTableAdapter = new ЦДО.База_данных.CDODataSetTableAdapters.TypeProgTableAdapter();
+            this.CbNameProg = new System.Windows.Forms.ComboBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.programTableAdapter = new ЦДО.База_данных.CDODataSetTableAdapters.ProgramTableAdapter();
+            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeObuchBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // TbSurname
@@ -625,16 +647,135 @@
             this.TbDop.Location = new System.Drawing.Point(1129, 819);
             this.TbDop.Multiline = true;
             this.TbDop.Name = "TbDop";
-            this.TbDop.Size = new System.Drawing.Size(306, 128);
+            this.TbDop.Size = new System.Drawing.Size(306, 64);
             this.TbDop.TabIndex = 60;
             this.TbDop.Text = "Инвалид II группы";
+            // 
+            // CbTypeCourse
+            // 
+            this.CbTypeCourse.DataSource = this.typeProgBindingSource;
+            this.CbTypeCourse.DisplayMember = "NameType";
+            this.CbTypeCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CbTypeCourse.FormattingEnabled = true;
+            this.CbTypeCourse.Location = new System.Drawing.Point(1129, 912);
+            this.CbTypeCourse.Name = "CbTypeCourse";
+            this.CbTypeCourse.Size = new System.Drawing.Size(306, 37);
+            this.CbTypeCourse.TabIndex = 62;
+            this.CbTypeCourse.ValueMember = "ID";
+            // 
+            // label26
+            // 
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label26.Location = new System.Drawing.Point(859, 915);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(209, 30);
+            this.label26.TabIndex = 61;
+            this.label26.Text = "Тип программы";
+            // 
+            // CbTypeObuch
+            // 
+            this.CbTypeObuch.DataSource = this.typeObuchBindingSource;
+            this.CbTypeObuch.DisplayMember = "NameType";
+            this.CbTypeObuch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CbTypeObuch.FormattingEnabled = true;
+            this.CbTypeObuch.Location = new System.Drawing.Point(1129, 980);
+            this.CbTypeObuch.Name = "CbTypeObuch";
+            this.CbTypeObuch.Size = new System.Drawing.Size(306, 37);
+            this.CbTypeObuch.TabIndex = 64;
+            this.CbTypeObuch.ValueMember = "ID";
+            // 
+            // label27
+            // 
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label27.Location = new System.Drawing.Point(862, 983);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(209, 29);
+            this.label27.TabIndex = 63;
+            this.label27.Text = "Тип обучения";
+            // 
+            // cDODataSet
+            // 
+            this.cDODataSet.DataSetName = "CDODataSet";
+            this.cDODataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // courseBindingSource
+            // 
+            this.courseBindingSource.DataMember = "Course";
+            this.courseBindingSource.DataSource = this.cDODataSet;
+            // 
+            // courseTableAdapter
+            // 
+            this.courseTableAdapter.ClearBeforeFill = true;
+            // 
+            // typeObuchBindingSource
+            // 
+            this.typeObuchBindingSource.DataMember = "TypeObuch";
+            this.typeObuchBindingSource.DataSource = this.cDODataSet;
+            // 
+            // typeObuchTableAdapter
+            // 
+            this.typeObuchTableAdapter.ClearBeforeFill = true;
+            // 
+            // typeProgBindingSource
+            // 
+            this.typeProgBindingSource.DataMember = "TypeProg";
+            this.typeProgBindingSource.DataSource = this.cDODataSet;
+            // 
+            // typeProgTableAdapter
+            // 
+            this.typeProgTableAdapter.ClearBeforeFill = true;
+            // 
+            // CbNameProg
+            // 
+            this.CbNameProg.DataSource = this.courseBindingSource;
+            this.CbNameProg.DisplayMember = "NameCourse";
+            this.CbNameProg.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CbNameProg.FormattingEnabled = true;
+            this.CbNameProg.Location = new System.Drawing.Point(1464, 980);
+            this.CbNameProg.Name = "CbNameProg";
+            this.CbNameProg.Size = new System.Drawing.Size(306, 37);
+            this.CbNameProg.TabIndex = 66;
+            this.CbNameProg.ValueMember = "IDCourse";
+            // 
+            // label28
+            // 
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label28.Location = new System.Drawing.Point(1459, 886);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(259, 84);
+            this.label28.TabIndex = 65;
+            this.label28.Text = "Наименование программы";
+            // 
+            // programBindingSource
+            // 
+            this.programBindingSource.DataMember = "Program";
+            this.programBindingSource.DataSource = this.cDODataSet;
+            // 
+            // programTableAdapter
+            // 
+            this.programTableAdapter.ClearBeforeFill = true;
+            // 
+            // vScrollBar1
+            // 
+            this.vScrollBar1.Location = new System.Drawing.Point(1816, 4);
+            this.vScrollBar1.Name = "vScrollBar1";
+            this.vScrollBar1.Size = new System.Drawing.Size(36, 1056);
+            this.vScrollBar1.TabIndex = 67;
             // 
             // AddEditStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1782, 1055);
+            this.ClientSize = new System.Drawing.Size(1852, 981);
+            this.Controls.Add(this.vScrollBar1);
+            this.Controls.Add(this.CbNameProg);
+            this.Controls.Add(this.label28);
+            this.Controls.Add(this.CbTypeObuch);
+            this.Controls.Add(this.label27);
+            this.Controls.Add(this.CbTypeCourse);
+            this.Controls.Add(this.label26);
             this.Controls.Add(this.TbDop);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.button2);
@@ -690,13 +831,18 @@
             this.Controls.Add(this.TbPatronymic);
             this.Controls.Add(this.TbName);
             this.Controls.Add(this.TbSurname);
-            this.MaximumSize = new System.Drawing.Size(1800, 1102);
+            this.MaximumSize = new System.Drawing.Size(2000, 1102);
             this.MinimumSize = new System.Drawing.Size(1572, 1028);
             this.Name = "AddEditStudents";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Добавление/ изменение информации о слушателе";
             this.TransparencyKey = System.Drawing.SystemColors.Control;
             this.Load += new System.EventHandler(this.AddStudents_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeObuchBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -758,5 +904,21 @@
         public System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label25;
         public System.Windows.Forms.TextBox TbDop;
+        public System.Windows.Forms.ComboBox CbTypeCourse;
+        private System.Windows.Forms.Label label26;
+        public System.Windows.Forms.ComboBox CbTypeObuch;
+        private System.Windows.Forms.Label label27;
+        private База_данных.CDODataSet cDODataSet;
+        private System.Windows.Forms.BindingSource courseBindingSource;
+        private База_данных.CDODataSetTableAdapters.CourseTableAdapter courseTableAdapter;
+        private System.Windows.Forms.BindingSource typeObuchBindingSource;
+        private База_данных.CDODataSetTableAdapters.TypeObuchTableAdapter typeObuchTableAdapter;
+        private System.Windows.Forms.BindingSource typeProgBindingSource;
+        private База_данных.CDODataSetTableAdapters.TypeProgTableAdapter typeProgTableAdapter;
+        public System.Windows.Forms.ComboBox CbNameProg;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.BindingSource programBindingSource;
+        private База_данных.CDODataSetTableAdapters.ProgramTableAdapter programTableAdapter;
+        private System.Windows.Forms.VScrollBar vScrollBar1;
     }
 }

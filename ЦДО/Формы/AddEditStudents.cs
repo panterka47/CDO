@@ -28,6 +28,14 @@ namespace ЦДО
 
         private void AddStudents_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.Program". При необходимости она может быть перемещена или удалена.
+            this.programTableAdapter.Fill(this.cDODataSet.Program);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.TypeProg". При необходимости она может быть перемещена или удалена.
+            this.typeProgTableAdapter.Fill(this.cDODataSet.TypeProg);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.TypeObuch". При необходимости она может быть перемещена или удалена.
+            this.typeObuchTableAdapter.Fill(this.cDODataSet.TypeObuch);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.Course". При необходимости она может быть перемещена или удалена.
+            this.courseTableAdapter.Fill(this.cDODataSet.Course);
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
         }
 
@@ -252,7 +260,7 @@ namespace ЦДО
                 // Создаём объект приложения
                 Word.Application app = new Word.Application();
                 // Путь до шаблона документа должен быть целиком на английском !!!
-                string source = @"D:\new.doc";
+                string source = @"D:\zayavlenie.docx";
 
                 // Открываем
                 doc = app.Documents.Open(source);
@@ -270,12 +278,35 @@ namespace ЦДО
                 doc.Bookmarks["number"].Range.Text = TbNumberCertificate.Text;
                 doc.Bookmarks["issued"].Range.Text = TbIssued.Text;
                 doc.Bookmarks["dateIssued"].Range.Text = Convert.ToDateTime(CalenDateIssued.Value).ToShortDateString();
+                doc.Bookmarks["phone"].Range.Text = TbPhone.Text;
+                int year = Convert.ToDateTime(DateEnd.Text).Year;
+                doc.Bookmarks["yearendeducat"].Range.Text = Convert.ToString(year);
+                doc.Bookmarks["docoeducat"].Range.Text = CbDocEducat.Text;
+                doc.Bookmarks["seriesdoc"].Range.Text = TbSeriesDoc.Text;
+                doc.Bookmarks["numberdoc"].Range.Text = TbNumberDoc.Text;
+                doc.Bookmarks["nameinstitute"].Range.Text = TbNameInstitute.Text;
+                doc.Bookmarks["dateissueddoc"].Range.Text = Convert.ToDateTime(CalenDateIssued.Value).ToShortDateString();
+                doc.Bookmarks["datenow"].Range.Text = Convert.ToDateTime(DateTime.Now).ToShortDateString();
+                doc.Bookmarks["datenow1"].Range.Text = Convert.ToDateTime(DateTime.Now).ToShortDateString();
+                doc.Bookmarks["typeprog"].Range.Text = CbTypeCourse.Text;
+                doc.Bookmarks["nameprof"].Range.Text = CbNameProg.Text;
+                doc.Bookmarks["typeobuch"].Range.Text = CbTypeObuch.Text;
+
                 ////////дописать свое
                 // Закрываем документ
-                doc.Save();
+                doc.SaveAs2(@"D:\dogovor.docx");
+/*
+                SaveFileDialog sfd = new SaveFileDialog();
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+
+                    doc.SaveAs();
+
+                }
+                */
                 doc.Close();
-               // app.ActiveDocument.Close();
-              //  app.Quit();
+               
+                app.Quit();
 
                 
 
