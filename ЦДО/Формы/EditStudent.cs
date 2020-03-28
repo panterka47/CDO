@@ -21,5 +21,10 @@ namespace ЦДО
         {
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
         }
+
+        private void BtnEditStudent_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

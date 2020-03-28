@@ -33,9 +33,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cDODataSet = new ЦДО.База_данных.CDODataSet();
-            this.newCourseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.newCourseTableAdapter = new ЦДО.База_данных.CDODataSetTableAdapters.NewCourseTableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.courseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.programDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,12 +43,15 @@
             this.smetaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeObuchDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typePractikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.newCourseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cDODataSet = new ЦДО.База_данных.CDODataSet();
+            this.newCourseTableAdapter = new ЦДО.База_данных.CDODataSetTableAdapters.NewCourseTableAdapter();
             this.BtnAdd = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -103,84 +103,105 @@
             this.dataGridView1.DataSource = this.newCourseBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 107);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1074, 453);
             this.dataGridView1.TabIndex = 5;
             // 
-            // cDODataSet
+            // iDDataGridViewTextBoxColumn
             // 
-            this.cDODataSet.DataSetName = "CDODataSet";
-            this.cDODataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // courseDataGridViewTextBoxColumn
+            // 
+            this.courseDataGridViewTextBoxColumn.DataPropertyName = "Course";
+            this.courseDataGridViewTextBoxColumn.HeaderText = "Course";
+            this.courseDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.courseDataGridViewTextBoxColumn.Name = "courseDataGridViewTextBoxColumn";
+            this.courseDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // programDataGridViewTextBoxColumn
+            // 
+            this.programDataGridViewTextBoxColumn.DataPropertyName = "Program";
+            this.programDataGridViewTextBoxColumn.HeaderText = "Program";
+            this.programDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.programDataGridViewTextBoxColumn.Name = "programDataGridViewTextBoxColumn";
+            this.programDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
+            this.typeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dateStartDataGridViewTextBoxColumn
+            // 
+            this.dateStartDataGridViewTextBoxColumn.DataPropertyName = "DateStart";
+            this.dateStartDataGridViewTextBoxColumn.HeaderText = "DateStart";
+            this.dateStartDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateStartDataGridViewTextBoxColumn.Name = "dateStartDataGridViewTextBoxColumn";
+            this.dateStartDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dateEndDataGridViewTextBoxColumn
+            // 
+            this.dateEndDataGridViewTextBoxColumn.DataPropertyName = "DateEnd";
+            this.dateEndDataGridViewTextBoxColumn.HeaderText = "DateEnd";
+            this.dateEndDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateEndDataGridViewTextBoxColumn.Name = "dateEndDataGridViewTextBoxColumn";
+            this.dateEndDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // kolChasDataGridViewTextBoxColumn
+            // 
+            this.kolChasDataGridViewTextBoxColumn.DataPropertyName = "KolChas";
+            this.kolChasDataGridViewTextBoxColumn.HeaderText = "KolChas";
+            this.kolChasDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.kolChasDataGridViewTextBoxColumn.Name = "kolChasDataGridViewTextBoxColumn";
+            this.kolChasDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // smetaDataGridViewTextBoxColumn
+            // 
+            this.smetaDataGridViewTextBoxColumn.DataPropertyName = "Smeta";
+            this.smetaDataGridViewTextBoxColumn.HeaderText = "Smeta";
+            this.smetaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.smetaDataGridViewTextBoxColumn.Name = "smetaDataGridViewTextBoxColumn";
+            this.smetaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // typeObuchDataGridViewTextBoxColumn
+            // 
+            this.typeObuchDataGridViewTextBoxColumn.DataPropertyName = "TypeObuch";
+            this.typeObuchDataGridViewTextBoxColumn.HeaderText = "TypeObuch";
+            this.typeObuchDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.typeObuchDataGridViewTextBoxColumn.Name = "typeObuchDataGridViewTextBoxColumn";
+            this.typeObuchDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // typePractikDataGridViewTextBoxColumn
+            // 
+            this.typePractikDataGridViewTextBoxColumn.DataPropertyName = "TypePractik";
+            this.typePractikDataGridViewTextBoxColumn.HeaderText = "TypePractik";
+            this.typePractikDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.typePractikDataGridViewTextBoxColumn.Name = "typePractikDataGridViewTextBoxColumn";
+            this.typePractikDataGridViewTextBoxColumn.Width = 125;
             // 
             // newCourseBindingSource
             // 
             this.newCourseBindingSource.DataMember = "NewCourse";
             this.newCourseBindingSource.DataSource = this.cDODataSet;
             // 
+            // cDODataSet
+            // 
+            this.cDODataSet.DataSetName = "CDODataSet";
+            this.cDODataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // newCourseTableAdapter
             // 
             this.newCourseTableAdapter.ClearBeforeFill = true;
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // courseDataGridViewTextBoxColumn
-            // 
-            this.courseDataGridViewTextBoxColumn.DataPropertyName = "Course";
-            this.courseDataGridViewTextBoxColumn.HeaderText = "Course";
-            this.courseDataGridViewTextBoxColumn.Name = "courseDataGridViewTextBoxColumn";
-            // 
-            // programDataGridViewTextBoxColumn
-            // 
-            this.programDataGridViewTextBoxColumn.DataPropertyName = "Program";
-            this.programDataGridViewTextBoxColumn.HeaderText = "Program";
-            this.programDataGridViewTextBoxColumn.Name = "programDataGridViewTextBoxColumn";
-            // 
-            // typeDataGridViewTextBoxColumn
-            // 
-            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
-            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
-            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
-            // 
-            // dateStartDataGridViewTextBoxColumn
-            // 
-            this.dateStartDataGridViewTextBoxColumn.DataPropertyName = "DateStart";
-            this.dateStartDataGridViewTextBoxColumn.HeaderText = "DateStart";
-            this.dateStartDataGridViewTextBoxColumn.Name = "dateStartDataGridViewTextBoxColumn";
-            // 
-            // dateEndDataGridViewTextBoxColumn
-            // 
-            this.dateEndDataGridViewTextBoxColumn.DataPropertyName = "DateEnd";
-            this.dateEndDataGridViewTextBoxColumn.HeaderText = "DateEnd";
-            this.dateEndDataGridViewTextBoxColumn.Name = "dateEndDataGridViewTextBoxColumn";
-            // 
-            // kolChasDataGridViewTextBoxColumn
-            // 
-            this.kolChasDataGridViewTextBoxColumn.DataPropertyName = "KolChas";
-            this.kolChasDataGridViewTextBoxColumn.HeaderText = "KolChas";
-            this.kolChasDataGridViewTextBoxColumn.Name = "kolChasDataGridViewTextBoxColumn";
-            // 
-            // smetaDataGridViewTextBoxColumn
-            // 
-            this.smetaDataGridViewTextBoxColumn.DataPropertyName = "Smeta";
-            this.smetaDataGridViewTextBoxColumn.HeaderText = "Smeta";
-            this.smetaDataGridViewTextBoxColumn.Name = "smetaDataGridViewTextBoxColumn";
-            // 
-            // typeObuchDataGridViewTextBoxColumn
-            // 
-            this.typeObuchDataGridViewTextBoxColumn.DataPropertyName = "TypeObuch";
-            this.typeObuchDataGridViewTextBoxColumn.HeaderText = "TypeObuch";
-            this.typeObuchDataGridViewTextBoxColumn.Name = "typeObuchDataGridViewTextBoxColumn";
-            // 
-            // typePractikDataGridViewTextBoxColumn
-            // 
-            this.typePractikDataGridViewTextBoxColumn.DataPropertyName = "TypePractik";
-            this.typePractikDataGridViewTextBoxColumn.HeaderText = "TypePractik";
-            this.typePractikDataGridViewTextBoxColumn.Name = "typePractikDataGridViewTextBoxColumn";
             // 
             // BtnAdd
             // 
@@ -193,6 +214,7 @@
             this.BtnAdd.TabIndex = 51;
             this.BtnAdd.Text = "Сформировать";
             this.BtnAdd.UseVisualStyleBackColor = false;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // Reports
             // 
@@ -210,8 +232,8 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

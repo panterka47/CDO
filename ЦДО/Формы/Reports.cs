@@ -23,5 +23,10 @@ namespace ЦДО.Формы
             this.newCourseTableAdapter.Fill(this.cDODataSet.NewCourse);
 
         }
+
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

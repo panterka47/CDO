@@ -94,14 +94,14 @@
             this.label28 = new System.Windows.Forms.Label();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.TbGroup = new System.Windows.Forms.ComboBox();
-            this.cDODataSet1 = new ЦДО.База_данных.CDODataSet();
             this.groupBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cDODataSet1 = new ЦДО.База_данных.CDODataSet();
             this.groupTableAdapter = new ЦДО.База_данных.CDODataSetTableAdapters.GroupTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeObuchBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // TbSurname
@@ -121,6 +121,7 @@
             this.TbName.Size = new System.Drawing.Size(306, 34);
             this.TbName.TabIndex = 1;
             this.TbName.Text = "Анастасия";
+            this.TbName.TextChanged += new System.EventHandler(this.TbName_TextChanged);
             // 
             // TbPatronymic
             // 
@@ -729,15 +730,15 @@
             this.TbGroup.Size = new System.Drawing.Size(306, 37);
             this.TbGroup.TabIndex = 68;
             // 
-            // cDODataSet1
-            // 
-            this.cDODataSet1.DataSetName = "CDODataSet";
-            this.cDODataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // groupBindingSource
             // 
             this.groupBindingSource.DataMember = "Group";
             this.groupBindingSource.DataSource = this.cDODataSet1;
+            // 
+            // cDODataSet1
+            // 
+            this.cDODataSet1.DataSetName = "CDODataSet";
+            this.cDODataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupTableAdapter
             // 
@@ -822,8 +823,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeObuchBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

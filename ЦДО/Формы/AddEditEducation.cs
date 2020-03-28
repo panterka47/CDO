@@ -17,67 +17,90 @@ namespace ЦДО
         {
             InitializeComponent();
         }
-
-        private void NewEdit_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtnCourseNew_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connecting = new SqlConnection(Program.connection))
+            try
             {
-                connecting.Open();
-                SqlCommand cmd = connecting.CreateCommand();
+                using (SqlConnection connecting = new SqlConnection(Program.connection))
+                {
+                    connecting.Open();
+                    SqlCommand cmd = connecting.CreateCommand();
 
-                //Добавление курса
-                cmd.CommandText = "INSERT INTO [Course] (NameCourse) VALUES ('" + TbCourse.Text + "')";
-                cmd.ExecuteScalar();
+                    //Добавление курса
+                    cmd.CommandText = "INSERT INTO [Course] (NameCourse) VALUES ('" + TbCourse.Text + "')";
+                    cmd.ExecuteScalar();
 
-                MessageBox.Show("Курс добавлен");
+                    MessageBox.Show("Курс добавлен");
 
+                }
             }
-    }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Возникла ошибка: " + ex);
+            }
+        }
 
         private void BtnProgNew_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connecting = new SqlConnection(Program.connection))
+            try
             {
-                connecting.Open();
-                SqlCommand cmd1 = connecting.CreateCommand();
+                using (SqlConnection connecting = new SqlConnection(Program.connection))
+                {
+                    connecting.Open();
+                    SqlCommand cmd1 = connecting.CreateCommand();
 
-                //Добавление программы
-                cmd1.CommandText = "INSERT INTO [Program] (NameProg) VALUES ('" + TbProg.Text + "')";
-                cmd1.ExecuteScalar();
-                MessageBox.Show("Программа добавлен");
+                    //Добавление программы
+                    cmd1.CommandText = "INSERT INTO [Program] (NameProg) VALUES ('" + TbProg.Text + "')";
+                    cmd1.ExecuteScalar();
+                    MessageBox.Show("Программа добавлен");
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Возникла ошибка: " + ex);
+            }
+
         }
 
         private void BtnTypeNew_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connecting = new SqlConnection(Program.connection))
+            try
             {
-                connecting.Open();
-                SqlCommand cmd2 = connecting.CreateCommand();
+                using (SqlConnection connecting = new SqlConnection(Program.connection))
+                {
+                    connecting.Open();
+                    SqlCommand cmd2 = connecting.CreateCommand();
 
-                //Добавление типа обучения
-                cmd2.CommandText = "INSERT INTO [TypeProg] (NameType, KolChas, TypeDoc) VALUES ('" + TbType.Text + "','" + Convert.ToInt32(TbKolChas.Text) + "','"+CbDocEducat.Text+"')";
-                cmd2.ExecuteScalar();
-                MessageBox.Show("Тип программы добавлен");
+                    //Добавление типа обучения
+                    cmd2.CommandText = "INSERT INTO [TypeProg] (NameType, KolChas, TypeDoc) VALUES ('" + TbType.Text + "','" + Convert.ToInt32(TbKolChas.Text) + "','" + CbDocEducat.Text + "')";
+                    cmd2.ExecuteScalar();
+                    MessageBox.Show("Тип программы добавлен");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Возникла ошибка: " + ex);
             }
         }
 
         private void BtnTypePractik_Click(object sender, EventArgs e)
         {
-            using (SqlConnection connecting = new SqlConnection(Program.connection))
+            try
             {
-                connecting.Open();
-                SqlCommand cmd2 = connecting.CreateCommand();
+                using (SqlConnection connecting = new SqlConnection(Program.connection))
+                {
+                    connecting.Open();
+                    SqlCommand cmd2 = connecting.CreateCommand();
 
-                //Добавление типа обучения
-                cmd2.CommandText = "INSERT INTO [TypePractik] (NamePractik) VALUES ('" + TbTypePractik.Text + "')";
-                cmd2.ExecuteScalar();
-                MessageBox.Show("Тип практики добавлен");
+                    //Добавление типа обучения
+                    cmd2.CommandText = "INSERT INTO [TypePractik] (NamePractik) VALUES ('" + TbTypePractik.Text + "')";
+                    cmd2.ExecuteScalar();
+                    MessageBox.Show("Тип практики добавлен");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Возникла ошибка: " + ex);
             }
         }
     }

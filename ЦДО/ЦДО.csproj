@@ -78,6 +78,7 @@
     <Compile Include="Формы\EditStudent.Designer.cs">
       <DependentUpon>EditStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Формы\Hach.cs" />
     <Compile Include="Формы\NewCourse.cs">
       <SubType>Form</SubType>
     </Compile>
