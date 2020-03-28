@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.645
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ЦДО", "ЦДО\ЦДО.csproj", "{ADC3CECB-BBC4-4E93-8729-0634FBEBE645}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOD", "ЦДО\SOD.csproj", "{ADC3CECB-BBC4-4E93-8729-0634FBEBE645}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

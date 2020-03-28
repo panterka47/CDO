@@ -44,8 +44,8 @@
             this.typeObuchDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typePractikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.newCourseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cDODataSet = new ЦДО.База_данных.CDODataSet();
-            this.newCourseTableAdapter = new ЦДО.База_данных.CDODataSetTableAdapters.NewCourseTableAdapter();
+            this.cDODataSet = new ЦДО.BD.CDODataSet();
+            this.newCourseTableAdapter = new ЦДО.BD.CDODataSetTableAdapters.NewCourseTableAdapter();
             this.BtnAdd = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -244,9 +244,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private База_данных.CDODataSet cDODataSet;
+        private BD.CDODataSet cDODataSet;
         private System.Windows.Forms.BindingSource newCourseBindingSource;
-        private База_данных.CDODataSetTableAdapters.NewCourseTableAdapter newCourseTableAdapter;
+        private BD.CDODataSetTableAdapters.NewCourseTableAdapter newCourseTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn courseDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn programDataGridViewTextBoxColumn;
