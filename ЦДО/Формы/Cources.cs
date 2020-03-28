@@ -25,21 +25,21 @@ namespace ЦДО
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet4.NewCourse". При необходимости она может быть перемещена или удалена.
             this.newCourseTableAdapter2.Fill(this.cDODataSet4.NewCourse);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet3.NewCourse". При необходимости она может быть перемещена или удалена.
-            this.newCourseTableAdapter1.Fill(this.cDODataSet3.NewCourse);
+       //     this.newCourseTableAdapter1.Fill(this.cDODataSet3.NewCourse);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet2.NewCourse". При необходимости она может быть перемещена или удалена.
-            this.newCourseTableAdapter.Fill(this.cDODataSet2.NewCourse);
+        //    this.newCourseTableAdapter.Fill(this.cDODataSet2.NewCourse);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.NewCourse". При необходимости она может быть перемещена или удалена.
-            this.newCourseTableAdapter.Fill(this.cDODataSet1.NewCourse);
+        //    this.newCourseTableAdapter.Fill(this.cDODataSet1.NewCourse);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.NewCourse". При необходимости она может быть перемещена или удалена.
-            this.newCourseTableAdapter.Fill(this.cDODataSet.NewCourse);
+        //    this.newCourseTableAdapter.Fill(this.cDODataSet.NewCourse);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.Course". При необходимости она может быть перемещена или удалена.
           //  this.courseTableAdapter.Fill(this.cDODataSet.Course);
 
         }
-        private void GridStudent_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void GridCourse_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             p = Convert.ToString(this.GridCourse.CurrentRow.Cells[0].Value);
-          //  MessageBox.Show(p);
+           MessageBox.Show(p);
         }
 
 

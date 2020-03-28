@@ -35,21 +35,21 @@ namespace ЦДО
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet2.Course". При необходимости она может быть перемещена или удалена.
             this.courseTableAdapter1.Fill(this.cDODataSet2.Course);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.TypePractik". При необходимости она может быть перемещена или удалена.
-            this.typePractikTableAdapter1.Fill(this.cDODataSet1.TypePractik);
+          //  this.typePractikTableAdapter1.Fill(this.cDODataSet1.TypePractik);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.TypeObuch". При необходимости она может быть перемещена или удалена.
-            this.typeObuchTableAdapter1.Fill(this.cDODataSet1.TypeObuch);
+       //     this.typeObuchTableAdapter1.Fill(this.cDODataSet1.TypeObuch);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.TypeObuch". При необходимости она может быть перемещена или удалена.
-            this.typeObuchTableAdapter.Fill(this.cDODataSet.TypeObuch);
+        //    this.typeObuchTableAdapter.Fill(this.cDODataSet.TypeObuch);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.TypePractik". При необходимости она может быть перемещена или удалена.
-            this.typePractikTableAdapter.Fill(this.cDODataSet.TypePractik);
+       //     this.typePractikTableAdapter.Fill(this.cDODataSet.TypePractik);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.TypeProg". При необходимости она может быть перемещена или удалена.
-            this.typeProgTableAdapter.Fill(this.cDODataSet.TypeProg);
+        //    this.typeProgTableAdapter.Fill(this.cDODataSet.TypeProg);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.TypeEducation". При необходимости она может быть перемещена или удалена.
          //   this.typeEducationTableAdapter.Fill(this.cDODataSet.TypeEducation);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.Program". При необходимости она может быть перемещена или удалена.
-            this.programTableAdapter.Fill(this.cDODataSet.Program);
+      //      this.programTableAdapter.Fill(this.cDODataSet.Program);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.Course". При необходимости она может быть перемещена или удалена.
-            this.courseTableAdapter.Fill(this.cDODataSet.Course);
+       //     this.courseTableAdapter.Fill(this.cDODataSet.Course);
 
         }
 
@@ -74,7 +74,7 @@ namespace ЦДО
             */
         }
 
-        private void BtnAddStudent_Click(object sender, EventArgs e)
+        private void BtnAdd_Click(object sender, EventArgs e)
         {
            
         }
@@ -90,6 +90,11 @@ namespace ЦДО
         private void BtnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+
+        }
+
+        private void BtnAdd_Click_1(object sender, EventArgs e)
+        {
 
         }
     }

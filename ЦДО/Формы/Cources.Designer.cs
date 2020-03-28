@@ -184,6 +184,7 @@
             this.GridCourse.RowTemplate.Height = 24;
             this.GridCourse.Size = new System.Drawing.Size(1064, 532);
             this.GridCourse.TabIndex = 63;
+            this.GridCourse.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridCourse_CellClick);
             // 
             // newCourseBindingSource3
             // 
