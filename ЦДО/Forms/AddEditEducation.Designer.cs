@@ -293,7 +293,6 @@
             this.MinimumSize = new System.Drawing.Size(1020, 648);
             this.Name = "AddEditEducation";
             this.Text = "Добавление/изменение обучения";
-            this.Load += new System.EventHandler(this.NewEdit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

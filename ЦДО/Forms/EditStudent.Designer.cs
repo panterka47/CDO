@@ -480,6 +480,7 @@
             this.BtnEditStudent.TabIndex = 91;
             this.BtnEditStudent.Text = "Изменить";
             this.BtnEditStudent.UseVisualStyleBackColor = false;
+            this.BtnEditStudent.Click += new System.EventHandler(this.BtnEditStudent_Click);
             // 
             // EditStudent
             // 

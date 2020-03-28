@@ -328,6 +328,10 @@ namespace ЦДО
             }
 
         }
-       
+
+        private void TbName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

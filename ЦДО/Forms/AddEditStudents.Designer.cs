@@ -94,14 +94,14 @@
             this.label28 = new System.Windows.Forms.Label();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.TbGroup = new System.Windows.Forms.ComboBox();
-            this.cDODataSet1 = new ЦДО.База_данных.CDODataSet();
             this.groupBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.groupTableAdapter = new ЦДО.База_данных.CDODataSetTableAdapters.GroupTableAdapter();
+            this.cDODataSet1 = new ЦДО.BD.CDODataSet();
+            this.groupTableAdapter = new ЦДО.BD.CDODataSetTableAdapters.GroupTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeObuchBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // TbSurname
@@ -121,6 +121,7 @@
             this.TbName.Size = new System.Drawing.Size(306, 34);
             this.TbName.TabIndex = 1;
             this.TbName.Text = "Анастасия";
+            this.TbName.TextChanged += new System.EventHandler(this.TbName_TextChanged);
             // 
             // TbPatronymic
             // 
@@ -729,15 +730,15 @@
             this.TbGroup.Size = new System.Drawing.Size(306, 37);
             this.TbGroup.TabIndex = 68;
             // 
-            // cDODataSet1
-            // 
-            this.cDODataSet1.DataSetName = "CDODataSet";
-            this.cDODataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // groupBindingSource
             // 
             this.groupBindingSource.DataMember = "Group";
             this.groupBindingSource.DataSource = this.cDODataSet1;
+            // 
+            // cDODataSet1
+            // 
+            this.cDODataSet1.DataSetName = "CDODataSet";
+            this.cDODataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupTableAdapter
             // 
@@ -822,8 +823,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeObuchBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -891,16 +892,16 @@
         public System.Windows.Forms.ComboBox CbNameProg;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.VScrollBar vScrollBar1;
-        private База_данных.CDODataSet cDODataSet;
+        private BD.CDODataSet cDODataSet;
         private System.Windows.Forms.BindingSource typeProgBindingSource;
-        private База_данных.CDODataSetTableAdapters.TypeProgTableAdapter typeProgTableAdapter;
+        private BD.CDODataSetTableAdapters.TypeProgTableAdapter typeProgTableAdapter;
         private System.Windows.Forms.BindingSource typeObuchBindingSource;
-        private База_данных.CDODataSetTableAdapters.TypeObuchTableAdapter typeObuchTableAdapter;
+        private BD.CDODataSetTableAdapters.TypeObuchTableAdapter typeObuchTableAdapter;
         private System.Windows.Forms.BindingSource programBindingSource;
-        private База_данных.CDODataSetTableAdapters.ProgramTableAdapter programTableAdapter;
+        private BD.CDODataSetTableAdapters.ProgramTableAdapter programTableAdapter;
         public System.Windows.Forms.ComboBox TbGroup;
-        private База_данных.CDODataSet cDODataSet1;
+        private BD.CDODataSet cDODataSet1;
         private System.Windows.Forms.BindingSource groupBindingSource;
-        private База_данных.CDODataSetTableAdapters.GroupTableAdapter groupTableAdapter;
+        private BD.CDODataSetTableAdapters.GroupTableAdapter groupTableAdapter;
     }
 }

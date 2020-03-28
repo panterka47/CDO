@@ -39,6 +39,8 @@
             this.BtnRegistr = new System.Windows.Forms.Button();
             this.TbMail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.TbPassRep = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -115,7 +117,7 @@
             this.BtnRegistr.BackColor = System.Drawing.SystemColors.Highlight;
             this.BtnRegistr.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnRegistr.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnRegistr.Location = new System.Drawing.Point(261, 371);
+            this.BtnRegistr.Location = new System.Drawing.Point(260, 429);
             this.BtnRegistr.Name = "BtnRegistr";
             this.BtnRegistr.Size = new System.Drawing.Size(283, 53);
             this.BtnRegistr.TabIndex = 6;
@@ -126,7 +128,7 @@
             // TbMail
             // 
             this.TbMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TbMail.Location = new System.Drawing.Point(233, 284);
+            this.TbMail.Location = new System.Drawing.Point(232, 342);
             this.TbMail.Name = "TbMail";
             this.TbMail.Size = new System.Drawing.Size(415, 38);
             this.TbMail.TabIndex = 13;
@@ -136,18 +138,39 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(100, 287);
+            this.label4.Location = new System.Drawing.Point(99, 345);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 32);
             this.label4.TabIndex = 12;
             this.label4.Text = "E-mail";
+            // 
+            // TbPassRep
+            // 
+            this.TbPassRep.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TbPassRep.Location = new System.Drawing.Point(233, 267);
+            this.TbPassRep.Name = "TbPassRep";
+            this.TbPassRep.Size = new System.Drawing.Size(415, 38);
+            this.TbPassRep.TabIndex = 15;
+            this.TbPassRep.Text = "fkkf";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(100, 270);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(114, 32);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Пароль";
             // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 510);
+            this.Controls.Add(this.TbPassRep);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.TbMail);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.TbPass);
@@ -179,5 +202,7 @@
         private System.Windows.Forms.Button BtnRegistr;
         private System.Windows.Forms.TextBox TbMail;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox TbPassRep;
+        private System.Windows.Forms.Label label5;
     }
 }

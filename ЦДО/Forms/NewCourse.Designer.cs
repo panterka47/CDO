@@ -377,12 +377,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private База_данных.CDODataSet cDODataSet;
-        private База_данных.CDODataSetTableAdapters.CourseTableAdapter courseTableAdapter;
-        private База_данных.CDODataSetTableAdapters.ProgramTableAdapter programTableAdapter;
-        private База_данных.CDODataSetTableAdapters.TypeProgTableAdapter typeProgTableAdapter;
-        private База_данных.CDODataSetTableAdapters.TypePractikTableAdapter typePractikTableAdapter;
-        private База_данных.CDODataSetTableAdapters.TypeObuchTableAdapter typeObuchTableAdapter;
+        private BD.CDODataSet cDODataSet;
+        private BD.CDODataSetTableAdapters.CourseTableAdapter courseTableAdapter;
+        private BD.CDODataSetTableAdapters.ProgramTableAdapter programTableAdapter;
+        private BD.CDODataSetTableAdapters.TypeProgTableAdapter typeProgTableAdapter;
+        private BD.CDODataSetTableAdapters.TypePractikTableAdapter typePractikTableAdapter;
+        private BD.CDODataSetTableAdapters.TypeObuchTableAdapter typeObuchTableAdapter;
         public System.Windows.Forms.TextBox TbChas;
         public System.Windows.Forms.TextBox TbSmeta;
         public System.Windows.Forms.ComboBox CbTypeObuch;
@@ -396,19 +396,19 @@
         private System.Windows.Forms.Button BtnExit;
         public System.Windows.Forms.Button BtnEdit;
         public System.Windows.Forms.Button BtnAdd;
-        private База_данных.CDODataSet cDODataSet1;
-        private База_данных.CDODataSetTableAdapters.TypeObuchTableAdapter typeObuchTableAdapter1;
-        private База_данных.CDODataSetTableAdapters.TypePractikTableAdapter typePractikTableAdapter1;
-        private База_данных.CDODataSet cDODataSet2;
+        private BD.CDODataSet cDODataSet1;
+        private BD.CDODataSetTableAdapters.TypeObuchTableAdapter typeObuchTableAdapter1;
+        private BD.CDODataSetTableAdapters.TypePractikTableAdapter typePractikTableAdapter1;
+        private BD.CDODataSet cDODataSet2;
         private System.Windows.Forms.BindingSource courseBindingSource;
-        private База_данных.CDODataSetTableAdapters.CourseTableAdapter courseTableAdapter1;
+        private BD.CDODataSetTableAdapters.CourseTableAdapter courseTableAdapter1;
         private System.Windows.Forms.BindingSource programBindingSource;
-        private База_данных.CDODataSetTableAdapters.ProgramTableAdapter programTableAdapter1;
+        private BD.CDODataSetTableAdapters.ProgramTableAdapter programTableAdapter1;
         private System.Windows.Forms.BindingSource typeProgBindingSource;
-        private База_данных.CDODataSetTableAdapters.TypeProgTableAdapter typeProgTableAdapter1;
+        private BD.CDODataSetTableAdapters.TypeProgTableAdapter typeProgTableAdapter1;
         private System.Windows.Forms.BindingSource typeObuchBindingSource;
-        private База_данных.CDODataSetTableAdapters.TypeObuchTableAdapter typeObuchTableAdapter2;
+        private BD.CDODataSetTableAdapters.TypeObuchTableAdapter typeObuchTableAdapter2;
         private System.Windows.Forms.BindingSource typePractikBindingSource;
-        private База_данных.CDODataSetTableAdapters.TypePractikTableAdapter typePractikTableAdapter2;
+        private BD.CDODataSetTableAdapters.TypePractikTableAdapter typePractikTableAdapter2;
     }
 }

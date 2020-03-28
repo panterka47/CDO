@@ -33,11 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EPPlus, Version=5.0.4.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.5.0.4\lib\net45\EPPlus.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,39 +56,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="База данных\CDODataSet.Designer.cs">
+    <Compile Include="BD\CDODataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CDODataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Формы\AddEditStudents.cs">
+    <Compile Include="Forms\AddEditStudents.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Формы\AddEditStudents.Designer.cs">
+    <Compile Include="Forms\AddEditStudents.Designer.cs">
       <DependentUpon>AddEditStudents.cs</DependentUpon>
     </Compile>
-    <Compile Include="Формы\Cources.cs">
+    <Compile Include="Forms\Cources.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Формы\Cources.Designer.cs">
+    <Compile Include="Forms\Cources.Designer.cs">
       <DependentUpon>Cources.cs</DependentUpon>
     </Compile>
-    <Compile Include="Формы\EditEducation.cs">
+    <Compile Include="Forms\EditEducation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Формы\EditEducation.Designer.cs">
+    <Compile Include="Forms\EditEducation.Designer.cs">
       <DependentUpon>EditEducation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Формы\EditStudent.cs">
+    <Compile Include="Forms\EditStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Формы\EditStudent.Designer.cs">
+    <Compile Include="Forms\EditStudent.Designer.cs">
       <DependentUpon>EditStudent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Формы\NewCourse.cs">
+    <Compile Include="Forms\GenerateDox.cs" />
+    <Compile Include="Forms\Hach.cs" />
+    <Compile Include="Forms\NewCourse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Формы\NewCourse.Designer.cs">
+    <Compile Include="Forms\NewCourse.Designer.cs">
       <DependentUpon>NewCourse.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -89,79 +98,79 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Формы\Reports.cs">
+    <Compile Include="Forms\Reports.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Формы\Reports.Designer.cs">
+    <Compile Include="Forms\Reports.Designer.cs">
       <DependentUpon>Reports.cs</DependentUpon>
     </Compile>
-    <Compile Include="Формы\Start.cs">
+    <Compile Include="Forms\Start.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Формы\Start.Designer.cs">
+    <Compile Include="Forms\Start.Designer.cs">
       <DependentUpon>Start.cs</DependentUpon>
     </Compile>
-    <Compile Include="Формы\AddEditEducation.cs">
+    <Compile Include="Forms\AddEditEducation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Формы\AddEditEducation.Designer.cs">
+    <Compile Include="Forms\AddEditEducation.Designer.cs">
       <DependentUpon>AddEditEducation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Формы\Menu.cs">
+    <Compile Include="Forms\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Формы\Menu.Designer.cs">
+    <Compile Include="Forms\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Формы\NewTeacher.cs">
+    <Compile Include="Forms\NewTeacher.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Формы\NewTeacher.Designer.cs">
+    <Compile Include="Forms\NewTeacher.Designer.cs">
       <DependentUpon>NewTeacher.cs</DependentUpon>
     </Compile>
     <Compile Include="Path.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Формы\Registration.cs">
+    <Compile Include="Forms\Registration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Формы\Registration.Designer.cs">
+    <Compile Include="Forms\Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Формы\Students.cs">
+    <Compile Include="Forms\Students.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Формы\Students.Designer.cs">
+    <Compile Include="Forms\Students.Designer.cs">
       <DependentUpon>Students.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Формы\AddEditStudents.resx">
+    <EmbeddedResource Include="Forms\AddEditStudents.resx">
       <DependentUpon>AddEditStudents.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Формы\Cources.resx">
+    <EmbeddedResource Include="Forms\Cources.resx">
       <DependentUpon>Cources.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Формы\EditEducation.resx">
+    <EmbeddedResource Include="Forms\EditEducation.resx">
       <DependentUpon>EditEducation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Формы\EditStudent.resx">
+    <EmbeddedResource Include="Forms\EditStudent.resx">
       <DependentUpon>EditStudent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Формы\NewCourse.resx">
+    <EmbeddedResource Include="Forms\NewCourse.resx">
       <DependentUpon>NewCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Формы\Reports.resx">
+    <EmbeddedResource Include="Forms\Reports.resx">
       <DependentUpon>Reports.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Формы\Start.resx">
+    <EmbeddedResource Include="Forms\Start.resx">
       <DependentUpon>Start.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Формы\AddEditEducation.resx">
+    <EmbeddedResource Include="Forms\AddEditEducation.resx">
       <DependentUpon>AddEditEducation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Формы\Menu.resx">
+    <EmbeddedResource Include="Forms\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Формы\NewTeacher.resx">
+    <EmbeddedResource Include="Forms\NewTeacher.resx">
       <DependentUpon>NewTeacher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -169,23 +178,24 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Формы\Registration.resx">
+    <EmbeddedResource Include="Forms\Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Формы\Students.resx">
+    <EmbeddedResource Include="Forms\Students.resx">
       <DependentUpon>Students.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="База данных\CDODataSet.xsc">
+    <None Include="BD\CDODataSet.xsc">
       <DependentUpon>CDODataSet.xsd</DependentUpon>
     </None>
-    <None Include="База данных\CDODataSet.xsd">
+    <None Include="BD\CDODataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>CDODataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="База данных\CDODataSet.xss">
+    <None Include="BD\CDODataSet.xss">
       <DependentUpon>CDODataSet.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ЦДО.Forms;
 
 namespace ЦДО.Формы
 {
     public partial class Reports : Form
     {
+        GenerateDox generateDox = new GenerateDox();
         public Reports()
         {
             InitializeComponent();
@@ -23,5 +25,18 @@ namespace ЦДО.Формы
             this.newCourseTableAdapter.Fill(this.cDODataSet.NewCourse);
 
         }
+
+        private void BtnAdd_Click(object sender, EventArgs e)  
+        {
+
+        }
+        private void GenerateDocOne() 
+        {
+            string fileName = $"ExportUsers{DateTime.Now:yyyyMMddHHmmss}.xlsx"; //Название документа
+            string[] mass = new string[3]; // Этому массиву нужно присвоить значения из датагрид 
+
+            generateDox.GenerateDoxOnes(fileName,mass);
+        }
+
     }
 }
