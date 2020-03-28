@@ -22,6 +22,14 @@ namespace ЦДО
 
         private void Cources_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet4.NewCourse". При необходимости она может быть перемещена или удалена.
+            this.newCourseTableAdapter2.Fill(this.cDODataSet4.NewCourse);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet3.NewCourse". При необходимости она может быть перемещена или удалена.
+            this.newCourseTableAdapter1.Fill(this.cDODataSet3.NewCourse);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet2.NewCourse". При необходимости она может быть перемещена или удалена.
+            this.newCourseTableAdapter.Fill(this.cDODataSet2.NewCourse);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.NewCourse". При необходимости она может быть перемещена или удалена.
+            this.newCourseTableAdapter.Fill(this.cDODataSet1.NewCourse);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.NewCourse". При необходимости она может быть перемещена или удалена.
             this.newCourseTableAdapter.Fill(this.cDODataSet.NewCourse);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.Course". При необходимости она может быть перемещена или удалена.
@@ -152,6 +160,11 @@ namespace ЦДО
                 connecting.Close();
 
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

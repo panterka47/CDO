@@ -28,6 +28,20 @@ namespace ЦДО
 
         private void AddStudents_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.Group". При необходимости она может быть перемещена или удалена.
+            this.groupTableAdapter.Fill(this.cDODataSet1.Group);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.Program". При необходимости она может быть перемещена или удалена.
+            this.programTableAdapter.Fill(this.cDODataSet.Program);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.TypeObuch". При необходимости она может быть перемещена или удалена.
+            this.typeObuchTableAdapter.Fill(this.cDODataSet.TypeObuch);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.TypeProg". При необходимости она может быть перемещена или удалена.
+            this.typeProgTableAdapter.Fill(this.cDODataSet.TypeProg);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.Course". При необходимости она может быть перемещена или удалена.
+          //  this.courseTableAdapter.Fill(this.cDODataSet1.Course);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.TypeObuch". При необходимости она может быть перемещена или удалена.
+            this.typeObuchTableAdapter.Fill(this.cDODataSet1.TypeObuch);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.TypeProg". При необходимости она может быть перемещена или удалена.
+            this.typeProgTableAdapter.Fill(this.cDODataSet1.TypeProg);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.Program". При необходимости она может быть перемещена или удалена.
             this.programTableAdapter.Fill(this.cDODataSet.Program);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.TypeProg". При необходимости она может быть перемещена или удалена.
@@ -35,7 +49,7 @@ namespace ЦДО
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.TypeObuch". При необходимости она может быть перемещена или удалена.
             this.typeObuchTableAdapter.Fill(this.cDODataSet.TypeObuch);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.Course". При необходимости она может быть перемещена или удалена.
-            this.courseTableAdapter.Fill(this.cDODataSet.Course);
+        //    this.courseTableAdapter.Fill(this.cDODataSet.Course);
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
         }
 
@@ -60,45 +74,44 @@ namespace ЦДО
                              
                            SqlCommand cmd = connecting.CreateCommand();
 
-                        
 
+
+                            //Добавление студента
                             
-                      //Добавление студента
+                                                        //Запись в таблицу Студент
+                                                        cmd.CommandText = "INSERT INTO [Student] (Surname, Name, Patronymic, DateOfBirth, PlaceOfBirth, Nationality, Phone, Email, NameGroup, Dop) VALUES('"
+                                                      + TbSurname.Text + "','" + TbName.Text + "','" + TbPatronymic.Text + "','" + Convert.ToDateTime(DateOfBirth.Text).ToShortDateString() + "','"+TbPlaceOfBirth.Text+"', '"
+                                                      + TbNationality.Text + "','" + Convert.ToString(TbPhone.Text) + "', '" + TbEmail.Text + "','"+ TbGroup.Text + "', '"+TbDop.Text+"') ";
 
-                            //Запись в таблицу Студент
-                      cmd.CommandText = "INSERT INTO [Student] (Surname, Name, Patronymic, DateOfBirth, PlaceOfBirth, Nationality, Phone, Email, Group, Dop) VALUES('"
-                          + TbSurname.Text + "','" + TbName.Text + "','" + TbPatronymic.Text + "','" + Convert.ToDateTime(DateOfBirth.Text).ToShortDateString() + "','"+TbPlaceOfBirth.Text+"', '"
-                          + TbNationality.Text + "','" + Convert.ToString(TbPhone.Text) + "', '" + TbEmail.Text + "','"+TbGroup.Text+"', '"+TbDop.Text+"') ";
-
-                      cmd.ExecuteScalar();
-
-                     
-                   
-                            SqlCommand cmd1 = connecting.CreateCommand();
-                              
-                        
-                            //Запись в таблицу Паспорт
-                         cmd1.CommandText = "INSERT INTO [Pasport] (Pasport, Series, Number, Issued, DateIssued, Lives, Registered) VALUES ('"
-                             + TbCertificate.Text + "', '" + Convert.ToInt32(TbSeriesCertificate.Text) + "', '" + Convert.ToInt32(TbNumberCertificate.Text)
-                             + "','" + TbIssued.Text + "','" + Convert.ToDateTime(PaspDateIssued.Text).ToShortDateString() + "','" + TbAdressProg.Text + "','" + TbAdressReg.Text + "')";
-                         cmd1.ExecuteScalar();
-
-                          
-                          
-                           
-                            
+                                                  cmd.ExecuteScalar();
 
 
 
-                           //Запись в таблицу Образование
-                            SqlCommand cmd2 = connecting.CreateCommand();
-                       cmd2.CommandText = "INSERT INTO [Education] (Education, DateEducation, DocEducation, SeriesDoc, NumberDoc," +
-                           " NameInstitute, DateIssuedDoc) VALUES ( '" + CbTypeEducat.Text + "','" + Convert.ToDateTime(DateEnd.Text).ToShortDateString() + "','" + CbDocEducat.Text + "'," +
-                           "'" + Convert.ToInt32(TbSeriesDoc.Text) + "','" + Convert.ToInt32(TbNumberDoc.Text) + "','" + TbNameInstitute.Text + "','" + Convert.ToDateTime(CalenDateIssued.Text).ToShortDateString() + "')";
-                       cmd2.ExecuteScalar();
-                       MessageBox.Show("Слушатель успешно добавлен");
-                      
+                                                        SqlCommand cmd1 = connecting.CreateCommand();
 
+
+                                                        //Запись в таблицу Паспорт
+                                                     cmd1.CommandText = "INSERT INTO [Pasport] (Pasport, Series, Number, Issued, DateIssued, Lives, Registered) VALUES ('"
+                                                         + TbCertificate.Text + "', '" + Convert.ToInt32(TbSeriesCertificate.Text) + "', '" + Convert.ToInt32(TbNumberCertificate.Text)
+                                                         + "','" + TbIssued.Text + "','" + Convert.ToDateTime(PaspDateIssued.Text).ToShortDateString() + "','" + TbAdressProg.Text + "','" + TbAdressReg.Text + "')";
+                                                     cmd1.ExecuteScalar();
+
+
+
+
+
+
+
+
+                                                       //Запись в таблицу Образование
+                                                        SqlCommand cmd2 = connecting.CreateCommand();
+                                                   cmd2.CommandText = "INSERT INTO [Education] (Education, DateEducation, DocEducation, SeriesDoc, NumberDoc," +
+                                                       " NameInstitute, DateIssuedDoc) VALUES ( '" + CbTypeEducat.Text + "','" + Convert.ToDateTime(DateEnd.Text).ToShortDateString() + "','" + CbDocEducat.Text + "'," +
+                                                       "'" + Convert.ToInt32(TbSeriesDoc.Text) + "','" + Convert.ToInt32(TbNumberDoc.Text) + "','" + TbNameInstitute.Text + "','" + Convert.ToDateTime(CalenDateIssued.Text).ToShortDateString() + "')";
+                                                   cmd2.ExecuteScalar();
+                                                   MessageBox.Show("Слушатель успешно добавлен");
+
+                                                    
                             connecting.Close();
                         }
 
@@ -295,15 +308,7 @@ namespace ЦДО
               
                 // Закрываем документ
                 doc.SaveAs2(@"D:\dogovor.docx");
-/*
-                SaveFileDialog sfd = new SaveFileDialog();
-                if (sfd.ShowDialog() == DialogResult.OK)
-                {
 
-                    doc.SaveAs();
-
-                }
-                */
                 doc.Close();
                
                 app.Quit();

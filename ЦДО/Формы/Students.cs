@@ -29,12 +29,16 @@ namespace ЦДО
 
         private void Students_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.Student". При необходимости она может быть перемещена или удалена.
-            this.studentTableAdapter.Fill(this.cDODataSet.Student);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet2.Student". При необходимости она может быть перемещена или удалена.
+            this.studentTableAdapter2.Fill(this.cDODataSet2.Student);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.Student". При необходимости она может быть перемещена или удалена.
-         //   this.studentTableAdapter.Fill(this.cDODataSet1.Student);
+            // this.studentTableAdapter1.Fill(this.cDODataSet1.Student);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.Student". При необходимости она может быть перемещена или удалена.
-            this.studentTableAdapter.Fill(this.cDODataSet.Student);
+            //this.studentTableAdapter.Fill(this.cDODataSet.Student);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.Student". При необходимости она может быть перемещена или удалена.
+            //   this.studentTableAdapter.Fill(this.cDODataSet1.Student);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.Student". При необходимости она может быть перемещена или удалена.
+            //  this.studentTableAdapter.Fill(this.cDODataSet.Student);
 
         }
 

@@ -31,17 +31,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnStudent = new System.Windows.Forms.Button();
             this.BtnCourse = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.BtnExit = new System.Windows.Forms.Button();
             this.BtnBack = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,15 +67,6 @@
             this.label1.Size = new System.Drawing.Size(125, 46);
             this.label1.TabIndex = 1;
             this.label1.Text = "Меню";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ЦДО.Properties.Resources.значок1;
-            this.pictureBox1.Location = new System.Drawing.Point(862, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // BtnStudent
             // 
@@ -100,24 +94,6 @@
             this.BtnCourse.UseVisualStyleBackColor = false;
             this.BtnCourse.Click += new System.EventHandler(this.BtnCourse_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::ЦДО.Properties.Resources.курсы;
-            this.pictureBox3.Location = new System.Drawing.Point(556, 218);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(112, 112);
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::ЦДО.Properties.Resources.студент;
-            this.pictureBox2.Location = new System.Drawing.Point(15, 218);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(112, 112);
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
             // BtnExit
             // 
             this.BtnExit.BackColor = System.Drawing.SystemColors.Highlight;
@@ -144,12 +120,63 @@
             this.BtnBack.UseVisualStyleBackColor = false;
             this.BtnBack.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(388, 398);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(280, 103);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Отчеты";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::ЦДО.Properties.Resources.отчеты;
+            this.pictureBox4.Location = new System.Drawing.Point(236, 398);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(112, 112);
+            this.pictureBox4.TabIndex = 8;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::ЦДО.Properties.Resources.курсы;
+            this.pictureBox3.Location = new System.Drawing.Point(556, 218);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(112, 112);
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ЦДО.Properties.Resources.студент;
+            this.pictureBox2.Location = new System.Drawing.Point(15, 218);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(112, 112);
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ЦДО.Properties.Resources.значок1;
+            this.pictureBox1.Location = new System.Drawing.Point(862, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1001, 600);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.BtnBack);
             this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.pictureBox3);
@@ -162,9 +189,10 @@
             this.Text = "Меню";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -180,5 +208,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnExit;
         private System.Windows.Forms.Button BtnBack;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

@@ -47,5 +47,14 @@ namespace ЦДО
 
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            //открытие формы
+            Формы.Reports frm = new Формы.Reports();
+            frm.Show();
+            this.Hide();
+
+        }
     }
 }

@@ -24,6 +24,20 @@ namespace ЦДО
 
         private void NewCourse_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet2.TypePractik". При необходимости она может быть перемещена или удалена.
+            this.typePractikTableAdapter2.Fill(this.cDODataSet2.TypePractik);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet2.TypeObuch". При необходимости она может быть перемещена или удалена.
+            this.typeObuchTableAdapter2.Fill(this.cDODataSet2.TypeObuch);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet2.TypeProg". При необходимости она может быть перемещена или удалена.
+            this.typeProgTableAdapter1.Fill(this.cDODataSet2.TypeProg);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet2.Program". При необходимости она может быть перемещена или удалена.
+            this.programTableAdapter1.Fill(this.cDODataSet2.Program);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet2.Course". При необходимости она может быть перемещена или удалена.
+            this.courseTableAdapter1.Fill(this.cDODataSet2.Course);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.TypePractik". При необходимости она может быть перемещена или удалена.
+            this.typePractikTableAdapter1.Fill(this.cDODataSet1.TypePractik);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.TypeObuch". При необходимости она может быть перемещена или удалена.
+            this.typeObuchTableAdapter1.Fill(this.cDODataSet1.TypeObuch);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.TypeObuch". При необходимости она может быть перемещена или удалена.
             this.typeObuchTableAdapter.Fill(this.cDODataSet.TypeObuch);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.TypePractik". При необходимости она может быть перемещена или удалена.

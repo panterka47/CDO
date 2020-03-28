@@ -79,32 +79,29 @@
             this.BtnDog = new System.Windows.Forms.Button();
             this.BtnSogl = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
-            this.TbGroup = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
             this.TbDop = new System.Windows.Forms.TextBox();
             this.CbTypeCourse = new System.Windows.Forms.ComboBox();
+            this.typeProgBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label26 = new System.Windows.Forms.Label();
             this.CbTypeObuch = new System.Windows.Forms.ComboBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.cDODataSet = new ЦДО.База_данных.CDODataSet();
-            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.courseTableAdapter = new ЦДО.База_данных.CDODataSetTableAdapters.CourseTableAdapter();
             this.typeObuchBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.typeObuchTableAdapter = new ЦДО.База_данных.CDODataSetTableAdapters.TypeObuchTableAdapter();
-            this.typeProgBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.typeProgTableAdapter = new ЦДО.База_данных.CDODataSetTableAdapters.TypeProgTableAdapter();
+            this.label27 = new System.Windows.Forms.Label();
             this.CbNameProg = new System.Windows.Forms.ComboBox();
-            this.label28 = new System.Windows.Forms.Label();
             this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.programTableAdapter = new ЦДО.База_данных.CDODataSetTableAdapters.ProgramTableAdapter();
+            this.label28 = new System.Windows.Forms.Label();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.typeObuchBindingSource)).BeginInit();
+            this.TbGroup = new System.Windows.Forms.ComboBox();
+            this.cDODataSet1 = new ЦДО.База_данных.CDODataSet();
+            this.groupBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupTableAdapter = new ЦДО.База_данных.CDODataSetTableAdapters.GroupTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeObuchBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // TbSurname
@@ -599,15 +596,6 @@
             this.label24.TabIndex = 56;
             this.label24.Text = "Группа";
             // 
-            // TbGroup
-            // 
-            this.TbGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TbGroup.Location = new System.Drawing.Point(1129, 753);
-            this.TbGroup.Name = "TbGroup";
-            this.TbGroup.Size = new System.Drawing.Size(306, 34);
-            this.TbGroup.TabIndex = 55;
-            this.TbGroup.Text = "МО-1";
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Highlight;
@@ -661,7 +649,10 @@
             this.CbTypeCourse.Name = "CbTypeCourse";
             this.CbTypeCourse.Size = new System.Drawing.Size(306, 37);
             this.CbTypeCourse.TabIndex = 62;
-            this.CbTypeCourse.ValueMember = "ID";
+            // 
+            // typeProgBindingSource
+            // 
+            this.typeProgBindingSource.DataMember = "TypeProg";
             // 
             // label26
             // 
@@ -682,7 +673,10 @@
             this.CbTypeObuch.Name = "CbTypeObuch";
             this.CbTypeObuch.Size = new System.Drawing.Size(306, 37);
             this.CbTypeObuch.TabIndex = 64;
-            this.CbTypeObuch.ValueMember = "ID";
+            // 
+            // typeObuchBindingSource
+            // 
+            this.typeObuchBindingSource.DataMember = "TypeObuch";
             // 
             // label27
             // 
@@ -693,49 +687,20 @@
             this.label27.TabIndex = 63;
             this.label27.Text = "Тип обучения";
             // 
-            // cDODataSet
-            // 
-            this.cDODataSet.DataSetName = "CDODataSet";
-            this.cDODataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // courseBindingSource
-            // 
-            this.courseBindingSource.DataMember = "Course";
-            this.courseBindingSource.DataSource = this.cDODataSet;
-            // 
-            // courseTableAdapter
-            // 
-            this.courseTableAdapter.ClearBeforeFill = true;
-            // 
-            // typeObuchBindingSource
-            // 
-            this.typeObuchBindingSource.DataMember = "TypeObuch";
-            this.typeObuchBindingSource.DataSource = this.cDODataSet;
-            // 
-            // typeObuchTableAdapter
-            // 
-            this.typeObuchTableAdapter.ClearBeforeFill = true;
-            // 
-            // typeProgBindingSource
-            // 
-            this.typeProgBindingSource.DataMember = "TypeProg";
-            this.typeProgBindingSource.DataSource = this.cDODataSet;
-            // 
-            // typeProgTableAdapter
-            // 
-            this.typeProgTableAdapter.ClearBeforeFill = true;
-            // 
             // CbNameProg
             // 
-            this.CbNameProg.DataSource = this.courseBindingSource;
-            this.CbNameProg.DisplayMember = "NameCourse";
+            this.CbNameProg.DataSource = this.programBindingSource;
+            this.CbNameProg.DisplayMember = "NameProg";
             this.CbNameProg.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CbNameProg.FormattingEnabled = true;
             this.CbNameProg.Location = new System.Drawing.Point(1464, 980);
             this.CbNameProg.Name = "CbNameProg";
             this.CbNameProg.Size = new System.Drawing.Size(306, 37);
             this.CbNameProg.TabIndex = 66;
-            this.CbNameProg.ValueMember = "IDCourse";
+            // 
+            // programBindingSource
+            // 
+            this.programBindingSource.DataMember = "Program";
             // 
             // label28
             // 
@@ -746,21 +711,37 @@
             this.label28.TabIndex = 65;
             this.label28.Text = "Наименование программы";
             // 
-            // programBindingSource
-            // 
-            this.programBindingSource.DataMember = "Program";
-            this.programBindingSource.DataSource = this.cDODataSet;
-            // 
-            // programTableAdapter
-            // 
-            this.programTableAdapter.ClearBeforeFill = true;
-            // 
             // vScrollBar1
             // 
             this.vScrollBar1.Location = new System.Drawing.Point(1816, 4);
             this.vScrollBar1.Name = "vScrollBar1";
             this.vScrollBar1.Size = new System.Drawing.Size(36, 1056);
             this.vScrollBar1.TabIndex = 67;
+            // 
+            // TbGroup
+            // 
+            this.TbGroup.DataSource = this.groupBindingSource;
+            this.TbGroup.DisplayMember = "NameGroup";
+            this.TbGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TbGroup.FormattingEnabled = true;
+            this.TbGroup.Location = new System.Drawing.Point(1129, 746);
+            this.TbGroup.Name = "TbGroup";
+            this.TbGroup.Size = new System.Drawing.Size(306, 37);
+            this.TbGroup.TabIndex = 68;
+            // 
+            // cDODataSet1
+            // 
+            this.cDODataSet1.DataSetName = "CDODataSet";
+            this.cDODataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // groupBindingSource
+            // 
+            this.groupBindingSource.DataMember = "Group";
+            this.groupBindingSource.DataSource = this.cDODataSet1;
+            // 
+            // groupTableAdapter
+            // 
+            this.groupTableAdapter.ClearBeforeFill = true;
             // 
             // AddEditStudents
             // 
@@ -769,6 +750,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1852, 981);
+            this.Controls.Add(this.TbGroup);
             this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.CbNameProg);
             this.Controls.Add(this.label28);
@@ -781,7 +763,6 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label24);
-            this.Controls.Add(this.TbGroup);
             this.Controls.Add(this.BtnSogl);
             this.Controls.Add(this.BtnDog);
             this.Controls.Add(this.BtnEdit);
@@ -838,11 +819,11 @@
             this.Text = "Добавление/ изменение информации о слушателе";
             this.TransparencyKey = System.Drawing.SystemColors.Control;
             this.Load += new System.EventHandler(this.AddStudents_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.typeObuchBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeObuchBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -897,7 +878,6 @@
         public System.Windows.Forms.ComboBox CbDocEducat;
         public System.Windows.Forms.DateTimePicker DateEnd;
         public System.Windows.Forms.TextBox TbEmail;
-        public System.Windows.Forms.TextBox TbGroup;
         public System.Windows.Forms.Button BtnAddStudent;
         public System.Windows.Forms.Button BtnEdit;
         public System.Windows.Forms.Button button1;
@@ -908,17 +888,19 @@
         private System.Windows.Forms.Label label26;
         public System.Windows.Forms.ComboBox CbTypeObuch;
         private System.Windows.Forms.Label label27;
-        private База_данных.CDODataSet cDODataSet;
-        private System.Windows.Forms.BindingSource courseBindingSource;
-        private База_данных.CDODataSetTableAdapters.CourseTableAdapter courseTableAdapter;
-        private System.Windows.Forms.BindingSource typeObuchBindingSource;
-        private База_данных.CDODataSetTableAdapters.TypeObuchTableAdapter typeObuchTableAdapter;
-        private System.Windows.Forms.BindingSource typeProgBindingSource;
-        private База_данных.CDODataSetTableAdapters.TypeProgTableAdapter typeProgTableAdapter;
         public System.Windows.Forms.ComboBox CbNameProg;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.VScrollBar vScrollBar1;
+        private База_данных.CDODataSet cDODataSet;
+        private System.Windows.Forms.BindingSource typeProgBindingSource;
+        private База_данных.CDODataSetTableAdapters.TypeProgTableAdapter typeProgTableAdapter;
+        private System.Windows.Forms.BindingSource typeObuchBindingSource;
+        private База_данных.CDODataSetTableAdapters.TypeObuchTableAdapter typeObuchTableAdapter;
         private System.Windows.Forms.BindingSource programBindingSource;
         private База_данных.CDODataSetTableAdapters.ProgramTableAdapter programTableAdapter;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
+        public System.Windows.Forms.ComboBox TbGroup;
+        private База_данных.CDODataSet cDODataSet1;
+        private System.Windows.Forms.BindingSource groupBindingSource;
+        private База_данных.CDODataSetTableAdapters.GroupTableAdapter groupTableAdapter;
     }
 }
