@@ -24,7 +24,7 @@ namespace ЦДО.Формы
 
         }
 
-        private void BtnAdd_Click(object sender, EventArgs e)
+        private void BtnAdd_Click(object sender, EventArgs e) 
         {
 
         }
