@@ -150,6 +150,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Start";
             this.Text = "Авторизация";
+            this.Load += new System.EventHandler(this.Start_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
