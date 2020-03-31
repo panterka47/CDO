@@ -110,7 +110,7 @@
             this.TbLogin.Name = "TbLogin";
             this.TbLogin.Size = new System.Drawing.Size(415, 38);
             this.TbLogin.TabIndex = 4;
-            this.TbLogin.Text = "Goncharenko-DS";
+            this.TbLogin.Text = "nastya";
             // 
             // TbPass
             // 
@@ -119,7 +119,7 @@
             this.TbPass.Name = "TbPass";
             this.TbPass.Size = new System.Drawing.Size(415, 38);
             this.TbPass.TabIndex = 5;
-            this.TbPass.Text = "lbfyf";
+            this.TbPass.Text = "nastya";
             this.TbPass.UseSystemPasswordChar = true;
             // 
             // button2

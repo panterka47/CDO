@@ -85,6 +85,7 @@
             this.TbDop = new System.Windows.Forms.TextBox();
             this.CbTypeCourse = new System.Windows.Forms.ComboBox();
             this.typeProgBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cDODataSet1 = new ЦДО.BD.CDODataSet();
             this.label26 = new System.Windows.Forms.Label();
             this.CbTypeObuch = new System.Windows.Forms.ComboBox();
             this.typeObuchBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -92,22 +93,25 @@
             this.CbNameProg = new System.Windows.Forms.ComboBox();
             this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label28 = new System.Windows.Forms.Label();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.TbGroup = new System.Windows.Forms.ComboBox();
+            this.groupBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cDODataSet1 = new ЦДО.BD.CDODataSet();
             this.groupTableAdapter = new ЦДО.BD.CDODataSetTableAdapters.GroupTableAdapter();
+            this.typeProgTableAdapter1 = new ЦДО.BD.CDODataSetTableAdapters.TypeProgTableAdapter();
+            this.typeObuchTableAdapter1 = new ЦДО.BD.CDODataSetTableAdapters.TypeObuchTableAdapter();
+            this.programTableAdapter1 = new ЦДО.BD.CDODataSetTableAdapters.ProgramTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeObuchBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // TbSurname
             // 
             this.TbSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TbSurname.Location = new System.Drawing.Point(386, 98);
+            this.TbSurname.Location = new System.Drawing.Point(301, 93);
             this.TbSurname.Name = "TbSurname";
             this.TbSurname.Size = new System.Drawing.Size(306, 34);
             this.TbSurname.TabIndex = 0;
@@ -116,7 +120,7 @@
             // TbName
             // 
             this.TbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TbName.Location = new System.Drawing.Point(386, 174);
+            this.TbName.Location = new System.Drawing.Point(301, 169);
             this.TbName.Name = "TbName";
             this.TbName.Size = new System.Drawing.Size(306, 34);
             this.TbName.TabIndex = 1;
@@ -126,7 +130,7 @@
             // TbPatronymic
             // 
             this.TbPatronymic.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TbPatronymic.Location = new System.Drawing.Point(386, 254);
+            this.TbPatronymic.Location = new System.Drawing.Point(301, 249);
             this.TbPatronymic.Name = "TbPatronymic";
             this.TbPatronymic.Size = new System.Drawing.Size(306, 34);
             this.TbPatronymic.TabIndex = 2;
@@ -135,7 +139,7 @@
             // TbPlaceOfBirth
             // 
             this.TbPlaceOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TbPlaceOfBirth.Location = new System.Drawing.Point(386, 393);
+            this.TbPlaceOfBirth.Location = new System.Drawing.Point(301, 388);
             this.TbPlaceOfBirth.Name = "TbPlaceOfBirth";
             this.TbPlaceOfBirth.Size = new System.Drawing.Size(306, 34);
             this.TbPlaceOfBirth.TabIndex = 3;
@@ -144,7 +148,7 @@
             // DateOfBirth
             // 
             this.DateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DateOfBirth.Location = new System.Drawing.Point(386, 326);
+            this.DateOfBirth.Location = new System.Drawing.Point(301, 321);
             this.DateOfBirth.Name = "DateOfBirth";
             this.DateOfBirth.Size = new System.Drawing.Size(306, 34);
             this.DateOfBirth.TabIndex = 4;
@@ -153,7 +157,7 @@
             // TbNationality
             // 
             this.TbNationality.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TbNationality.Location = new System.Drawing.Point(386, 463);
+            this.TbNationality.Location = new System.Drawing.Point(301, 458);
             this.TbNationality.Name = "TbNationality";
             this.TbNationality.Size = new System.Drawing.Size(306, 34);
             this.TbNationality.TabIndex = 5;
@@ -162,7 +166,7 @@
             // TbCertificate
             // 
             this.TbCertificate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TbCertificate.Location = new System.Drawing.Point(386, 532);
+            this.TbCertificate.Location = new System.Drawing.Point(301, 527);
             this.TbCertificate.Name = "TbCertificate";
             this.TbCertificate.Size = new System.Drawing.Size(306, 34);
             this.TbCertificate.TabIndex = 6;
@@ -171,7 +175,7 @@
             // TbSeriesCertificate
             // 
             this.TbSeriesCertificate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TbSeriesCertificate.Location = new System.Drawing.Point(386, 597);
+            this.TbSeriesCertificate.Location = new System.Drawing.Point(301, 597);
             this.TbSeriesCertificate.Name = "TbSeriesCertificate";
             this.TbSeriesCertificate.Size = new System.Drawing.Size(306, 34);
             this.TbSeriesCertificate.TabIndex = 7;
@@ -181,7 +185,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(116, 101);
+            this.label1.Location = new System.Drawing.Point(31, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(133, 29);
             this.label1.TabIndex = 8;
@@ -191,7 +195,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(116, 177);
+            this.label2.Location = new System.Drawing.Point(31, 172);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 29);
             this.label2.TabIndex = 9;
@@ -201,7 +205,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(116, 257);
+            this.label3.Location = new System.Drawing.Point(31, 252);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(133, 29);
             this.label3.TabIndex = 10;
@@ -211,7 +215,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(116, 331);
+            this.label4.Location = new System.Drawing.Point(31, 326);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(201, 29);
             this.label4.TabIndex = 11;
@@ -221,7 +225,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(116, 396);
+            this.label5.Location = new System.Drawing.Point(31, 391);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(209, 29);
             this.label5.TabIndex = 12;
@@ -231,7 +235,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(116, 466);
+            this.label6.Location = new System.Drawing.Point(31, 461);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(165, 29);
             this.label6.TabIndex = 13;
@@ -240,7 +244,7 @@
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(116, 518);
+            this.label7.Location = new System.Drawing.Point(31, 513);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(209, 60);
             this.label7.TabIndex = 14;
@@ -249,7 +253,7 @@
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(116, 586);
+            this.label8.Location = new System.Drawing.Point(31, 586);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(209, 63);
             this.label8.TabIndex = 15;
@@ -270,7 +274,7 @@
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(116, 657);
+            this.label10.Location = new System.Drawing.Point(31, 657);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(209, 73);
             this.label10.TabIndex = 18;
@@ -279,7 +283,7 @@
             // TbNumberCertificate
             // 
             this.TbNumberCertificate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TbNumberCertificate.Location = new System.Drawing.Point(386, 670);
+            this.TbNumberCertificate.Location = new System.Drawing.Point(301, 670);
             this.TbNumberCertificate.Name = "TbNumberCertificate";
             this.TbNumberCertificate.Size = new System.Drawing.Size(306, 34);
             this.TbNumberCertificate.TabIndex = 17;
@@ -289,7 +293,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(116, 746);
+            this.label11.Location = new System.Drawing.Point(31, 746);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(149, 29);
             this.label11.TabIndex = 20;
@@ -298,16 +302,17 @@
             // TbIssued
             // 
             this.TbIssued.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TbIssued.Location = new System.Drawing.Point(386, 743);
+            this.TbIssued.Location = new System.Drawing.Point(301, 728);
+            this.TbIssued.Multiline = true;
             this.TbIssued.Name = "TbIssued";
-            this.TbIssued.Size = new System.Drawing.Size(306, 34);
+            this.TbIssued.Size = new System.Drawing.Size(343, 68);
             this.TbIssued.TabIndex = 19;
             this.TbIssued.Text = "УФМС по Калининскому району г. Новосибирска";
             // 
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(862, 571);
+            this.label12.Location = new System.Drawing.Point(696, 567);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(191, 81);
             this.label12.TabIndex = 40;
@@ -316,16 +321,17 @@
             // TbNameInstitute
             // 
             this.TbNameInstitute.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TbNameInstitute.Location = new System.Drawing.Point(1129, 587);
+            this.TbNameInstitute.Location = new System.Drawing.Point(963, 557);
+            this.TbNameInstitute.Multiline = true;
             this.TbNameInstitute.Name = "TbNameInstitute";
-            this.TbNameInstitute.Size = new System.Drawing.Size(306, 34);
+            this.TbNameInstitute.Size = new System.Drawing.Size(331, 91);
             this.TbNameInstitute.TabIndex = 39;
             this.TbNameInstitute.Text = "Средняя образовательная школа № 34";
             // 
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(859, 501);
+            this.label13.Location = new System.Drawing.Point(693, 497);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(209, 73);
             this.label13.TabIndex = 38;
@@ -334,7 +340,7 @@
             // TbNumberDoc
             // 
             this.TbNumberDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TbNumberDoc.Location = new System.Drawing.Point(1129, 514);
+            this.TbNumberDoc.Location = new System.Drawing.Point(963, 510);
             this.TbNumberDoc.Name = "TbNumberDoc";
             this.TbNumberDoc.Size = new System.Drawing.Size(306, 34);
             this.TbNumberDoc.TabIndex = 37;
@@ -343,7 +349,7 @@
             // label14
             // 
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(859, 430);
+            this.label14.Location = new System.Drawing.Point(693, 420);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(191, 63);
             this.label14.TabIndex = 36;
@@ -352,7 +358,7 @@
             // label15
             // 
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(859, 362);
+            this.label15.Location = new System.Drawing.Point(693, 352);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(209, 60);
             this.label15.TabIndex = 35;
@@ -362,7 +368,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.Location = new System.Drawing.Point(859, 310);
+            this.label16.Location = new System.Drawing.Point(693, 300);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(199, 29);
             this.label16.TabIndex = 34;
@@ -372,7 +378,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label17.Location = new System.Drawing.Point(859, 240);
+            this.label17.Location = new System.Drawing.Point(693, 230);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(217, 29);
             this.label17.TabIndex = 33;
@@ -382,7 +388,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label18.Location = new System.Drawing.Point(859, 101);
+            this.label18.Location = new System.Drawing.Point(693, 91);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(129, 29);
             this.label18.TabIndex = 32;
@@ -392,7 +398,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label19.Location = new System.Drawing.Point(116, 954);
+            this.label19.Location = new System.Drawing.Point(31, 951);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(238, 29);
             this.label19.TabIndex = 31;
@@ -402,7 +408,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label20.Location = new System.Drawing.Point(116, 889);
+            this.label20.Location = new System.Drawing.Point(31, 889);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(234, 29);
             this.label20.TabIndex = 30;
@@ -412,7 +418,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label21.Location = new System.Drawing.Point(116, 822);
+            this.label21.Location = new System.Drawing.Point(31, 822);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(169, 29);
             this.label21.TabIndex = 29;
@@ -421,7 +427,7 @@
             // TbSeriesDoc
             // 
             this.TbSeriesDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TbSeriesDoc.Location = new System.Drawing.Point(1129, 441);
+            this.TbSeriesDoc.Location = new System.Drawing.Point(963, 431);
             this.TbSeriesDoc.Name = "TbSeriesDoc";
             this.TbSeriesDoc.Size = new System.Drawing.Size(306, 34);
             this.TbSeriesDoc.TabIndex = 28;
@@ -430,18 +436,20 @@
             // TbAdressReg
             // 
             this.TbAdressReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TbAdressReg.Location = new System.Drawing.Point(386, 951);
+            this.TbAdressReg.Location = new System.Drawing.Point(301, 948);
+            this.TbAdressReg.Multiline = true;
             this.TbAdressReg.Name = "TbAdressReg";
-            this.TbAdressReg.Size = new System.Drawing.Size(343, 34);
+            this.TbAdressReg.Size = new System.Drawing.Size(343, 64);
             this.TbAdressReg.TabIndex = 23;
             this.TbAdressReg.Text = "ул. Новоуральская, 19/7 - 63";
             // 
             // TbAdressProg
             // 
             this.TbAdressProg.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TbAdressProg.Location = new System.Drawing.Point(386, 886);
+            this.TbAdressProg.Location = new System.Drawing.Point(301, 886);
+            this.TbAdressProg.Multiline = true;
             this.TbAdressProg.Name = "TbAdressProg";
-            this.TbAdressProg.Size = new System.Drawing.Size(343, 34);
+            this.TbAdressProg.Size = new System.Drawing.Size(343, 56);
             this.TbAdressProg.TabIndex = 22;
             this.TbAdressProg.Text = "ул. Новоуральская, 19/7 - 63";
             // 
@@ -449,7 +457,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label22.Location = new System.Drawing.Point(859, 673);
+            this.label22.Location = new System.Drawing.Point(693, 669);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(159, 29);
             this.label22.TabIndex = 42;
@@ -458,7 +466,7 @@
             // CalenDateIssued
             // 
             this.CalenDateIssued.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CalenDateIssued.Location = new System.Drawing.Point(1129, 668);
+            this.CalenDateIssued.Location = new System.Drawing.Point(963, 664);
             this.CalenDateIssued.Name = "CalenDateIssued";
             this.CalenDateIssued.Size = new System.Drawing.Size(306, 34);
             this.CalenDateIssued.TabIndex = 41;
@@ -467,7 +475,7 @@
             // PaspDateIssued
             // 
             this.PaspDateIssued.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PaspDateIssued.Location = new System.Drawing.Point(386, 817);
+            this.PaspDateIssued.Location = new System.Drawing.Point(301, 817);
             this.PaspDateIssued.Name = "PaspDateIssued";
             this.PaspDateIssued.Size = new System.Drawing.Size(306, 34);
             this.PaspDateIssued.TabIndex = 43;
@@ -476,7 +484,7 @@
             // TbPhone
             // 
             this.TbPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TbPhone.Location = new System.Drawing.Point(1129, 98);
+            this.TbPhone.Location = new System.Drawing.Point(963, 88);
             this.TbPhone.Mask = "(999) 000-0000";
             this.TbPhone.Name = "TbPhone";
             this.TbPhone.Size = new System.Drawing.Size(306, 34);
@@ -492,9 +500,9 @@
             "Образовательное учреждение начального профессионального образования",
             "Образовательное учреждение среднего профессионального образования",
             "образовательное учреждение высшего профессионального образования"});
-            this.CbTypeEducat.Location = new System.Drawing.Point(1129, 232);
+            this.CbTypeEducat.Location = new System.Drawing.Point(963, 222);
             this.CbTypeEducat.Name = "CbTypeEducat";
-            this.CbTypeEducat.Size = new System.Drawing.Size(306, 37);
+            this.CbTypeEducat.Size = new System.Drawing.Size(484, 37);
             this.CbTypeEducat.TabIndex = 45;
             this.CbTypeEducat.Text = "Общеобразовательное учреждение";
             // 
@@ -506,7 +514,7 @@
             "Свидетельство",
             "Удостоверение",
             "Диплом"});
-            this.CbDocEducat.Location = new System.Drawing.Point(1129, 380);
+            this.CbDocEducat.Location = new System.Drawing.Point(963, 370);
             this.CbDocEducat.Name = "CbDocEducat";
             this.CbDocEducat.Size = new System.Drawing.Size(306, 37);
             this.CbDocEducat.TabIndex = 46;
@@ -515,7 +523,7 @@
             // DateEnd
             // 
             this.DateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DateEnd.Location = new System.Drawing.Point(1129, 305);
+            this.DateEnd.Location = new System.Drawing.Point(963, 295);
             this.DateEnd.Name = "DateEnd";
             this.DateEnd.Size = new System.Drawing.Size(306, 34);
             this.DateEnd.TabIndex = 47;
@@ -536,7 +544,7 @@
             // label23
             // 
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label23.Location = new System.Drawing.Point(859, 174);
+            this.label23.Location = new System.Drawing.Point(693, 164);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(191, 51);
             this.label23.TabIndex = 51;
@@ -545,7 +553,7 @@
             // TbEmail
             // 
             this.TbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TbEmail.Location = new System.Drawing.Point(1129, 171);
+            this.TbEmail.Location = new System.Drawing.Point(963, 161);
             this.TbEmail.Name = "TbEmail";
             this.TbEmail.Size = new System.Drawing.Size(306, 34);
             this.TbEmail.TabIndex = 50;
@@ -587,11 +595,12 @@
             this.BtnSogl.TabIndex = 54;
             this.BtnSogl.Text = "Сформировать согласие";
             this.BtnSogl.UseVisualStyleBackColor = false;
+            this.BtnSogl.Click += new System.EventHandler(this.BtnSogl_Click);
             // 
             // label24
             // 
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label24.Location = new System.Drawing.Point(862, 753);
+            this.label24.Location = new System.Drawing.Point(696, 749);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(191, 34);
             this.label24.TabIndex = 56;
@@ -624,7 +633,7 @@
             // label25
             // 
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label25.Location = new System.Drawing.Point(862, 822);
+            this.label25.Location = new System.Drawing.Point(696, 818);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(230, 81);
             this.label25.TabIndex = 59;
@@ -633,7 +642,7 @@
             // TbDop
             // 
             this.TbDop.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TbDop.Location = new System.Drawing.Point(1129, 819);
+            this.TbDop.Location = new System.Drawing.Point(963, 815);
             this.TbDop.Multiline = true;
             this.TbDop.Name = "TbDop";
             this.TbDop.Size = new System.Drawing.Size(306, 64);
@@ -646,7 +655,7 @@
             this.CbTypeCourse.DisplayMember = "NameType";
             this.CbTypeCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CbTypeCourse.FormattingEnabled = true;
-            this.CbTypeCourse.Location = new System.Drawing.Point(1129, 912);
+            this.CbTypeCourse.Location = new System.Drawing.Point(964, 901);
             this.CbTypeCourse.Name = "CbTypeCourse";
             this.CbTypeCourse.Size = new System.Drawing.Size(306, 37);
             this.CbTypeCourse.TabIndex = 62;
@@ -654,11 +663,17 @@
             // typeProgBindingSource
             // 
             this.typeProgBindingSource.DataMember = "TypeProg";
+            this.typeProgBindingSource.DataSource = this.cDODataSet1;
+            // 
+            // cDODataSet1
+            // 
+            this.cDODataSet1.DataSetName = "CDODataSet";
+            this.cDODataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label26
             // 
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label26.Location = new System.Drawing.Point(859, 915);
+            this.label26.Location = new System.Drawing.Point(694, 904);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(209, 30);
             this.label26.TabIndex = 61;
@@ -670,7 +685,7 @@
             this.CbTypeObuch.DisplayMember = "NameType";
             this.CbTypeObuch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CbTypeObuch.FormattingEnabled = true;
-            this.CbTypeObuch.Location = new System.Drawing.Point(1129, 980);
+            this.CbTypeObuch.Location = new System.Drawing.Point(964, 969);
             this.CbTypeObuch.Name = "CbTypeObuch";
             this.CbTypeObuch.Size = new System.Drawing.Size(306, 37);
             this.CbTypeObuch.TabIndex = 64;
@@ -678,11 +693,12 @@
             // typeObuchBindingSource
             // 
             this.typeObuchBindingSource.DataMember = "TypeObuch";
+            this.typeObuchBindingSource.DataSource = this.cDODataSet1;
             // 
             // label27
             // 
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label27.Location = new System.Drawing.Point(862, 983);
+            this.label27.Location = new System.Drawing.Point(697, 972);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(209, 29);
             this.label27.TabIndex = 63;
@@ -694,7 +710,7 @@
             this.CbNameProg.DisplayMember = "NameProg";
             this.CbNameProg.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CbNameProg.FormattingEnabled = true;
-            this.CbNameProg.Location = new System.Drawing.Point(1464, 980);
+            this.CbNameProg.Location = new System.Drawing.Point(1299, 951);
             this.CbNameProg.Name = "CbNameProg";
             this.CbNameProg.Size = new System.Drawing.Size(306, 37);
             this.CbNameProg.TabIndex = 66;
@@ -702,47 +718,53 @@
             // programBindingSource
             // 
             this.programBindingSource.DataMember = "Program";
+            this.programBindingSource.DataSource = this.cDODataSet1;
             // 
             // label28
             // 
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label28.Location = new System.Drawing.Point(1459, 886);
+            this.label28.Location = new System.Drawing.Point(1294, 875);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(259, 84);
             this.label28.TabIndex = 65;
             this.label28.Text = "Наименование программы";
             // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Location = new System.Drawing.Point(1816, 4);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(36, 1056);
-            this.vScrollBar1.TabIndex = 67;
-            // 
             // TbGroup
             // 
-            this.TbGroup.DataSource = this.groupBindingSource;
+            this.TbGroup.DataSource = this.groupBindingSource1;
             this.TbGroup.DisplayMember = "NameGroup";
             this.TbGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.TbGroup.FormattingEnabled = true;
-            this.TbGroup.Location = new System.Drawing.Point(1129, 746);
+            this.TbGroup.Location = new System.Drawing.Point(963, 742);
             this.TbGroup.Name = "TbGroup";
             this.TbGroup.Size = new System.Drawing.Size(306, 37);
             this.TbGroup.TabIndex = 68;
+            // 
+            // groupBindingSource1
+            // 
+            this.groupBindingSource1.DataMember = "Group";
+            this.groupBindingSource1.DataSource = this.cDODataSet1;
             // 
             // groupBindingSource
             // 
             this.groupBindingSource.DataMember = "Group";
             this.groupBindingSource.DataSource = this.cDODataSet1;
             // 
-            // cDODataSet1
-            // 
-            this.cDODataSet1.DataSetName = "CDODataSet";
-            this.cDODataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // groupTableAdapter
             // 
             this.groupTableAdapter.ClearBeforeFill = true;
+            // 
+            // typeProgTableAdapter1
+            // 
+            this.typeProgTableAdapter1.ClearBeforeFill = true;
+            // 
+            // typeObuchTableAdapter1
+            // 
+            this.typeObuchTableAdapter1.ClearBeforeFill = true;
+            // 
+            // programTableAdapter1
+            // 
+            this.programTableAdapter1.ClearBeforeFill = true;
             // 
             // AddEditStudents
             // 
@@ -750,9 +772,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1852, 981);
+            this.ClientSize = new System.Drawing.Size(1852, 853);
             this.Controls.Add(this.TbGroup);
-            this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.CbNameProg);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.CbTypeObuch);
@@ -814,17 +835,18 @@
             this.Controls.Add(this.TbName);
             this.Controls.Add(this.TbSurname);
             this.MaximumSize = new System.Drawing.Size(2000, 1102);
-            this.MinimumSize = new System.Drawing.Size(1572, 1028);
+            this.MinimumSize = new System.Drawing.Size(1572, 900);
             this.Name = "AddEditStudents";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Добавление/ изменение информации о слушателе";
             this.TransparencyKey = System.Drawing.SystemColors.Control;
             this.Load += new System.EventHandler(this.AddStudents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeObuchBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -891,17 +913,20 @@
         private System.Windows.Forms.Label label27;
         public System.Windows.Forms.ComboBox CbNameProg;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
         private BD.CDODataSet cDODataSet;
-        private System.Windows.Forms.BindingSource typeProgBindingSource;
         private BD.CDODataSetTableAdapters.TypeProgTableAdapter typeProgTableAdapter;
-        private System.Windows.Forms.BindingSource typeObuchBindingSource;
         private BD.CDODataSetTableAdapters.TypeObuchTableAdapter typeObuchTableAdapter;
-        private System.Windows.Forms.BindingSource programBindingSource;
         private BD.CDODataSetTableAdapters.ProgramTableAdapter programTableAdapter;
         public System.Windows.Forms.ComboBox TbGroup;
         private BD.CDODataSet cDODataSet1;
         private System.Windows.Forms.BindingSource groupBindingSource;
         private BD.CDODataSetTableAdapters.GroupTableAdapter groupTableAdapter;
+        private System.Windows.Forms.BindingSource typeProgBindingSource;
+        private BD.CDODataSetTableAdapters.TypeProgTableAdapter typeProgTableAdapter1;
+        private System.Windows.Forms.BindingSource typeObuchBindingSource;
+        private BD.CDODataSetTableAdapters.TypeObuchTableAdapter typeObuchTableAdapter1;
+        private System.Windows.Forms.BindingSource programBindingSource;
+        private BD.CDODataSetTableAdapters.ProgramTableAdapter programTableAdapter1;
+        private System.Windows.Forms.BindingSource groupBindingSource1;
     }
 }

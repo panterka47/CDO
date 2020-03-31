@@ -67,7 +67,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(100, 204);
+            this.label3.Location = new System.Drawing.Point(23, 201);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 32);
             this.label3.TabIndex = 9;
@@ -77,7 +77,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(100, 119);
+            this.label2.Location = new System.Drawing.Point(23, 116);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 32);
             this.label2.TabIndex = 8;
@@ -138,7 +138,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(99, 345);
+            this.label4.Location = new System.Drawing.Point(23, 345);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 32);
             this.label4.TabIndex = 12;
@@ -155,13 +155,12 @@
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(100, 270);
+            this.label5.Location = new System.Drawing.Point(23, 258);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 32);
+            this.label5.Size = new System.Drawing.Size(191, 75);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Пароль";
+            this.label5.Text = "Повторите пароль";
             // 
             // Registration
             // 

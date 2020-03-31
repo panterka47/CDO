@@ -63,13 +63,17 @@ namespace ЦДО
                         cmd.CommandText = "SELECT Pass from [Users] Where Login ='" + TbLogin.Text + "'";
                         string password = Convert.ToString(cmd.ExecuteScalar());
                         connecting.Close();
-                        if (hach.GetHash(TbPass.Text) == password)
-                        {
+
+                         if (hach.GetHash(TbPass.Text) == password)
+                       {
                             Menu frm = new Menu();
                             frm.Show();
                             Hide(); //this писать не нужно 
                         }                        
                     }
+
+
+                  
                 }
             }
             catch (Exception ex)

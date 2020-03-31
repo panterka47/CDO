@@ -33,8 +33,12 @@ namespace ЦДО
                                 connecting.Open();
                                 SqlCommand cmd = connecting.CreateCommand();
 
-                                //Запись в таблицу Студент
+                                //Запись в таблицу Пользователи
+
+                                //hach.GetHash(TbPass.Text)
                                 cmd.CommandText = "INSERT INTO [Users] (login, pass, email) VALUES ('" + TbLogin.Text + "','" + hach.GetHash(TbPass.Text) + "','" + TbMail.Text + "')";
+                                cmd.ExecuteScalar();
+                                
                                 connecting.Close();
                                  
                                 MessageBox.Show("Регистрация успешно завершена!");

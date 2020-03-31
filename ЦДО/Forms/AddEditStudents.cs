@@ -28,28 +28,15 @@ namespace ЦДО
 
         private void AddStudents_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.Program". При необходимости она может быть перемещена или удалена.
+            this.programTableAdapter1.Fill(this.cDODataSet1.Program);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.TypeObuch". При необходимости она может быть перемещена или удалена.
+            this.typeObuchTableAdapter1.Fill(this.cDODataSet1.TypeObuch);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.TypeProg". При необходимости она может быть перемещена или удалена.
+            this.typeProgTableAdapter1.Fill(this.cDODataSet1.TypeProg);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.Group". При необходимости она может быть перемещена или удалена.
             this.groupTableAdapter.Fill(this.cDODataSet1.Group);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.Program". При необходимости она может быть перемещена или удалена.
-            this.programTableAdapter.Fill(this.cDODataSet.Program);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.TypeObuch". При необходимости она может быть перемещена или удалена.
-            this.typeObuchTableAdapter.Fill(this.cDODataSet.TypeObuch);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.TypeProg". При необходимости она может быть перемещена или удалена.
-            this.typeProgTableAdapter.Fill(this.cDODataSet.TypeProg);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.Course". При необходимости она может быть перемещена или удалена.
-          //  this.courseTableAdapter.Fill(this.cDODataSet1.Course);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.TypeObuch". При необходимости она может быть перемещена или удалена.
-            this.typeObuchTableAdapter.Fill(this.cDODataSet1.TypeObuch);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.TypeProg". При необходимости она может быть перемещена или удалена.
-            this.typeProgTableAdapter.Fill(this.cDODataSet1.TypeProg);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.Program". При необходимости она может быть перемещена или удалена.
-            this.programTableAdapter.Fill(this.cDODataSet.Program);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.TypeProg". При необходимости она может быть перемещена или удалена.
-            this.typeProgTableAdapter.Fill(this.cDODataSet.TypeProg);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.TypeObuch". При необходимости она может быть перемещена или удалена.
-            this.typeObuchTableAdapter.Fill(this.cDODataSet.TypeObuch);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.Course". При необходимости она может быть перемещена или удалена.
-        //    this.courseTableAdapter.Fill(this.cDODataSet.Course);
+
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
         }
 
@@ -331,6 +318,63 @@ namespace ЦДО
 
         private void TbName_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void BtnSogl_Click(object sender, EventArgs e)
+        {
+            // Создаём объект документа
+            Word.Document doc = null;
+            try
+            {
+                // Создаём объект приложения
+                Word.Application app = new Word.Application();
+                // Путь до шаблона документа должен быть целиком на английском !!!
+                string source = @"D:\soglshab.docx";
+
+                // Открываем
+                doc = app.Documents.Open(source);
+                doc.Activate();
+                doc.Bookmarks["FIO"].Range.Text = TbSurname.Text + "  " + TbName.Text + "  " + TbPatronymic.Text;
+                doc.Bookmarks["pasportseries"].Range.Text = TbSeriesCertificate.Text;
+                doc.Bookmarks["pasportnumber"].Range.Text = TbNumberCertificate.Text;
+                doc.Bookmarks["dateissuedpasport"].Range.Text = Convert.ToDateTime(PaspDateIssued.Text).ToShortDateString();
+                doc.Bookmarks["issued"].Range.Text = TbIssued.Text;
+                doc.Bookmarks["adressreg"].Range.Text = TbAdressReg.Text;
+                doc.Bookmarks["date"].Range.Text = Convert.ToDateTime(DateTime.Now).ToShortDateString();
+
+
+                MessageBox.Show("Файл сформирован");
+                
+                SaveFileDialog sfd = new SaveFileDialog();
+
+                //выбираем путь для сохранения
+                sfd.InitialDirectory = @"D:\";
+                
+                string path = "";
+
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    path = sfd.FileName;
+                    doc.SaveAs2(path);
+                    MessageBox.Show("Файл сохранен");
+
+
+                }
+                doc.Close();
+
+
+
+            }
+
+            catch (Exception ex)
+            {
+                // Если произошла ошибка, то закрываем документ и выводим информацию
+
+                MessageBox.Show("Во время выполнения произошла ошибка" + ex);
+
+            }
+
 
         }
     }
