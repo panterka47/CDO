@@ -13,9 +13,11 @@ namespace ЦДО
 {
     public partial class AddEditEducation : Form
     {
-        public AddEditEducation()
+        public string Id;
+        public AddEditEducation(string l)
         {
             InitializeComponent();
+            Id = l;
         }
         private void BtnCourseNew_Click(object sender, EventArgs e)
         {
@@ -71,7 +73,7 @@ namespace ЦДО
                     connecting.Open();
                     SqlCommand cmd2 = connecting.CreateCommand();
 
-                    //Добавление типа обучения
+                    //Добавление типа подготовки
                     cmd2.CommandText = "INSERT INTO [TypeProg] (NameType, KolChas, TypeDoc) VALUES ('" + TbType.Text + "','" + Convert.ToInt32(TbKolChas.Text) + "','" + CbDocEducat.Text + "')";
                     cmd2.ExecuteScalar();
                     MessageBox.Show("Тип программы добавлен");
@@ -92,7 +94,7 @@ namespace ЦДО
                     connecting.Open();
                     SqlCommand cmd2 = connecting.CreateCommand();
 
-                    //Добавление типа обучения
+                    //Добавление типа практики
                     cmd2.CommandText = "INSERT INTO [TypePractik] (NamePractik) VALUES ('" + TbTypePractik.Text + "')";
                     cmd2.ExecuteScalar();
                     MessageBox.Show("Тип практики добавлен");
@@ -103,5 +105,138 @@ namespace ЦДО
                 MessageBox.Show("Возникла ошибка: " + ex);
             }
         }
+
+        private void BtnCourseEdit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection connecting = new SqlConnection(Program.connection))
+                {
+                    connecting.Open();
+
+
+                    SqlCommand cmd = connecting.CreateCommand();
+
+                    //Изменение данных о курсе
+                    SqlCommand WriteCommand;
+                    WriteCommand = new SqlCommand("UPDATE [Course] SET NameCourse=@namecourse  WHERE IDCourse = @ID", connecting);
+
+                    WriteCommand.Parameters.AddWithValue("namecourse", TbCourse.Text);
+                    WriteCommand.Parameters.AddWithValue("ID", Convert.ToInt32(Id));
+                    WriteCommand.ExecuteNonQuery();
+
+                    MessageBox.Show("Курс изменен");
+                    connecting.Close();
+
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(Convert.ToString(ex.Message));
+            }
+
+        }
+
+        private void BtnProgEdit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection connecting = new SqlConnection(Program.connection))
+                {
+                    connecting.Open();
+
+
+                    SqlCommand cmd = connecting.CreateCommand();
+
+                    //Изменение данных о программе
+                    SqlCommand WriteCommand;
+                    WriteCommand = new SqlCommand("UPDATE [Program] SET NameProg=@nameprog  WHERE ID = @ID", connecting);
+
+                    WriteCommand.Parameters.AddWithValue("nameprog", TbProg.Text);
+                    WriteCommand.Parameters.AddWithValue("ID", Convert.ToInt32(Id));
+                    WriteCommand.ExecuteNonQuery();
+
+                    MessageBox.Show("Программа изменена");
+                    connecting.Close();
+
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(Convert.ToString(ex.Message));
+            }
+        }
+
+        private void BtnTypeEdit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection connecting = new SqlConnection(Program.connection))
+                {
+                    connecting.Open();
+
+
+                    SqlCommand cmd = connecting.CreateCommand();
+
+                    //Изменение данных о типе подготовки
+                    SqlCommand WriteCommand;
+                    WriteCommand = new SqlCommand("UPDATE [TypeProg] SET NameType=@nametype, KolChas=@kolchas, TypeDoc=@typedoc  WHERE ID = @ID", connecting);
+
+                    WriteCommand.Parameters.AddWithValue("nametype", TbType.Text);
+                    WriteCommand.Parameters.AddWithValue("kolchas", Convert.ToInt32(TbKolChas.Text));
+                    WriteCommand.Parameters.AddWithValue("typedoc", CbDocEducat.Text);
+                    WriteCommand.Parameters.AddWithValue("ID", Convert.ToInt32(Id));
+                    WriteCommand.ExecuteNonQuery();
+
+                    MessageBox.Show("Тип подготовки изменен");
+                    connecting.Close();
+
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(Convert.ToString(ex.Message));
+            }
+        }
+
+        private void BtnTypePractikEdit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection connecting = new SqlConnection(Program.connection))
+                {
+                    connecting.Open();
+
+
+                    SqlCommand cmd = connecting.CreateCommand();
+
+                    //Изменение данных о типе практики
+                    SqlCommand WriteCommand;
+                    WriteCommand = new SqlCommand("UPDATE [TypePractik] SET NamePractik=@namepractik  WHERE ID = @ID", connecting);
+
+                    WriteCommand.Parameters.AddWithValue("namepractik", TbTypePractik.Text);
+                    WriteCommand.Parameters.AddWithValue("ID", Convert.ToInt32(Id));
+                    WriteCommand.ExecuteNonQuery();
+
+                    MessageBox.Show("Тип практики изменен");
+                    connecting.Close();
+
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(Convert.ToString(ex.Message));
+            }
+        }
     }
- }
+    }
+    
+ 

@@ -77,6 +77,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CDODataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AddEditDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddEditDocument.Designer.cs">
+      <DependentUpon>AddEditDocument.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddEditStudents.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,12 @@
     <Compile Include="Forms\Cources.Designer.cs">
       <DependentUpon>Cources.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Documents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Documents.Designer.cs">
+      <DependentUpon>Documents.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EditEducation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +112,12 @@
     </Compile>
     <Compile Include="Forms\EditStudent.Designer.cs">
       <DependentUpon>EditStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Education.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Education.Designer.cs">
+      <DependentUpon>Education.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\GenerateDox.cs" />
     <Compile Include="Forms\Hach.cs" />
@@ -159,17 +177,26 @@
     <Compile Include="Forms\Students.Designer.cs">
       <DependentUpon>Students.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\AddEditDocument.resx">
+      <DependentUpon>AddEditDocument.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddEditStudents.resx">
       <DependentUpon>AddEditStudents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Cources.resx">
       <DependentUpon>Cources.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Documents.resx">
+      <DependentUpon>Documents.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditEducation.resx">
       <DependentUpon>EditEducation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditStudent.resx">
       <DependentUpon>EditStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Education.resx">
+      <DependentUpon>Education.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NewCourse.resx">
       <DependentUpon>NewCourse.cs</DependentUpon>
@@ -243,5 +270,6 @@
   <ItemGroup>
     <None Include="Resources\отчеты.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -110,6 +110,11 @@ namespace ЦДО
 
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Не все обязательные поля заполнены \n Обязательные поля отмечены *");
+                 
+                }
             }
             catch (Exception ex)
             {
@@ -377,5 +382,7 @@ namespace ЦДО
 
 
         }
+
+        
     }
 }

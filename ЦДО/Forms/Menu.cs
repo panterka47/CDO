@@ -50,8 +50,25 @@ namespace ЦДО
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            //открытие формы
+
+            Forms.Education frm = new Forms.Education();
+            frm.Show();
+
+           /* //открытие формы
             Формы.Reports frm = new Формы.Reports();
+            frm.Show();
+            this.Hide();
+            */
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Forms.Documents frm = new Forms.Documents();
             frm.Show();
             this.Hide();
 

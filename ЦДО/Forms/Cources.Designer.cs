@@ -38,12 +38,12 @@
             this.BtnEdit = new System.Windows.Forms.Button();
             this.BtnAdd = new System.Windows.Forms.Button();
             this.GridCourse = new System.Windows.Forms.DataGridView();
+            this.newCourseBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.cDODataSet4 = new ЦДО.BD.CDODataSet();
             this.newCourseBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.newCourseBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.newCourseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.newCourseBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.cDODataSet4 = new ЦДО.BD.CDODataSet();
-            this.newCourseBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.newCourseTableAdapter2 = new ЦДО.BD.CDODataSetTableAdapters.NewCourseTableAdapter();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,12 +58,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridCourse)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -186,6 +186,16 @@
             this.GridCourse.TabIndex = 63;
             this.GridCourse.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridCourse_CellClick);
             // 
+            // newCourseBindingSource4
+            // 
+            this.newCourseBindingSource4.DataMember = "NewCourse";
+            this.newCourseBindingSource4.DataSource = this.cDODataSet4;
+            // 
+            // cDODataSet4
+            // 
+            this.cDODataSet4.DataSetName = "CDODataSet";
+            this.cDODataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // newCourseBindingSource3
             // 
             this.newCourseBindingSource3.DataMember = "NewCourse";
@@ -202,16 +212,6 @@
             // 
             this.newCourseBindingSource1.DataMember = "NewCourse";
             // 
-            // cDODataSet4
-            // 
-            this.cDODataSet4.DataSetName = "CDODataSet";
-            this.cDODataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // newCourseBindingSource4
-            // 
-            this.newCourseBindingSource4.DataMember = "NewCourse";
-            this.newCourseBindingSource4.DataSource = this.cDODataSet4;
-            // 
             // newCourseTableAdapter2
             // 
             this.newCourseTableAdapter2.ClearBeforeFill = true;
@@ -219,62 +219,62 @@
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn11.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn11.HeaderText = "№ п/п";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn12
             // 
             this.dataGridViewTextBoxColumn12.DataPropertyName = "Course";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Course";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Курс";
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             // 
             // dataGridViewTextBoxColumn13
             // 
             this.dataGridViewTextBoxColumn13.DataPropertyName = "Program";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Program";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Программа";
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             // 
             // dataGridViewTextBoxColumn14
             // 
             this.dataGridViewTextBoxColumn14.DataPropertyName = "Type";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Type";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Тип программы";
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             // 
             // dataGridViewTextBoxColumn15
             // 
             this.dataGridViewTextBoxColumn15.DataPropertyName = "DateStart";
-            this.dataGridViewTextBoxColumn15.HeaderText = "DateStart";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Дата начала";
             this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             // 
             // dataGridViewTextBoxColumn16
             // 
             this.dataGridViewTextBoxColumn16.DataPropertyName = "DateEnd";
-            this.dataGridViewTextBoxColumn16.HeaderText = "DateEnd";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Дата окончания";
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             // 
             // dataGridViewTextBoxColumn17
             // 
             this.dataGridViewTextBoxColumn17.DataPropertyName = "KolChas";
-            this.dataGridViewTextBoxColumn17.HeaderText = "KolChas";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Количество часов";
             this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
             // 
             // dataGridViewTextBoxColumn18
             // 
             this.dataGridViewTextBoxColumn18.DataPropertyName = "Smeta";
-            this.dataGridViewTextBoxColumn18.HeaderText = "Smeta";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Смета";
             this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
             // 
             // dataGridViewTextBoxColumn19
             // 
             this.dataGridViewTextBoxColumn19.DataPropertyName = "TypeObuch";
-            this.dataGridViewTextBoxColumn19.HeaderText = "TypeObuch";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Тип обучения";
             this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
             // 
             // dataGridViewTextBoxColumn20
             // 
             this.dataGridViewTextBoxColumn20.DataPropertyName = "TypePractik";
-            this.dataGridViewTextBoxColumn20.HeaderText = "TypePractik";
+            this.dataGridViewTextBoxColumn20.HeaderText = "Тип практики";
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
             // 
             // Cources
@@ -297,12 +297,12 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridCourse)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource4)).EndInit();
             this.ResumeLayout(false);
 
         }

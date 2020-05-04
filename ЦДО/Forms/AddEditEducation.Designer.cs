@@ -44,10 +44,14 @@
             this.TbKolChas = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.CbDocEducat = new System.Windows.Forms.ComboBox();
-            this.BtnTypePractik = new System.Windows.Forms.Button();
+            this.BtnTypePractikNew = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.TbTypePractik = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.BtnCourseEdit = new System.Windows.Forms.Button();
+            this.BtnProgEdit = new System.Windows.Forms.Button();
+            this.BtnTypeEdit = new System.Windows.Forms.Button();
+            this.BtnTypePractikEdit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -145,7 +149,7 @@
             this.BtnCourseNew.BackColor = System.Drawing.Color.Blue;
             this.BtnCourseNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnCourseNew.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnCourseNew.Location = new System.Drawing.Point(798, 115);
+            this.BtnCourseNew.Location = new System.Drawing.Point(798, 75);
             this.BtnCourseNew.Name = "BtnCourseNew";
             this.BtnCourseNew.Size = new System.Drawing.Size(192, 57);
             this.BtnCourseNew.TabIndex = 9;
@@ -158,7 +162,7 @@
             this.BtnProgNew.BackColor = System.Drawing.Color.Blue;
             this.BtnProgNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnProgNew.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnProgNew.Location = new System.Drawing.Point(798, 274);
+            this.BtnProgNew.Location = new System.Drawing.Point(798, 235);
             this.BtnProgNew.Name = "BtnProgNew";
             this.BtnProgNew.Size = new System.Drawing.Size(192, 57);
             this.BtnProgNew.TabIndex = 10;
@@ -171,7 +175,7 @@
             this.BtnTypeNew.BackColor = System.Drawing.Color.Blue;
             this.BtnTypeNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnTypeNew.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnTypeNew.Location = new System.Drawing.Point(798, 496);
+            this.BtnTypeNew.Location = new System.Drawing.Point(798, 422);
             this.BtnTypeNew.Name = "BtnTypeNew";
             this.BtnTypeNew.Size = new System.Drawing.Size(192, 57);
             this.BtnTypeNew.TabIndex = 11;
@@ -221,18 +225,18 @@
             this.CbDocEducat.Size = new System.Drawing.Size(306, 37);
             this.CbDocEducat.TabIndex = 47;
             // 
-            // BtnTypePractik
+            // BtnTypePractikNew
             // 
-            this.BtnTypePractik.BackColor = System.Drawing.Color.Blue;
-            this.BtnTypePractik.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BtnTypePractik.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnTypePractik.Location = new System.Drawing.Point(798, 714);
-            this.BtnTypePractik.Name = "BtnTypePractik";
-            this.BtnTypePractik.Size = new System.Drawing.Size(192, 57);
-            this.BtnTypePractik.TabIndex = 51;
-            this.BtnTypePractik.Text = "Добавить";
-            this.BtnTypePractik.UseVisualStyleBackColor = false;
-            this.BtnTypePractik.Click += new System.EventHandler(this.BtnTypePractik_Click);
+            this.BtnTypePractikNew.BackColor = System.Drawing.Color.Blue;
+            this.BtnTypePractikNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnTypePractikNew.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnTypePractikNew.Location = new System.Drawing.Point(798, 679);
+            this.BtnTypePractikNew.Name = "BtnTypePractikNew";
+            this.BtnTypePractikNew.Size = new System.Drawing.Size(192, 57);
+            this.BtnTypePractikNew.TabIndex = 51;
+            this.BtnTypePractikNew.Text = "Добавить";
+            this.BtnTypePractikNew.UseVisualStyleBackColor = false;
+            this.BtnTypePractikNew.Click += new System.EventHandler(this.BtnTypePractik_Click);
             // 
             // label9
             // 
@@ -263,13 +267,69 @@
             this.label10.TabIndex = 48;
             this.label10.Text = "Тип практики";
             // 
+            // BtnCourseEdit
+            // 
+            this.BtnCourseEdit.BackColor = System.Drawing.Color.Blue;
+            this.BtnCourseEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnCourseEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnCourseEdit.Location = new System.Drawing.Point(798, 149);
+            this.BtnCourseEdit.Name = "BtnCourseEdit";
+            this.BtnCourseEdit.Size = new System.Drawing.Size(192, 57);
+            this.BtnCourseEdit.TabIndex = 52;
+            this.BtnCourseEdit.Text = "Изменить";
+            this.BtnCourseEdit.UseVisualStyleBackColor = false;
+            this.BtnCourseEdit.Click += new System.EventHandler(this.BtnCourseEdit_Click);
+            // 
+            // BtnProgEdit
+            // 
+            this.BtnProgEdit.BackColor = System.Drawing.Color.Blue;
+            this.BtnProgEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnProgEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnProgEdit.Location = new System.Drawing.Point(798, 298);
+            this.BtnProgEdit.Name = "BtnProgEdit";
+            this.BtnProgEdit.Size = new System.Drawing.Size(192, 57);
+            this.BtnProgEdit.TabIndex = 53;
+            this.BtnProgEdit.Text = "Изменить";
+            this.BtnProgEdit.UseVisualStyleBackColor = false;
+            this.BtnProgEdit.Click += new System.EventHandler(this.BtnProgEdit_Click);
+            // 
+            // BtnTypeEdit
+            // 
+            this.BtnTypeEdit.BackColor = System.Drawing.Color.Blue;
+            this.BtnTypeEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnTypeEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnTypeEdit.Location = new System.Drawing.Point(798, 509);
+            this.BtnTypeEdit.Name = "BtnTypeEdit";
+            this.BtnTypeEdit.Size = new System.Drawing.Size(192, 57);
+            this.BtnTypeEdit.TabIndex = 54;
+            this.BtnTypeEdit.Text = "Изменить";
+            this.BtnTypeEdit.UseVisualStyleBackColor = false;
+            this.BtnTypeEdit.Click += new System.EventHandler(this.BtnTypeEdit_Click);
+            // 
+            // BtnTypePractikEdit
+            // 
+            this.BtnTypePractikEdit.BackColor = System.Drawing.Color.Blue;
+            this.BtnTypePractikEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnTypePractikEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnTypePractikEdit.Location = new System.Drawing.Point(798, 760);
+            this.BtnTypePractikEdit.Name = "BtnTypePractikEdit";
+            this.BtnTypePractikEdit.Size = new System.Drawing.Size(192, 57);
+            this.BtnTypePractikEdit.TabIndex = 55;
+            this.BtnTypePractikEdit.Text = "Изменить";
+            this.BtnTypePractikEdit.UseVisualStyleBackColor = false;
+            this.BtnTypePractikEdit.Click += new System.EventHandler(this.BtnTypePractikEdit_Click);
+            // 
             // AddEditEducation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1002, 857);
-            this.Controls.Add(this.BtnTypePractik);
+            this.Controls.Add(this.BtnTypePractikEdit);
+            this.Controls.Add(this.BtnTypeEdit);
+            this.Controls.Add(this.BtnProgEdit);
+            this.Controls.Add(this.BtnCourseEdit);
+            this.Controls.Add(this.BtnTypePractikNew);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.TbTypePractik);
             this.Controls.Add(this.label10);
@@ -303,22 +363,26 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TbCourse;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TbProg;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox TbType;
-        private System.Windows.Forms.Button BtnCourseNew;
-        private System.Windows.Forms.Button BtnProgNew;
-        private System.Windows.Forms.Button BtnTypeNew;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox TbKolChas;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox CbDocEducat;
-        private System.Windows.Forms.Button BtnTypePractik;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox TbTypePractik;
         private System.Windows.Forms.Label label10;
+        public System.Windows.Forms.Button BtnCourseNew;
+        public System.Windows.Forms.Button BtnProgNew;
+        public System.Windows.Forms.Button BtnTypeNew;
+        public System.Windows.Forms.Button BtnTypePractikNew;
+        public System.Windows.Forms.Button BtnCourseEdit;
+        public System.Windows.Forms.Button BtnProgEdit;
+        public System.Windows.Forms.Button BtnTypeEdit;
+        public System.Windows.Forms.Button BtnTypePractikEdit;
+        public System.Windows.Forms.TextBox TbCourse;
+        public System.Windows.Forms.TextBox TbProg;
+        public System.Windows.Forms.TextBox TbType;
+        public System.Windows.Forms.TextBox TbKolChas;
+        public System.Windows.Forms.ComboBox CbDocEducat;
+        public System.Windows.Forms.TextBox TbTypePractik;
     }
 }
