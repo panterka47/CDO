@@ -26,19 +26,25 @@ namespace ЦДО.Forms
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.Student". При необходимости она может быть перемещена или удалена.
             this.studentTableAdapter1.Fill(this.cDODataSet1.Student);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.Student". При необходимости она может быть перемещена или удалена.
-            this.studentTableAdapter.Fill(this.cDODataSet.Student);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.Group". При необходимости она может быть перемещена или удалена.
-            this.groupTableAdapter.Fill(this.cDODataSet.Group);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.Group". При необходимости она может быть перемещена или удалена.
-            this.groupTableAdapter.Fill(this.cDODataSet.Group);
-
+          
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             p = Convert.ToString(this.dataGridView1.CurrentRow.Cells[0].Value);
             TbStudent.Text = p;
+
+            using (SqlConnection connecting = new SqlConnection(Program.connection))
+            {
+                connecting.Open();
+                SqlCommand cmd = connecting.CreateCommand();
+
+                //Добавление документа
+                cmd.CommandText = " SELECT NameGroup FROM [Student] WHERE IDStudent ='" + p + "'";
+                cmd.ExecuteScalar();
+                CbGroup.Text = Convert.ToString(cmd.ExecuteScalar());
+            }
+
         }
 
         private void BtnCourseNew_Click(object sender, EventArgs e)
@@ -51,10 +57,15 @@ namespace ЦДО.Forms
                     SqlCommand cmd = connecting.CreateCommand();
 
                     //Добавление документа
-                    cmd.CommandText = "INSERT INTO [Documents] (TypeDoc, Group, IdStudent, StatusDoc, Utrata, Obmen, Unichtog, SeriesDoc, NumberDoc, RegNumber, DateIssued) VALUES ('" + CbTypeDoc.Text + "', '" + CbGroup.Text + "','" + Convert.ToInt32(TbStudent.Text) + "','" + CbStatusDoc.Text + "', '" + CbUtrata.Text + "','" + CbObmen.Text + "', '" + CbUnichtog.Text + "', '" + TbSeriesDoc.Text + "', '" + Convert.ToInt32(TbNumberDoc.Text) + "', '" + Convert.ToInt32(TbRegNumber.Text) + "', '"+Convert.ToDateTime(DateTime.Now).ToShortDateString()+"'";
+                    cmd.CommandText = "INSERT INTO [Documents] (TypeDoc, [Group], IdStudent, StatusDoc, Utrata, Obmen, Unichtog, SeriesDoc, NumberDoc, RegNumber, DateIssued) VALUES ('" + Convert.ToString(CbTypeDoc.Text) + "', '" + Convert.ToString(CbGroup.Text) + "','" + Convert.ToInt32(TbStudent.Text) + "','" + CbStatusDoc.Text + "', '" + CbUtrata.Text + "','" + CbObmen.Text + "', '" + CbUnichtog.Text + "', '" + TbSeriesDoc.Text + "', '" + Convert.ToInt32(TbNumberDoc.Text) + "', '" + Convert.ToInt32(TbRegNumber.Text) + "', '"+Convert.ToDateTime(dateTimedateissued.Value).ToShortDateString()+"')";
                     cmd.ExecuteScalar();
 
                     MessageBox.Show("Документ добавлен");
+
+                    Documents ifrm = new Documents();
+                    ifrm.Show();
+                    this.Hide();
+
 
                 }
             }

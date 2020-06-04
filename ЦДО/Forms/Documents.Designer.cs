@@ -53,9 +53,15 @@
             this.BtnBack = new System.Windows.Forms.Button();
             this.documentsTableAdapter1 = new ЦДО.BD.CDODataSetTableAdapters.DocumentsTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CbTypeDoc = new System.Windows.Forms.ComboBox();
             this.typeProgBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.typeProgTableAdapter = new ЦДО.BD.CDODataSetTableAdapters.TypeProgTableAdapter();
+            this.dateTimeOt = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dateTimeDo = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDocuments)).BeginInit();
@@ -256,7 +262,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.Highlight;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(564, 531);
+            this.button1.Location = new System.Drawing.Point(131, 612);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(252, 60);
             this.button1.TabIndex = 61;
@@ -264,18 +270,18 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboBox1
+            // CbTypeDoc
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.CbTypeDoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CbTypeDoc.FormattingEnabled = true;
+            this.CbTypeDoc.Items.AddRange(new object[] {
             "Диплом",
             "Удостоверение",
             "Сертификат"});
-            this.comboBox1.Location = new System.Drawing.Point(86, 551);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(281, 33);
-            this.comboBox1.TabIndex = 62;
+            this.CbTypeDoc.Location = new System.Drawing.Point(237, 546);
+            this.CbTypeDoc.Name = "CbTypeDoc";
+            this.CbTypeDoc.Size = new System.Drawing.Size(281, 33);
+            this.CbTypeDoc.TabIndex = 62;
             // 
             // typeProgBindingSource
             // 
@@ -286,13 +292,75 @@
             // 
             this.typeProgTableAdapter.ClearBeforeFill = true;
             // 
+            // dateTimeOt
+            // 
+            this.dateTimeOt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateTimeOt.Location = new System.Drawing.Point(98, 488);
+            this.dateTimeOt.Name = "dateTimeOt";
+            this.dateTimeOt.Size = new System.Drawing.Size(200, 30);
+            this.dateTimeOt.TabIndex = 63;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(38, 460);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 25);
+            this.label2.TabIndex = 64;
+            this.label2.Text = "Период";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(38, 495);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 25);
+            this.label3.TabIndex = 65;
+            this.label3.Text = "От";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(320, 495);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 25);
+            this.label4.TabIndex = 67;
+            this.label4.Text = "До";
+            // 
+            // dateTimeDo
+            // 
+            this.dateTimeDo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateTimeDo.Location = new System.Drawing.Point(380, 488);
+            this.dateTimeDo.Name = "dateTimeDo";
+            this.dateTimeDo.Size = new System.Drawing.Size(200, 30);
+            this.dateTimeDo.TabIndex = 66;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(38, 549);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(154, 25);
+            this.label5.TabIndex = 68;
+            this.label5.Text = "Тип документа";
+            // 
             // Documents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1104, 650);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(1104, 684);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.dateTimeDo);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dateTimeOt);
+            this.Controls.Add(this.CbTypeDoc);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.BtnBack);
@@ -312,6 +380,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cDODataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -353,8 +422,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CbTypeDoc;
         private System.Windows.Forms.BindingSource typeProgBindingSource;
         private BD.CDODataSetTableAdapters.TypeProgTableAdapter typeProgTableAdapter;
+        private System.Windows.Forms.DateTimePicker dateTimeOt;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker dateTimeDo;
+        private System.Windows.Forms.Label label5;
     }
 }

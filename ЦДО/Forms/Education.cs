@@ -57,7 +57,8 @@ namespace ЦДО.Forms
 
         private void BtnAddCourse_Click(object sender, EventArgs e)
         {
-            
+            k = "";
+
 
             AddEditEducation ifrm = new AddEditEducation(k);
             ifrm.BtnCourseNew.Enabled = true;
@@ -69,7 +70,8 @@ namespace ЦДО.Forms
             ifrm.BtnTypePractikNew.Enabled = false;
             ifrm.BtnTypePractikEdit.Enabled = false;
 
-
+            ifrm.Show();
+            this.Hide();
 
         }
 
@@ -226,6 +228,7 @@ namespace ЦДО.Forms
 
         private void BtnAddProgram_Click(object sender, EventArgs e)
         {
+            k = "";
             AddEditEducation ifrm = new AddEditEducation(k);
             ifrm.BtnCourseNew.Enabled = false;
             ifrm.BtnCourseEdit.Enabled = false;
@@ -235,10 +238,13 @@ namespace ЦДО.Forms
             ifrm.BtnTypeEdit.Enabled = false;
             ifrm.BtnTypePractikNew.Enabled = false;
             ifrm.BtnTypePractikEdit.Enabled = false;
+            ifrm.Show();
+            this.Hide();
         }
 
         private void BtnAddTypeProg_Click(object sender, EventArgs e)
         {
+            k = "";
             AddEditEducation ifrm = new AddEditEducation(k);
             ifrm.BtnCourseNew.Enabled = false;
             ifrm.BtnCourseEdit.Enabled = false;
@@ -248,11 +254,14 @@ namespace ЦДО.Forms
             ifrm.BtnTypeEdit.Enabled = false;
             ifrm.BtnTypePractikNew.Enabled = false;
             ifrm.BtnTypePractikEdit.Enabled = false;
+            ifrm.Show();
+            this.Hide();
         }
 
       
         private void BtnAddTypePractik_Click(object sender, EventArgs e)
         {
+            k = "";
             AddEditEducation ifrm = new AddEditEducation(k);
             ifrm.BtnCourseNew.Enabled = false;
             ifrm.BtnCourseEdit.Enabled = false;
@@ -262,6 +271,8 @@ namespace ЦДО.Forms
             ifrm.BtnTypeEdit.Enabled = false;
             ifrm.BtnTypePractikNew.Enabled = true;
             ifrm.BtnTypePractikEdit.Enabled = false;
+            ifrm.Show();
+            this.Hide();
         }
 
         private void BtnEditCourse_Click(object sender, EventArgs e)

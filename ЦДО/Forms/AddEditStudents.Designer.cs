@@ -84,19 +84,30 @@
             this.label25 = new System.Windows.Forms.Label();
             this.TbDop = new System.Windows.Forms.TextBox();
             this.CbTypeCourse = new System.Windows.Forms.ComboBox();
+            this.programBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cDODataSet2 = new ЦДО.BD.CDODataSet();
             this.typeProgBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label26 = new System.Windows.Forms.Label();
             this.CbTypeObuch = new System.Windows.Forms.ComboBox();
+            this.typeObuchBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.typeObuchBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label27 = new System.Windows.Forms.Label();
             this.CbNameProg = new System.Windows.Forms.ComboBox();
+            this.typeProgBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label28 = new System.Windows.Forms.Label();
             this.TbGroup = new System.Windows.Forms.ComboBox();
             this.groupBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.programTableAdapter2 = new ЦДО.BD.CDODataSetTableAdapters.ProgramTableAdapter();
+            this.typeProgTableAdapter2 = new ЦДО.BD.CDODataSetTableAdapters.TypeProgTableAdapter();
+            this.typeObuchTableAdapter2 = new ЦДО.BD.CDODataSetTableAdapters.TypeObuchTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeObuchBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeObuchBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).BeginInit();
@@ -109,7 +120,7 @@
             this.TbSurname.Name = "TbSurname";
             this.TbSurname.Size = new System.Drawing.Size(306, 34);
             this.TbSurname.TabIndex = 0;
-            this.TbSurname.Text = "Мальцева";
+            this.TbSurname.Text = "Суслова";
             // 
             // TbName
             // 
@@ -118,7 +129,7 @@
             this.TbName.Name = "TbName";
             this.TbName.Size = new System.Drawing.Size(306, 34);
             this.TbName.TabIndex = 1;
-            this.TbName.Text = "Анастасия";
+            this.TbName.Text = "Ирина";
             this.TbName.TextChanged += new System.EventHandler(this.TbName_TextChanged);
             // 
             // TbPatronymic
@@ -128,7 +139,7 @@
             this.TbPatronymic.Name = "TbPatronymic";
             this.TbPatronymic.Size = new System.Drawing.Size(306, 34);
             this.TbPatronymic.TabIndex = 2;
-            this.TbPatronymic.Text = "Андреевна";
+            this.TbPatronymic.Text = "Вадимовна";
             // 
             // TbPlaceOfBirth
             // 
@@ -146,7 +157,7 @@
             this.DateOfBirth.Name = "DateOfBirth";
             this.DateOfBirth.Size = new System.Drawing.Size(306, 34);
             this.DateOfBirth.TabIndex = 4;
-            this.DateOfBirth.Value = new System.DateTime(2000, 2, 4, 0, 0, 0, 0);
+            this.DateOfBirth.Value = new System.DateTime(2000, 6, 26, 0, 0, 0, 0);
             // 
             // TbNationality
             // 
@@ -281,7 +292,7 @@
             this.TbNumberCertificate.Name = "TbNumberCertificate";
             this.TbNumberCertificate.Size = new System.Drawing.Size(306, 34);
             this.TbNumberCertificate.TabIndex = 17;
-            this.TbNumberCertificate.Text = "214334";
+            this.TbNumberCertificate.Text = "201486";
             // 
             // label11
             // 
@@ -338,7 +349,7 @@
             this.TbNumberDoc.Name = "TbNumberDoc";
             this.TbNumberDoc.Size = new System.Drawing.Size(306, 34);
             this.TbNumberDoc.TabIndex = 37;
-            this.TbNumberDoc.Text = "512473";
+            this.TbNumberDoc.Text = "512474";
             // 
             // label14
             // 
@@ -473,7 +484,7 @@
             this.PaspDateIssued.Name = "PaspDateIssued";
             this.PaspDateIssued.Size = new System.Drawing.Size(306, 34);
             this.PaspDateIssued.TabIndex = 43;
-            this.PaspDateIssued.Value = new System.DateTime(2014, 4, 3, 0, 0, 0, 0);
+            this.PaspDateIssued.Value = new System.DateTime(2014, 7, 2, 0, 0, 0, 0);
             // 
             // TbPhone
             // 
@@ -551,7 +562,7 @@
             this.TbEmail.Name = "TbEmail";
             this.TbEmail.Size = new System.Drawing.Size(306, 34);
             this.TbEmail.TabIndex = 50;
-            this.TbEmail.Text = "nastya-maa@ngs.ru";
+            this.TbEmail.Text = "suslova-iv@ya.ru";
             // 
             // BtnEdit
             // 
@@ -564,7 +575,7 @@
             this.BtnEdit.TabIndex = 52;
             this.BtnEdit.Text = "Изменить";
             this.BtnEdit.UseVisualStyleBackColor = false;
-           // this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click_1);
+            this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // BtnDog
             // 
@@ -575,7 +586,7 @@
             this.BtnDog.Name = "BtnDog";
             this.BtnDog.Size = new System.Drawing.Size(252, 60);
             this.BtnDog.TabIndex = 53;
-            this.BtnDog.Text = "Сформировать договор";
+            this.BtnDog.Text = "Сформировать заявление";
             this.BtnDog.UseVisualStyleBackColor = false;
             this.BtnDog.Click += new System.EventHandler(this.BtnDog_Click_1);
             // 
@@ -612,6 +623,7 @@
             this.button1.TabIndex = 57;
             this.button1.Text = "Назад";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -624,6 +636,7 @@
             this.button2.TabIndex = 58;
             this.button2.Text = "Выход";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // label25
             // 
@@ -642,18 +655,27 @@
             this.TbDop.Name = "TbDop";
             this.TbDop.Size = new System.Drawing.Size(306, 64);
             this.TbDop.TabIndex = 60;
-            this.TbDop.Text = "Инвалид II группы";
             // 
             // CbTypeCourse
             // 
-            this.CbTypeCourse.DataSource = this.typeProgBindingSource;
-            this.CbTypeCourse.DisplayMember = "NameType";
+            this.CbTypeCourse.DataSource = this.programBindingSource1;
+            this.CbTypeCourse.DisplayMember = "NameProg";
             this.CbTypeCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CbTypeCourse.FormattingEnabled = true;
             this.CbTypeCourse.Location = new System.Drawing.Point(964, 901);
             this.CbTypeCourse.Name = "CbTypeCourse";
             this.CbTypeCourse.Size = new System.Drawing.Size(306, 37);
             this.CbTypeCourse.TabIndex = 62;
+            // 
+            // programBindingSource1
+            // 
+            this.programBindingSource1.DataMember = "Program";
+            this.programBindingSource1.DataSource = this.cDODataSet2;
+            // 
+            // cDODataSet2
+            // 
+            this.cDODataSet2.DataSetName = "CDODataSet";
+            this.cDODataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // typeProgBindingSource
             // 
@@ -670,7 +692,7 @@
             // 
             // CbTypeObuch
             // 
-            this.CbTypeObuch.DataSource = this.typeObuchBindingSource;
+            this.CbTypeObuch.DataSource = this.typeObuchBindingSource1;
             this.CbTypeObuch.DisplayMember = "NameType";
             this.CbTypeObuch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CbTypeObuch.FormattingEnabled = true;
@@ -678,6 +700,11 @@
             this.CbTypeObuch.Name = "CbTypeObuch";
             this.CbTypeObuch.Size = new System.Drawing.Size(306, 37);
             this.CbTypeObuch.TabIndex = 64;
+            // 
+            // typeObuchBindingSource1
+            // 
+            this.typeObuchBindingSource1.DataMember = "TypeObuch";
+            this.typeObuchBindingSource1.DataSource = this.cDODataSet2;
             // 
             // typeObuchBindingSource
             // 
@@ -694,14 +721,19 @@
             // 
             // CbNameProg
             // 
-            this.CbNameProg.DataSource = this.programBindingSource;
-            this.CbNameProg.DisplayMember = "NameProg";
+            this.CbNameProg.DataSource = this.typeProgBindingSource1;
+            this.CbNameProg.DisplayMember = "NameType";
             this.CbNameProg.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CbNameProg.FormattingEnabled = true;
             this.CbNameProg.Location = new System.Drawing.Point(1299, 951);
             this.CbNameProg.Name = "CbNameProg";
             this.CbNameProg.Size = new System.Drawing.Size(306, 37);
             this.CbNameProg.TabIndex = 66;
+            // 
+            // typeProgBindingSource1
+            // 
+            this.typeProgBindingSource1.DataMember = "TypeProg";
+            this.typeProgBindingSource1.DataSource = this.cDODataSet2;
             // 
             // programBindingSource
             // 
@@ -734,6 +766,18 @@
             // groupBindingSource
             // 
             this.groupBindingSource.DataMember = "Group";
+            // 
+            // programTableAdapter2
+            // 
+            this.programTableAdapter2.ClearBeforeFill = true;
+            // 
+            // typeProgTableAdapter2
+            // 
+            this.typeProgTableAdapter2.ClearBeforeFill = true;
+            // 
+            // typeObuchTableAdapter2
+            // 
+            this.typeObuchTableAdapter2.ClearBeforeFill = true;
             // 
             // AddEditStudents
             // 
@@ -810,8 +854,12 @@
             this.Text = "Добавление/ изменение информации о слушателе";
             this.TransparencyKey = System.Drawing.SystemColors.Control;
             this.Load += new System.EventHandler(this.AddStudents_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeObuchBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeObuchBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).EndInit();
@@ -896,5 +944,12 @@
         private System.Windows.Forms.BindingSource programBindingSource;
         private BD.CDODataSetTableAdapters.ProgramTableAdapter programTableAdapter1;
         private System.Windows.Forms.BindingSource groupBindingSource1;
+        private BD.CDODataSet cDODataSet2;
+        private System.Windows.Forms.BindingSource programBindingSource1;
+        private BD.CDODataSetTableAdapters.ProgramTableAdapter programTableAdapter2;
+        private System.Windows.Forms.BindingSource typeProgBindingSource1;
+        private BD.CDODataSetTableAdapters.TypeProgTableAdapter typeProgTableAdapter2;
+        private System.Windows.Forms.BindingSource typeObuchBindingSource1;
+        private BD.CDODataSetTableAdapters.TypeObuchTableAdapter typeObuchTableAdapter2;
     }
 }

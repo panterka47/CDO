@@ -52,7 +52,7 @@
             this.TbPass.Name = "TbPass";
             this.TbPass.Size = new System.Drawing.Size(415, 38);
             this.TbPass.TabIndex = 11;
-            this.TbPass.Text = "fkkf";
+            this.TbPass.Text = "mver";
             // 
             // TbLogin
             // 
@@ -61,7 +61,7 @@
             this.TbLogin.Name = "TbLogin";
             this.TbLogin.Size = new System.Drawing.Size(415, 38);
             this.TbLogin.TabIndex = 10;
-            this.TbLogin.Text = "Egoshina-AA";
+            this.TbLogin.Text = "mver";
             // 
             // label3
             // 
@@ -132,7 +132,7 @@
             this.TbMail.Name = "TbMail";
             this.TbMail.Size = new System.Drawing.Size(415, 38);
             this.TbMail.TabIndex = 13;
-            this.TbMail.Text = "egoshina.alla@mail.ru";
+            this.TbMail.Text = "mver@ngs.ru";
             // 
             // label4
             // 
@@ -151,7 +151,7 @@
             this.TbPassRep.Name = "TbPassRep";
             this.TbPassRep.Size = new System.Drawing.Size(415, 38);
             this.TbPassRep.TabIndex = 15;
-            this.TbPassRep.Text = "fkkf";
+            this.TbPassRep.Text = "mver";
             // 
             // label5
             // 
@@ -180,7 +180,7 @@
             this.Controls.Add(this.BtnRegistr);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Registration";
-            this.Text = "Регистрация";
+            this.Text = "mver";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

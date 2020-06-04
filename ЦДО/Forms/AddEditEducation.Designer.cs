@@ -95,6 +95,7 @@
             this.TbCourse.Name = "TbCourse";
             this.TbCourse.Size = new System.Drawing.Size(367, 82);
             this.TbCourse.TabIndex = 3;
+            this.TbCourse.Text = "Подбор сотрудников";
             // 
             // label4
             // 
@@ -124,6 +125,7 @@
             this.TbProg.Name = "TbProg";
             this.TbProg.Size = new System.Drawing.Size(367, 82);
             this.TbProg.TabIndex = 5;
+            this.TbProg.Text = "Кадры";
             // 
             // label6
             // 

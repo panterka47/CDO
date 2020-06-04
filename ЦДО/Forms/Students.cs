@@ -96,7 +96,7 @@ namespace ЦДО
                 email.ExecuteScalar();
 
                 SqlCommand group = connecting.CreateCommand();
-                group.CommandText = "SELECT Group FROM [Student] WHERE IDStudent= " + p;
+                group.CommandText = "SELECT NameGroup FROM [Student] WHERE IDStudent= " + p;
                 group.ExecuteScalar();
 
                 SqlCommand dop = connecting.CreateCommand();
@@ -137,31 +137,31 @@ namespace ЦДО
                 // Данные из таблицы Образование
 
                 SqlCommand education = connecting.CreateCommand();
-                education.CommandText = "SELECT Education FROM [Pasport] WHERE IDStudent= " + p;
+                education.CommandText = "SELECT Education FROM [Education] WHERE IDStudent= " + p;
                 education.ExecuteScalar();
 
                 SqlCommand dateeducation = connecting.CreateCommand();
-                dateeducation.CommandText = "SELECT DateEducation FROM [Pasport] WHERE IDStudent= " + p;
+                dateeducation.CommandText = "SELECT DateEducation FROM [Education] WHERE IDStudent= " + p;
                 dateeducation.ExecuteScalar();
 
                 SqlCommand doceducation = connecting.CreateCommand();
-                doceducation.CommandText = "SELECT DocEducation FROM [Pasport] WHERE IDStudent= " + p;
+                doceducation.CommandText = "SELECT DocEducation FROM [Education] WHERE IDStudent= " + p;
                 doceducation.ExecuteScalar();
 
                 SqlCommand seriesdoc = connecting.CreateCommand();
-                seriesdoc.CommandText = "SELECT SeriesDoc FROM [Pasport] WHERE IDStudent= " + p;
+                seriesdoc.CommandText = "SELECT SeriesDoc FROM [Education] WHERE IDStudent= " + p;
                 seriesdoc.ExecuteScalar();
 
                 SqlCommand numberdoc = connecting.CreateCommand();
-                numberdoc.CommandText = "SELECT NumberDoc FROM [Pasport] WHERE IDStudent= " + p;
+                numberdoc.CommandText = "SELECT NumberDoc FROM [Education] WHERE IDStudent= " + p;
                 numberdoc.ExecuteScalar();
 
                 SqlCommand nameinstitute = connecting.CreateCommand();
-                nameinstitute.CommandText = "SELECT NameInstitute FROM [Pasport] WHERE IDStudent= " + p;
+                nameinstitute.CommandText = "SELECT NameInstitute FROM [Education] WHERE IDStudent= " + p;
                 nameinstitute.ExecuteScalar();
 
                 SqlCommand dateissueddoc = connecting.CreateCommand();
-                dateissueddoc.CommandText = "SELECT DateIssuedDoc FROM [Pasport] WHERE IDStudent= " + p;
+                dateissueddoc.CommandText = "SELECT DateIssuedDoc FROM [Education] WHERE IDStudent= " + p;
                 dateissueddoc.ExecuteScalar();
 
 
@@ -227,16 +227,20 @@ namespace ЦДО
                 //Удаление студента
 
                 //Удаление данных о студенте
-                cmd.CommandText = "DELETE*FROM [Student] WHERE IDStudent ='" + p + "'";
+                cmd.CommandText = "DELETE FROM [Student] WHERE IDStudent ='" + p + "'";
                 cmd.ExecuteScalar();
                 SqlCommand cmd1 = connecting.CreateCommand();
-                cmd1.CommandText = "DELETE*FROM [Pasport] WHERE IDStudent ='" + p + "'";
+                cmd1.CommandText = "DELETE FROM [Pasport] WHERE IDStudent ='" + p + "'";
                 cmd1.ExecuteScalar();
                 SqlCommand cmd2 = connecting.CreateCommand();
-                cmd2.CommandText = "DELETE*FROM [Education] WHERE IDStudent ='" + p + "'";
+                cmd2.CommandText = "DELETE FROM [Education] WHERE IDStudent ='" + p + "'";
                 cmd2.ExecuteScalar();
 
                 connecting.Close();
+                Students ifrm = new Students();
+                ifrm.Show();
+                this.Hide();
+
 
             }
         }
@@ -253,6 +257,24 @@ namespace ЦДО
             frm.Show();
             this.Hide();
 
+        }
+
+       
+
+        private void btnPoisk_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < GridStudent.RowCount; i++)
+            {
+                GridStudent.Rows[i].Selected = false;
+                for (int j = 0; j < GridStudent.ColumnCount; j++)
+                    if (GridStudent.Rows[i].Cells[j].Value != null)
+                        if (GridStudent.Rows[i].Cells[j].Value.ToString().Contains(TbReserch.Text))
+                        {
+                            GridStudent.Rows[i].Selected = true;
+                            break;
+                        }
+
+            }
         }
     }
 }

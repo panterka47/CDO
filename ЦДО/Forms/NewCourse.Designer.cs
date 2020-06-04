@@ -43,43 +43,43 @@
             this.TbChas = new System.Windows.Forms.TextBox();
             this.TbSmeta = new System.Windows.Forms.TextBox();
             this.CbTypeObuch = new System.Windows.Forms.ComboBox();
+            this.typeObuchBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cDODataSet3 = new ЦДО.BD.CDODataSet();
             this.typeObuchBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.CbCourse = new System.Windows.Forms.ComboBox();
+            this.courseBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.CbProgram = new System.Windows.Forms.ComboBox();
+            this.programBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.CbTypeProg = new System.Windows.Forms.ComboBox();
+            this.typeProgBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.typeProgBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dateStart = new System.Windows.Forms.DateTimePicker();
             this.dateEnd = new System.Windows.Forms.DateTimePicker();
             this.CbTypePractik = new System.Windows.Forms.ComboBox();
+            this.typePractikBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.typePractikBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.BtnAdd = new System.Windows.Forms.Button();
             this.BtnEdit = new System.Windows.Forms.Button();
             this.BtnBack = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
-            this.cDODataSet3 = new ЦДО.BD.CDODataSet();
-            this.courseBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.courseTableAdapter2 = new ЦДО.BD.CDODataSetTableAdapters.CourseTableAdapter();
-            this.programBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.programTableAdapter2 = new ЦДО.BD.CDODataSetTableAdapters.ProgramTableAdapter();
-            this.typeProgBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.typeProgTableAdapter2 = new ЦДО.BD.CDODataSetTableAdapters.TypeProgTableAdapter();
-            this.typeObuchBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.typeObuchTableAdapter3 = new ЦДО.BD.CDODataSetTableAdapters.TypeObuchTableAdapter();
-            this.typePractikBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.typePractikTableAdapter3 = new ЦДО.BD.CDODataSetTableAdapters.TypePractikTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.typeObuchBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.typePractikBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeObuchBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeObuchBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typePractikBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typePractikBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -207,6 +207,16 @@
             this.CbTypeObuch.Size = new System.Drawing.Size(208, 33);
             this.CbTypeObuch.TabIndex = 12;
             // 
+            // typeObuchBindingSource1
+            // 
+            this.typeObuchBindingSource1.DataMember = "TypeObuch";
+            this.typeObuchBindingSource1.DataSource = this.cDODataSet3;
+            // 
+            // cDODataSet3
+            // 
+            this.cDODataSet3.DataSetName = "CDODataSet";
+            this.cDODataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // typeObuchBindingSource
             // 
             this.typeObuchBindingSource.DataMember = "TypeObuch";
@@ -221,6 +231,11 @@
             this.CbCourse.Name = "CbCourse";
             this.CbCourse.Size = new System.Drawing.Size(233, 33);
             this.CbCourse.TabIndex = 13;
+            // 
+            // courseBindingSource1
+            // 
+            this.courseBindingSource1.DataMember = "Course";
+            this.courseBindingSource1.DataSource = this.cDODataSet3;
             // 
             // courseBindingSource
             // 
@@ -237,6 +252,11 @@
             this.CbProgram.Size = new System.Drawing.Size(233, 33);
             this.CbProgram.TabIndex = 14;
             // 
+            // programBindingSource1
+            // 
+            this.programBindingSource1.DataMember = "Program";
+            this.programBindingSource1.DataSource = this.cDODataSet3;
+            // 
             // programBindingSource
             // 
             this.programBindingSource.DataMember = "Program";
@@ -252,6 +272,11 @@
             this.CbTypeProg.Size = new System.Drawing.Size(233, 33);
             this.CbTypeProg.TabIndex = 15;
             this.CbTypeProg.TextChanged += new System.EventHandler(this.CbTypeProg_TextChanged);
+            // 
+            // typeProgBindingSource1
+            // 
+            this.typeProgBindingSource1.DataMember = "TypeProg";
+            this.typeProgBindingSource1.DataSource = this.cDODataSet3;
             // 
             // typeProgBindingSource
             // 
@@ -284,6 +309,11 @@
             this.CbTypePractik.Size = new System.Drawing.Size(208, 33);
             this.CbTypePractik.TabIndex = 18;
             // 
+            // typePractikBindingSource1
+            // 
+            this.typePractikBindingSource1.DataMember = "TypePractik";
+            this.typePractikBindingSource1.DataSource = this.cDODataSet3;
+            // 
             // typePractikBindingSource
             // 
             this.typePractikBindingSource.DataMember = "TypePractik";
@@ -299,7 +329,7 @@
             this.BtnAdd.TabIndex = 50;
             this.BtnAdd.Text = "Добавить";
             this.BtnAdd.UseVisualStyleBackColor = false;
-            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click_1);
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // BtnEdit
             // 
@@ -312,6 +342,7 @@
             this.BtnEdit.TabIndex = 51;
             this.BtnEdit.Text = "Изменить";
             this.BtnEdit.UseVisualStyleBackColor = false;
+            this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // BtnBack
             // 
@@ -339,51 +370,21 @@
             this.BtnExit.UseVisualStyleBackColor = false;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
-            // cDODataSet3
-            // 
-            this.cDODataSet3.DataSetName = "CDODataSet";
-            this.cDODataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // courseBindingSource1
-            // 
-            this.courseBindingSource1.DataMember = "Course";
-            this.courseBindingSource1.DataSource = this.cDODataSet3;
-            // 
             // courseTableAdapter2
             // 
             this.courseTableAdapter2.ClearBeforeFill = true;
-            // 
-            // programBindingSource1
-            // 
-            this.programBindingSource1.DataMember = "Program";
-            this.programBindingSource1.DataSource = this.cDODataSet3;
             // 
             // programTableAdapter2
             // 
             this.programTableAdapter2.ClearBeforeFill = true;
             // 
-            // typeProgBindingSource1
-            // 
-            this.typeProgBindingSource1.DataMember = "TypeProg";
-            this.typeProgBindingSource1.DataSource = this.cDODataSet3;
-            // 
             // typeProgTableAdapter2
             // 
             this.typeProgTableAdapter2.ClearBeforeFill = true;
             // 
-            // typeObuchBindingSource1
-            // 
-            this.typeObuchBindingSource1.DataMember = "TypeObuch";
-            this.typeObuchBindingSource1.DataSource = this.cDODataSet3;
-            // 
             // typeObuchTableAdapter3
             // 
             this.typeObuchTableAdapter3.ClearBeforeFill = true;
-            // 
-            // typePractikBindingSource1
-            // 
-            this.typePractikBindingSource1.DataMember = "TypePractik";
-            this.typePractikBindingSource1.DataSource = this.cDODataSet3;
             // 
             // typePractikTableAdapter3
             // 
@@ -422,17 +423,17 @@
             this.Name = "NewCourse";
             this.Text = "Создание/редактирование курса обучения";
             this.Load += new System.EventHandler(this.NewCourse_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.typeObuchBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.typePractikBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeObuchBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeObuchBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typePractikBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typePractikBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

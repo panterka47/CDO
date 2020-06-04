@@ -35,14 +35,6 @@ namespace ЦДО
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GridStudent = new System.Windows.Forms.DataGridView();
-            this.BtnEdit = new System.Windows.Forms.Button();
-            this.BtnAdd = new System.Windows.Forms.Button();
-            this.BtnDel = new System.Windows.Forms.Button();
-            this.BtnBack = new System.Windows.Forms.Button();
-            this.BtnExit = new System.Windows.Forms.Button();
-            this.cDODataSet3 = new ЦДО.BD.CDODataSet();
-            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentTableAdapter3 = new ЦДО.BD.CDODataSetTableAdapters.StudentTableAdapter();
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,11 +46,22 @@ namespace ЦДО
             this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cDODataSet3 = new ЦДО.BD.CDODataSet();
+            this.BtnEdit = new System.Windows.Forms.Button();
+            this.BtnAdd = new System.Windows.Forms.Button();
+            this.BtnDel = new System.Windows.Forms.Button();
+            this.BtnBack = new System.Windows.Forms.Button();
+            this.BtnExit = new System.Windows.Forms.Button();
+            this.studentTableAdapter3 = new ЦДО.BD.CDODataSetTableAdapters.StudentTableAdapter();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TbReserch = new System.Windows.Forms.TextBox();
+            this.btnPoisk = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridStudent)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -115,84 +118,6 @@ namespace ЦДО
             this.GridStudent.Size = new System.Drawing.Size(1096, 479);
             this.GridStudent.TabIndex = 3;
             this.GridStudent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridStudent_CellClick);
-            // 
-            // BtnEdit
-            // 
-            this.BtnEdit.BackColor = System.Drawing.SystemColors.Highlight;
-            this.BtnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BtnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnEdit.Location = new System.Drawing.Point(1123, 273);
-            this.BtnEdit.Name = "BtnEdit";
-            this.BtnEdit.Size = new System.Drawing.Size(252, 60);
-            this.BtnEdit.TabIndex = 54;
-            this.BtnEdit.Text = "Изменить";
-            this.BtnEdit.UseVisualStyleBackColor = false;
-            this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
-            // 
-            // BtnAdd
-            // 
-            this.BtnAdd.BackColor = System.Drawing.SystemColors.Highlight;
-            this.BtnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BtnAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnAdd.Location = new System.Drawing.Point(1123, 166);
-            this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(252, 60);
-            this.BtnAdd.TabIndex = 53;
-            this.BtnAdd.Text = "Добавить";
-            this.BtnAdd.UseVisualStyleBackColor = false;
-            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
-            // 
-            // BtnDel
-            // 
-            this.BtnDel.BackColor = System.Drawing.SystemColors.Highlight;
-            this.BtnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BtnDel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnDel.Location = new System.Drawing.Point(1123, 378);
-            this.BtnDel.Name = "BtnDel";
-            this.BtnDel.Size = new System.Drawing.Size(252, 60);
-            this.BtnDel.TabIndex = 55;
-            this.BtnDel.Text = "Удалить";
-            this.BtnDel.UseVisualStyleBackColor = false;
-            this.BtnDel.Click += new System.EventHandler(this.BtnDel_Click);
-            // 
-            // BtnBack
-            // 
-            this.BtnBack.BackColor = System.Drawing.SystemColors.Highlight;
-            this.BtnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BtnBack.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnBack.Location = new System.Drawing.Point(1123, 477);
-            this.BtnBack.Name = "BtnBack";
-            this.BtnBack.Size = new System.Drawing.Size(252, 60);
-            this.BtnBack.TabIndex = 56;
-            this.BtnBack.Text = "Назад";
-            this.BtnBack.UseVisualStyleBackColor = false;
-            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
-            // 
-            // BtnExit
-            // 
-            this.BtnExit.BackColor = System.Drawing.SystemColors.Highlight;
-            this.BtnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BtnExit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnExit.Location = new System.Drawing.Point(1123, 578);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(252, 60);
-            this.BtnExit.TabIndex = 57;
-            this.BtnExit.Text = "Выход";
-            this.BtnExit.UseVisualStyleBackColor = false;
-            // 
-            // cDODataSet3
-            // 
-            this.cDODataSet3.DataSetName = "CDODataSet";
-            this.cDODataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // studentBindingSource
-            // 
-            this.studentBindingSource.DataMember = "Student";
-            this.studentBindingSource.DataSource = this.cDODataSet3;
-            // 
-            // studentTableAdapter3
-            // 
-            this.studentTableAdapter3.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn23
             // 
@@ -261,12 +186,124 @@ namespace ЦДО
             this.dataGridViewTextBoxColumn33.HeaderText = "Dop";
             this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
             // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataMember = "Student";
+            this.studentBindingSource.DataSource = this.cDODataSet3;
+            // 
+            // cDODataSet3
+            // 
+            this.cDODataSet3.DataSetName = "CDODataSet";
+            this.cDODataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // BtnEdit
+            // 
+            this.BtnEdit.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnEdit.Location = new System.Drawing.Point(1123, 273);
+            this.BtnEdit.Name = "BtnEdit";
+            this.BtnEdit.Size = new System.Drawing.Size(252, 60);
+            this.BtnEdit.TabIndex = 54;
+            this.BtnEdit.Text = "Изменить";
+            this.BtnEdit.UseVisualStyleBackColor = false;
+            this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
+            // 
+            // BtnAdd
+            // 
+            this.BtnAdd.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnAdd.Location = new System.Drawing.Point(1123, 166);
+            this.BtnAdd.Name = "BtnAdd";
+            this.BtnAdd.Size = new System.Drawing.Size(252, 60);
+            this.BtnAdd.TabIndex = 53;
+            this.BtnAdd.Text = "Добавить";
+            this.BtnAdd.UseVisualStyleBackColor = false;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
+            // 
+            // BtnDel
+            // 
+            this.BtnDel.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnDel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnDel.Location = new System.Drawing.Point(1123, 378);
+            this.BtnDel.Name = "BtnDel";
+            this.BtnDel.Size = new System.Drawing.Size(252, 60);
+            this.BtnDel.TabIndex = 55;
+            this.BtnDel.Text = "Удалить";
+            this.BtnDel.UseVisualStyleBackColor = false;
+            this.BtnDel.Click += new System.EventHandler(this.BtnDel_Click);
+            // 
+            // BtnBack
+            // 
+            this.BtnBack.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnBack.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnBack.Location = new System.Drawing.Point(1123, 477);
+            this.BtnBack.Name = "BtnBack";
+            this.BtnBack.Size = new System.Drawing.Size(252, 60);
+            this.BtnBack.TabIndex = 56;
+            this.BtnBack.Text = "Назад";
+            this.BtnBack.UseVisualStyleBackColor = false;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
+            // 
+            // BtnExit
+            // 
+            this.BtnExit.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnExit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnExit.Location = new System.Drawing.Point(1123, 578);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Size = new System.Drawing.Size(252, 60);
+            this.BtnExit.TabIndex = 57;
+            this.BtnExit.Text = "Выход";
+            this.BtnExit.UseVisualStyleBackColor = false;
+            // 
+            // studentTableAdapter3
+            // 
+            this.studentTableAdapter3.ClearBeforeFill = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(30, 665);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(194, 25);
+            this.label2.TabIndex = 59;
+            this.label2.Text = "Данные для поиска";
+            // 
+            // TbReserch
+            // 
+            this.TbReserch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TbReserch.Location = new System.Drawing.Point(239, 662);
+            this.TbReserch.Name = "TbReserch";
+            this.TbReserch.Size = new System.Drawing.Size(448, 30);
+            this.TbReserch.TabIndex = 60;
+            // 
+            // btnPoisk
+            // 
+            this.btnPoisk.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnPoisk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnPoisk.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnPoisk.Location = new System.Drawing.Point(742, 655);
+            this.btnPoisk.Name = "btnPoisk";
+            this.btnPoisk.Size = new System.Drawing.Size(175, 45);
+            this.btnPoisk.TabIndex = 61;
+            this.btnPoisk.Text = "Поиск";
+            this.btnPoisk.UseVisualStyleBackColor = false;
+            this.btnPoisk.Click += new System.EventHandler(this.btnPoisk_Click);
+            // 
             // Students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1387, 685);
+            this.ClientSize = new System.Drawing.Size(1387, 742);
+            this.Controls.Add(this.btnPoisk);
+            this.Controls.Add(this.TbReserch);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.BtnBack);
             this.Controls.Add(this.BtnDel);
@@ -281,9 +318,10 @@ namespace ЦДО
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridStudent)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -352,5 +390,8 @@ namespace ЦДО
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox TbReserch;
+        private System.Windows.Forms.Button btnPoisk;
     }
 }

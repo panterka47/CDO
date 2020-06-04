@@ -28,14 +28,20 @@ namespace ЦДО
 
         private void AddStudents_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet2.TypeObuch". При необходимости она может быть перемещена или удалена.
+            this.typeObuchTableAdapter2.Fill(this.cDODataSet2.TypeObuch);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet2.TypeProg". При необходимости она может быть перемещена или удалена.
+            this.typeProgTableAdapter2.Fill(this.cDODataSet2.TypeProg);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet2.Program". При необходимости она может быть перемещена или удалена.
+            this.programTableAdapter2.Fill(this.cDODataSet2.Program);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.Program". При необходимости она может быть перемещена или удалена.
-            this.programTableAdapter1.Fill(this.cDODataSet1.Program);
+            //   this.programTableAdapter1.Fill(this.cDODataSet1.Program);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.TypeObuch". При необходимости она может быть перемещена или удалена.
-            this.typeObuchTableAdapter1.Fill(this.cDODataSet1.TypeObuch);
+            //this.typeObuchTableAdapter1.Fill(this.cDODataSet1.TypeObuch);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.TypeProg". При необходимости она может быть перемещена или удалена.
-            this.typeProgTableAdapter1.Fill(this.cDODataSet1.TypeProg);
+            //this.typeProgTableAdapter1.Fill(this.cDODataSet1.TypeProg);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.Group". При необходимости она может быть перемещена или удалена.
-            this.groupTableAdapter.Fill(this.cDODataSet1.Group);
+            // this.groupTableAdapter.Fill(this.cDODataSet1.Group);
 
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
         }
@@ -212,7 +218,7 @@ namespace ЦДО
 
                     //Изменение данных о слушателе
                     SqlCommand WriteCommand;
-                    WriteCommand = new SqlCommand("UPDATE [Student] SET Surname = @Surname, Name = @Name, Patronymic=@Patronymic, DateOfBirth=@DateOfBirth, PlaceOfBirth=@PlaceOfBirth, Nationality=@Nationality, Phone=@Phone, Email=@Email, Group=@Group, Dop=@Dop  WHERE IDStudent = @ID", connecting);
+                    WriteCommand = new SqlCommand("UPDATE [Student] SET Surname = @Surname, Name = @Name, Patronymic=@Patronymic, DateOfBirth=@DateOfBirth, PlaceOfBirth=@PlaceOfBirth, Nationality=@Nationality, Phone=@Phone, Email=@Email, NameGroup=@Group, Dop=@Dop  WHERE IDStudent = @ID", connecting);
 
                     WriteCommand.Parameters.AddWithValue("Surname", TbSurname.Text);
                     WriteCommand.Parameters.AddWithValue("Name", TbName.Text);
@@ -301,6 +307,8 @@ namespace ЦДО
                 // Закрываем документ
                 doc.SaveAs2(@"D:\dogovor.docx");
 
+                
+
                 doc.Close();
                
                 app.Quit();
@@ -382,7 +390,5 @@ namespace ЦДО
 
 
         }
-
-        
     }
 }
