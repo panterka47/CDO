@@ -96,12 +96,17 @@
             this.typeProgBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label28 = new System.Windows.Forms.Label();
-            this.TbGroup = new System.Windows.Forms.ComboBox();
+            this.CbGroup = new System.Windows.Forms.ComboBox();
             this.groupBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.programTableAdapter2 = new ЦДО.BD.CDODataSetTableAdapters.ProgramTableAdapter();
             this.typeProgTableAdapter2 = new ЦДО.BD.CDODataSetTableAdapters.TypeProgTableAdapter();
             this.typeObuchTableAdapter2 = new ЦДО.BD.CDODataSetTableAdapters.TypeObuchTableAdapter();
+            this.BtnDPO = new System.Windows.Forms.Button();
+            this.BtnPO = new System.Windows.Forms.Button();
+            this.cDODataSet3 = new ЦДО.BD.CDODataSet();
+            this.groupBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.groupTableAdapter1 = new ЦДО.BD.CDODataSetTableAdapters.GroupTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDODataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource)).BeginInit();
@@ -111,6 +116,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // TbSurname
@@ -538,7 +545,7 @@
             this.BtnAddStudent.BackColor = System.Drawing.SystemColors.Highlight;
             this.BtnAddStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnAddStudent.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnAddStudent.Location = new System.Drawing.Point(1499, 150);
+            this.BtnAddStudent.Location = new System.Drawing.Point(1526, 76);
             this.BtnAddStudent.Name = "BtnAddStudent";
             this.BtnAddStudent.Size = new System.Drawing.Size(252, 60);
             this.BtnAddStudent.TabIndex = 49;
@@ -569,7 +576,7 @@
             this.BtnEdit.BackColor = System.Drawing.SystemColors.Highlight;
             this.BtnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnEdit.Location = new System.Drawing.Point(1499, 257);
+            this.BtnEdit.Location = new System.Drawing.Point(1526, 183);
             this.BtnEdit.Name = "BtnEdit";
             this.BtnEdit.Size = new System.Drawing.Size(252, 60);
             this.BtnEdit.TabIndex = 52;
@@ -582,7 +589,7 @@
             this.BtnDog.BackColor = System.Drawing.SystemColors.Highlight;
             this.BtnDog.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnDog.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnDog.Location = new System.Drawing.Point(1499, 367);
+            this.BtnDog.Location = new System.Drawing.Point(1526, 293);
             this.BtnDog.Name = "BtnDog";
             this.BtnDog.Size = new System.Drawing.Size(252, 60);
             this.BtnDog.TabIndex = 53;
@@ -595,7 +602,7 @@
             this.BtnSogl.BackColor = System.Drawing.SystemColors.Highlight;
             this.BtnSogl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnSogl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnSogl.Location = new System.Drawing.Point(1499, 466);
+            this.BtnSogl.Location = new System.Drawing.Point(1526, 392);
             this.BtnSogl.Name = "BtnSogl";
             this.BtnSogl.Size = new System.Drawing.Size(252, 60);
             this.BtnSogl.TabIndex = 54;
@@ -617,7 +624,7 @@
             this.button1.BackColor = System.Drawing.SystemColors.Highlight;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(1499, 571);
+            this.button1.Location = new System.Drawing.Point(1526, 679);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(252, 60);
             this.button1.TabIndex = 57;
@@ -630,7 +637,7 @@
             this.button2.BackColor = System.Drawing.SystemColors.Highlight;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(1499, 670);
+            this.button2.Location = new System.Drawing.Point(1526, 778);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(252, 60);
             this.button2.TabIndex = 58;
@@ -748,16 +755,17 @@
             this.label28.TabIndex = 65;
             this.label28.Text = "Тип программы";
             // 
-            // TbGroup
+            // CbGroup
             // 
-            this.TbGroup.DataSource = this.groupBindingSource1;
-            this.TbGroup.DisplayMember = "NameGroup";
-            this.TbGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TbGroup.FormattingEnabled = true;
-            this.TbGroup.Location = new System.Drawing.Point(963, 742);
-            this.TbGroup.Name = "TbGroup";
-            this.TbGroup.Size = new System.Drawing.Size(306, 37);
-            this.TbGroup.TabIndex = 68;
+            this.CbGroup.DataSource = this.groupBindingSource2;
+            this.CbGroup.DisplayMember = "NameGroup";
+            this.CbGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CbGroup.FormattingEnabled = true;
+            this.CbGroup.Location = new System.Drawing.Point(963, 742);
+            this.CbGroup.Name = "CbGroup";
+            this.CbGroup.Size = new System.Drawing.Size(306, 37);
+            this.CbGroup.TabIndex = 68;
+            this.CbGroup.ValueMember = "NameGroup";
             // 
             // groupBindingSource1
             // 
@@ -779,6 +787,46 @@
             // 
             this.typeObuchTableAdapter2.ClearBeforeFill = true;
             // 
+            // BtnDPO
+            // 
+            this.BtnDPO.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnDPO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnDPO.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnDPO.Location = new System.Drawing.Point(1526, 482);
+            this.BtnDPO.Name = "BtnDPO";
+            this.BtnDPO.Size = new System.Drawing.Size(252, 60);
+            this.BtnDPO.TabIndex = 69;
+            this.BtnDPO.Text = "Сформировать договор ДПО";
+            this.BtnDPO.UseVisualStyleBackColor = false;
+            this.BtnDPO.Click += new System.EventHandler(this.BtnDPO_Click);
+            // 
+            // BtnPO
+            // 
+            this.BtnPO.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnPO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnPO.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnPO.Location = new System.Drawing.Point(1526, 571);
+            this.BtnPO.Name = "BtnPO";
+            this.BtnPO.Size = new System.Drawing.Size(252, 60);
+            this.BtnPO.TabIndex = 70;
+            this.BtnPO.Text = "Сформировать договор ПО";
+            this.BtnPO.UseVisualStyleBackColor = false;
+            this.BtnPO.Click += new System.EventHandler(this.BtnPO_Click);
+            // 
+            // cDODataSet3
+            // 
+            this.cDODataSet3.DataSetName = "CDODataSet";
+            this.cDODataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // groupBindingSource2
+            // 
+            this.groupBindingSource2.DataMember = "Group";
+            this.groupBindingSource2.DataSource = this.cDODataSet3;
+            // 
+            // groupTableAdapter1
+            // 
+            this.groupTableAdapter1.ClearBeforeFill = true;
+            // 
             // AddEditStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -786,7 +834,9 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1852, 853);
-            this.Controls.Add(this.TbGroup);
+            this.Controls.Add(this.BtnPO);
+            this.Controls.Add(this.BtnDPO);
+            this.Controls.Add(this.CbGroup);
             this.Controls.Add(this.CbNameProg);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.CbTypeObuch);
@@ -863,6 +913,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -933,7 +985,7 @@
         private BD.CDODataSetTableAdapters.TypeProgTableAdapter typeProgTableAdapter;
         private BD.CDODataSetTableAdapters.TypeObuchTableAdapter typeObuchTableAdapter;
         private BD.CDODataSetTableAdapters.ProgramTableAdapter programTableAdapter;
-        public System.Windows.Forms.ComboBox TbGroup;
+        public System.Windows.Forms.ComboBox CbGroup;
         private BD.CDODataSet cDODataSet1;
         private System.Windows.Forms.BindingSource groupBindingSource;
         private BD.CDODataSetTableAdapters.GroupTableAdapter groupTableAdapter;
@@ -951,5 +1003,10 @@
         private BD.CDODataSetTableAdapters.TypeProgTableAdapter typeProgTableAdapter2;
         private System.Windows.Forms.BindingSource typeObuchBindingSource1;
         private BD.CDODataSetTableAdapters.TypeObuchTableAdapter typeObuchTableAdapter2;
+        private System.Windows.Forms.Button BtnDPO;
+        private System.Windows.Forms.Button BtnPO;
+        private BD.CDODataSet cDODataSet3;
+        private System.Windows.Forms.BindingSource groupBindingSource2;
+        private BD.CDODataSetTableAdapters.GroupTableAdapter groupTableAdapter1;
     }
 }

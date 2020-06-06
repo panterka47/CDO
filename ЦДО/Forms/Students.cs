@@ -23,6 +23,7 @@ namespace ЦДО
         private void GridStudent_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             p = Convert.ToString(this.GridStudent.CurrentRow.Cells[0].Value);
+
           //  MessageBox.Show(p);
         }
 
@@ -174,7 +175,7 @@ namespace ЦДО
                 frm.TbNationality.Text = Convert.ToString(nationality.ExecuteScalar());
                 frm.TbPhone.Text = Convert.ToString(phone.ExecuteScalar());
                 frm.TbEmail.Text = Convert.ToString(email.ExecuteScalar());
-                frm.TbGroup.Text = Convert.ToString(group.ExecuteScalar());
+                frm.CbGroup.Text = Convert.ToString(group.ExecuteScalar());
                 frm.TbDop.Text = Convert.ToString(dop.ExecuteScalar());
 
 
@@ -263,18 +264,97 @@ namespace ЦДО
 
         private void btnPoisk_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < GridStudent.RowCount; i++)
+            if (rbSurname.Checked == true)
             {
-                GridStudent.Rows[i].Selected = false;
-                for (int j = 0; j < GridStudent.ColumnCount; j++)
-                    if (GridStudent.Rows[i].Cells[j].Value != null)
-                        if (GridStudent.Rows[i].Cells[j].Value.ToString().Contains(TbReserch.Text))
-                        {
-                            GridStudent.Rows[i].Selected = true;
-                            break;
-                        }
+                for (int i = 0; i < GridStudent.RowCount; i++)
+                {
+                    GridStudent.Rows[i].Selected = false;
+                    for (int j = 1; j < 2; j++)
+                        if (GridStudent.Rows[i].Cells[j].Value != null)
+                            if (GridStudent.Rows[i].Cells[j].Value.ToString().Contains(TbReserch.Text))
+                            {
+                                GridStudent.DefaultCellStyle.SelectionBackColor = Color.LightBlue;
+                                GridStudent.DefaultCellStyle.SelectionForeColor = Color.Black;
+
+
+
+
+
+                                GridStudent.DefaultCellStyle.ForeColor = Color.Black;
+
+
+                                GridStudent.Rows[i].Selected = true;
+
+
+
+                                break;
+                            }
+
+                }
 
             }
-        }
+            else
+            {
+                if(rbGroup.Checked==true)
+                {
+                    
+                    for (int i = 0; i < GridStudent.RowCount; i++)
+                    {
+                        GridStudent.Rows[i].Selected = false;
+                        for (int j = 9; j < 10; j++)
+                            if (GridStudent.Rows[i].Cells[j].Value != null)
+                                if (GridStudent.Rows[i].Cells[j].Value.ToString().Contains(TbReserch.Text))
+                                {
+                                    GridStudent.DefaultCellStyle.SelectionBackColor = Color.LightBlue;
+                                    GridStudent.DefaultCellStyle.SelectionForeColor = Color.Black;
+
+
+
+
+
+                                    GridStudent.DefaultCellStyle.ForeColor = Color.Black;
+
+
+                                    GridStudent.Rows[i].Selected = true;
+
+
+
+                                    break;
+                                }
+
+                    }
+                }
+
+            }
+
+                    /*
+                    for (int i = 0; i < GridStudent.RowCount; i++)
+                    {
+                        GridStudent.Rows[i].Selected = false;
+                        for (int j = 0; j < GridStudent.ColumnCount; j++)
+                            if (GridStudent.Rows[i].Cells[j].Value != null)
+                                if (GridStudent.Rows[i].Cells[j].Value.ToString().Contains(TbReserch.Text))
+                                {
+                                    GridStudent.DefaultCellStyle.SelectionBackColor = Color.LightBlue;
+                                    GridStudent.DefaultCellStyle.SelectionForeColor = Color.Black;
+
+
+
+
+
+                                    GridStudent.DefaultCellStyle.ForeColor = Color.Black;
+
+
+                                    GridStudent.Rows[i].Selected = true;
+
+
+
+                                    break;
+                                }
+
+                    }
+
+            */
+                }
     }
 }

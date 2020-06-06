@@ -24,6 +24,8 @@ namespace ЦДО.Forms
 
         private void Education_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.Group". При необходимости она может быть перемещена или удалена.
+            this.groupTableAdapter.Fill(this.cDODataSet1.Group);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.TypePractik". При необходимости она может быть перемещена или удалена.
             this.typePractikTableAdapter.Fill(this.cDODataSet.TypePractik);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.TypeProg". При необходимости она может быть перемещена или удалена.
@@ -69,6 +71,7 @@ namespace ЦДО.Forms
             ifrm.BtnTypeEdit.Enabled = false;
             ifrm.BtnTypePractikNew.Enabled = false;
             ifrm.BtnTypePractikEdit.Enabled = false;
+            ifrm.btnAddGroup.Enabled = false;
 
             ifrm.Show();
             this.Hide();
@@ -108,6 +111,7 @@ namespace ЦДО.Forms
                 frm.BtnTypeEdit.Enabled = false;
                 frm.BtnTypePractikNew.Enabled = false;
                 frm.BtnTypePractikEdit.Enabled = false;
+                frm.btnAddGroup.Enabled = false;
                 frm.Show();
                 this.Hide();
                 connecting.Close();
@@ -159,6 +163,7 @@ namespace ЦДО.Forms
                 frm.BtnTypeEdit.Enabled = true;
                 frm.BtnTypePractikNew.Enabled = false;
                 frm.BtnTypePractikEdit.Enabled = false;
+                frm.btnAddGroup.Enabled = false;
                 frm.Show();
                 this.Hide();
                 connecting.Close();
@@ -203,6 +208,7 @@ namespace ЦДО.Forms
                 frm.BtnTypeEdit.Enabled = false;
                 frm.BtnTypePractikNew.Enabled = false;
                 frm.BtnTypePractikEdit.Enabled = true;
+                frm.btnAddGroup.Enabled = false;
                 frm.Show();
                 this.Hide();
                 connecting.Close();
@@ -226,6 +232,37 @@ namespace ЦДО.Forms
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            k = "";
+            AddEditEducation ifrm = new AddEditEducation(k);
+            ifrm.BtnCourseNew.Enabled = false;
+            ifrm.BtnCourseEdit.Enabled = false;
+            ifrm.BtnProgNew.Enabled = false;
+            ifrm.BtnProgEdit.Enabled = false;
+            ifrm.BtnTypeNew.Enabled = false;
+            ifrm.BtnTypeEdit.Enabled = false;
+            ifrm.BtnTypePractikNew.Enabled = false;
+            ifrm.BtnTypePractikEdit.Enabled = false;
+            ifrm.btnAddGroup.Enabled = true;
+
+        }
+
+        private void BtnGroup_Click(object sender, EventArgs e)
+        {
+            k = "";
+            AddEditEducation ifrm = new AddEditEducation(k);
+            ifrm.BtnCourseNew.Enabled = false;
+            ifrm.BtnCourseEdit.Enabled = false;
+            ifrm.BtnProgNew.Enabled = false;
+            ifrm.BtnProgEdit.Enabled = false;
+            ifrm.BtnTypeNew.Enabled = false;
+            ifrm.BtnTypeEdit.Enabled = false;
+            ifrm.BtnTypePractikNew.Enabled = false;
+            ifrm.BtnTypePractikEdit.Enabled = false;
+            ifrm.btnAddGroup.Enabled = true;
+        }
+
         private void BtnAddProgram_Click(object sender, EventArgs e)
         {
             k = "";
@@ -238,6 +275,8 @@ namespace ЦДО.Forms
             ifrm.BtnTypeEdit.Enabled = false;
             ifrm.BtnTypePractikNew.Enabled = false;
             ifrm.BtnTypePractikEdit.Enabled = false;
+            ifrm.btnAddGroup.Enabled = false;
+
             ifrm.Show();
             this.Hide();
         }
@@ -254,6 +293,7 @@ namespace ЦДО.Forms
             ifrm.BtnTypeEdit.Enabled = false;
             ifrm.BtnTypePractikNew.Enabled = false;
             ifrm.BtnTypePractikEdit.Enabled = false;
+            ifrm.btnAddGroup.Enabled = false;
             ifrm.Show();
             this.Hide();
         }
@@ -271,6 +311,7 @@ namespace ЦДО.Forms
             ifrm.BtnTypeEdit.Enabled = false;
             ifrm.BtnTypePractikNew.Enabled = true;
             ifrm.BtnTypePractikEdit.Enabled = false;
+            ifrm.btnAddGroup.Enabled = false;
             ifrm.Show();
             this.Hide();
         }
@@ -308,6 +349,7 @@ namespace ЦДО.Forms
                 frm.BtnTypeEdit.Enabled = false;
                 frm.BtnTypePractikNew.Enabled = false;
                 frm.BtnTypePractikEdit.Enabled = false;
+                frm.btnAddGroup.Enabled = false;
                 frm.Show();
                 this.Hide();
                 connecting.Close();

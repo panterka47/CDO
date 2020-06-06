@@ -25,10 +25,12 @@ namespace ЦДО.Forms
 
         private void Documents_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet2.Documents". При необходимости она может быть перемещена или удалена.
+            this.documentsTableAdapter2.Fill(this.cDODataSet2.Documents);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.TypeProg". При необходимости она может быть перемещена или удалена.
-            this.typeProgTableAdapter.Fill(this.cDODataSet1.TypeProg);
+            //    this.typeProgTableAdapter.Fill(this.cDODataSet1.TypeProg);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.Documents". При необходимости она может быть перемещена или удалена.
-            this.documentsTableAdapter1.Fill(this.cDODataSet1.Documents);
+            //    this.documentsTableAdapter1.Fill(this.cDODataSet1.Documents);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet.Documents". При необходимости она может быть перемещена или удалена.
             //this.documentsTableAdapter.Fill(this.cDODataSet.Documents);
 
@@ -321,8 +323,27 @@ namespace ЦДО.Forms
 
 
 
-                ex.Visible = true;
+                //ex.Visible = true;
                 // worksheet.SaveAs("otchet");
+
+
+                SaveFileDialog sfd = new SaveFileDialog();
+
+                //выбираем путь для сохранения
+                sfd.InitialDirectory = @"D:\SDO\otchet\";
+
+                string path = "";
+
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    path = sfd.FileName;
+                    worksheet.SaveAs(path);
+                    MessageBox.Show("Файл сохранен");
+
+
+                }
+
+
                 connect.Close();
                 MessageBox.Show("Файл сформирован");
             }
@@ -342,6 +363,7 @@ namespace ЦДО.Forms
     
 
         }
+
         private void BtnEditDoc_Click(object sender, EventArgs e)
         {
             //Редактирование данных о документе
@@ -362,7 +384,7 @@ namespace ЦДО.Forms
                 typedoc.ExecuteScalar();
 
                 SqlCommand group = connecting.CreateCommand();
-                group.CommandText = "SELECT Group FROM [Documents] WHERE ID= " + p;
+                group.CommandText = "SELECT [Group] FROM [Documents] WHERE ID= " + p;
                 group.ExecuteScalar();
 
                 SqlCommand idstudent = connecting.CreateCommand();

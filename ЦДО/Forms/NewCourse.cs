@@ -24,17 +24,19 @@ namespace ЦДО
 
         private void NewCourse_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet3.TypePractik". При необходимости она может быть перемещена или удалена.
-            this.typePractikTableAdapter3.Fill(this.cDODataSet3.TypePractik);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet3.TypeObuch". При необходимости она может быть перемещена или удалена.
-            this.typeObuchTableAdapter3.Fill(this.cDODataSet3.TypeObuch);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet3.TypeProg". При необходимости она может быть перемещена или удалена.
-            this.typeProgTableAdapter2.Fill(this.cDODataSet3.TypeProg);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet3.Program". При необходимости она может быть перемещена или удалена.
-            this.programTableAdapter2.Fill(this.cDODataSet3.Program);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet3.Course". При необходимости она может быть перемещена или удалена.
-            this.courseTableAdapter2.Fill(this.cDODataSet3.Course);
-          
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet4.Group". При необходимости она может быть перемещена или удалена.
+            this.groupTableAdapter.Fill(this.cDODataSet4.Group);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet4.TypePractik". При необходимости она может быть перемещена или удалена.
+            this.typePractikTableAdapter4.Fill(this.cDODataSet4.TypePractik);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet4.TypeObuch". При необходимости она может быть перемещена или удалена.
+            this.typeObuchTableAdapter4.Fill(this.cDODataSet4.TypeObuch);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet4.TypeProg". При необходимости она может быть перемещена или удалена.
+            this.typeProgTableAdapter3.Fill(this.cDODataSet4.TypeProg);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet4.Program". При необходимости она может быть перемещена или удалена.
+            this.programTableAdapter3.Fill(this.cDODataSet4.Program);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet4.Course". При необходимости она может быть перемещена или удалена.
+            this.courseTableAdapter3.Fill(this.cDODataSet4.Course);
+           
 
         }
 
@@ -84,7 +86,7 @@ namespace ЦДО
                     SqlCommand cmd1 = connecting.CreateCommand();
 
                     //Добавление программы
-                    cmd1.CommandText = "INSERT INTO [NewCourse] (Course, Program, Type, DateStart, DateEnd, KolChas, Smeta, TypeObuch, TypePractik) VALUES ('" + Convert.ToInt32(course.ExecuteScalar()) + "', '"+ Convert.ToInt32(prog.ExecuteScalar())+"','"+ Convert.ToInt32(typeprog.ExecuteScalar())+"','"+ Convert.ToDateTime(dateStart.Value).ToShortDateString()+"', '"+ Convert.ToDateTime(dateEnd.Value).ToShortDateString()+"', '"+Convert.ToInt32(TbChas.Text)+"','" + Convert.ToInt32(TbSmeta.Text)+"', '" + Convert.ToInt32(typeobuch.ExecuteScalar())+"', '" + Convert.ToInt32(typepractik.ExecuteScalar())+"')";
+                    cmd1.CommandText = "INSERT INTO [NewCourse] (Course, Program, Type, DateStart, DateEnd, KolChas, Smeta, TypeObuch, TypePractik, Kvalification, Profeciya, Group) VALUES ('" + Convert.ToInt32(course.ExecuteScalar()) + "', '"+ Convert.ToInt32(prog.ExecuteScalar())+"','"+ Convert.ToInt32(typeprog.ExecuteScalar())+"','"+ Convert.ToDateTime(dateStart.Value).ToShortDateString()+"', '"+ Convert.ToDateTime(dateEnd.Value).ToShortDateString()+"', '"+Convert.ToInt32(TbChas.Text)+"','" + Convert.ToInt32(TbSmeta.Text)+"', '" + Convert.ToInt32(typeobuch.ExecuteScalar())+"', '" + Convert.ToInt32(typepractik.ExecuteScalar())+"', '"+TbKvalif.Text+"', '"+TbProf.Text+"', '"+CbGroup.Text+"')";
                     cmd1.ExecuteScalar();
                     MessageBox.Show("Новый курс создан");
 
@@ -152,7 +154,7 @@ namespace ЦДО
 
                     //Изменение данных о курсе
                     SqlCommand WriteCommand;
-                    WriteCommand = new SqlCommand("UPDATE [NewCourse] SET Course=@course, Program=@prog, Type=@typeprog, DateStart=@datestart, DateEnd=@dateend, KolChas=@kolchas, Smeta=@smeta, TypeObuch=@typeobuch, TypePractik=@typepractik  WHERE ID = @ID", connecting);
+                    WriteCommand = new SqlCommand("UPDATE [NewCourse] SET Course=@course, Program=@prog, Type=@typeprog, DateStart=@datestart, DateEnd=@dateend, KolChas=@kolchas, Smeta=@smeta, TypeObuch=@typeobuch, TypePractik=@typepractik, Kvalification=@kvalification, Profeciya=@profeciya, Group=@group  WHERE ID = @ID", connecting);
 
                     WriteCommand.Parameters.AddWithValue("course", Convert.ToInt32(course.ExecuteScalar()));
                     WriteCommand.Parameters.AddWithValue("prog", Convert.ToInt32(prog.ExecuteScalar()));
@@ -163,6 +165,9 @@ namespace ЦДО
                     WriteCommand.Parameters.AddWithValue("smeta", Convert.ToInt32(TbSmeta.Text));
                     WriteCommand.Parameters.AddWithValue("typeobuch", Convert.ToInt32(typeobuch.ExecuteScalar()));
                     WriteCommand.Parameters.AddWithValue("typepractik", Convert.ToInt32(typepractik.ExecuteScalar()));
+                    WriteCommand.Parameters.AddWithValue("kvalification", Convert.ToString(TbKvalif.Text));
+                    WriteCommand.Parameters.AddWithValue("profeciya", Convert.ToString(TbProf.Text));
+                    WriteCommand.Parameters.AddWithValue("group", Convert.ToString(CbGroup.Text));
                     WriteCommand.Parameters.AddWithValue("ID", Convert.ToInt32(ID));
                     WriteCommand.ExecuteNonQuery();
 

@@ -236,6 +236,29 @@ namespace ЦДО
                 MessageBox.Show(Convert.ToString(ex.Message));
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection connecting = new SqlConnection(Program.connection))
+                {
+                    connecting.Open();
+                    SqlCommand cmd2 = connecting.CreateCommand();
+
+                    //Добавление типа подготовки
+                    cmd2.CommandText = "INSERT INTO [Group] (NameGroup) VALUES ('" +TbGroup.Text + "')";
+                    cmd2.ExecuteScalar();
+                    MessageBox.Show("Группа добавлена");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Возникла ошибка: " + ex);
+            }
+        }
+
+        
     }
     }
     

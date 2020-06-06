@@ -28,22 +28,17 @@ namespace ЦДО
 
         private void AddStudents_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet3.Group". При необходимости она может быть перемещена или удалена.
+            this.groupTableAdapter1.Fill(this.cDODataSet3.Group);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet2.TypeObuch". При необходимости она может быть перемещена или удалена.
             this.typeObuchTableAdapter2.Fill(this.cDODataSet2.TypeObuch);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet2.TypeProg". При необходимости она может быть перемещена или удалена.
             this.typeProgTableAdapter2.Fill(this.cDODataSet2.TypeProg);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet2.Program". При необходимости она может быть перемещена или удалена.
             this.programTableAdapter2.Fill(this.cDODataSet2.Program);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.Program". При необходимости она может быть перемещена или удалена.
-            //   this.programTableAdapter1.Fill(this.cDODataSet1.Program);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.TypeObuch". При необходимости она может быть перемещена или удалена.
-            //this.typeObuchTableAdapter1.Fill(this.cDODataSet1.TypeObuch);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.TypeProg". При необходимости она может быть перемещена или удалена.
-            //this.typeProgTableAdapter1.Fill(this.cDODataSet1.TypeProg);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cDODataSet1.Group". При необходимости она может быть перемещена или удалена.
-            // this.groupTableAdapter.Fill(this.cDODataSet1.Group);
+           
 
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+          //  this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
         }
 
         private void BtnAddStudent_Click(object sender, EventArgs e)
@@ -74,7 +69,7 @@ namespace ЦДО
                                                         //Запись в таблицу Студент
                                                         cmd.CommandText = "INSERT INTO [Student] (Surname, Name, Patronymic, DateOfBirth, PlaceOfBirth, Nationality, Phone, Email, NameGroup, Dop) VALUES('"
                                                       + TbSurname.Text + "','" + TbName.Text + "','" + TbPatronymic.Text + "','" + Convert.ToDateTime(DateOfBirth.Text).ToShortDateString() + "','"+TbPlaceOfBirth.Text+"', '"
-                                                      + TbNationality.Text + "','" + Convert.ToString(TbPhone.Text) + "', '" + TbEmail.Text + "','"+ TbGroup.Text + "', '"+TbDop.Text+"') ";
+                                                      + TbNationality.Text + "','" + Convert.ToString(TbPhone.Text) + "', '" + TbEmail.Text + "','"+ CbGroup.Text + "', '"+TbDop.Text+"') ";
 
                                                   cmd.ExecuteScalar();
 
@@ -228,7 +223,7 @@ namespace ЦДО
                     WriteCommand.Parameters.AddWithValue("Nationality", TbNationality.Text);
                     WriteCommand.Parameters.AddWithValue("Phone", Convert.ToString(TbPhone.Text));
                     WriteCommand.Parameters.AddWithValue("Email", TbEmail.Text);
-                    WriteCommand.Parameters.AddWithValue("Group", TbGroup.Text);
+                    WriteCommand.Parameters.AddWithValue("Group", CbGroup.Text);
                     WriteCommand.Parameters.AddWithValue("Dop", TbDop.Text);
                     WriteCommand.Parameters.AddWithValue("ID", Convert.ToInt32(Id));
                     WriteCommand.ExecuteNonQuery();
@@ -271,7 +266,7 @@ namespace ЦДО
                 // Создаём объект приложения
                 Word.Application app = new Word.Application();
                 // Путь до шаблона документа должен быть целиком на английском !!!
-                string source = @"D:\zayavlenie.docx";
+                string source = @"D:\SDO\shablon\zayavlenie.docx";
 
                 // Открываем
                 doc = app.Documents.Open(source);
@@ -303,9 +298,26 @@ namespace ЦДО
                 doc.Bookmarks["nameprof"].Range.Text = CbNameProg.Text;
                 doc.Bookmarks["typeobuch"].Range.Text = CbTypeObuch.Text;
 
-              
+
+
+                SaveFileDialog sfd = new SaveFileDialog();
+
+                //выбираем путь для сохранения
+                sfd.InitialDirectory = @"D:\SDO\zayavleniya\";
+
+                string path = "";
+
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    path = sfd.FileName;
+                    doc.SaveAs2(path);
+                    MessageBox.Show("Файл сохранен");
+
+
+                }
+
                 // Закрываем документ
-                doc.SaveAs2(@"D:\dogovor.docx");
+              //  doc.SaveAs2(@"D:\dogovor.docx");
 
                 
 
@@ -343,7 +355,7 @@ namespace ЦДО
                 // Создаём объект приложения
                 Word.Application app = new Word.Application();
                 // Путь до шаблона документа должен быть целиком на английском !!!
-                string source = @"D:\soglshab.docx";
+                string source = @"D:\SDO\shablon\soglshab.docx";
 
                 // Открываем
                 doc = app.Documents.Open(source);
@@ -362,7 +374,7 @@ namespace ЦДО
                 SaveFileDialog sfd = new SaveFileDialog();
 
                 //выбираем путь для сохранения
-                sfd.InitialDirectory = @"D:\";
+                sfd.InitialDirectory = @"D:\SDO\soglasiya\";
                 
                 string path = "";
 
@@ -388,6 +400,230 @@ namespace ЦДО
 
             }
 
+
+        }
+
+        private void BtnDPO_Click(object sender, EventArgs e)
+        {
+            // Создаём объект документа
+            Word.Document doc = null;
+            try
+            {
+                using (SqlConnection connecting = new SqlConnection(Program.connection))
+                {
+                    connecting.Open();
+
+
+                    SqlCommand cmd = connecting.CreateCommand();
+
+                    //Изменение данных о слушателе
+                    
+                    cmd.CommandText="SELECT MAX(IDStudent) FROM Student";
+                    //  MessageBox.Show(WriteCommand.ExecuteScalar().ToString());
+                    //выбираем курс
+                    SqlCommand idcourse = connecting.CreateCommand();
+                    idcourse.CommandText = "SELECT ID FROM NewCourse WHERE [Group] ='" + CbGroup.Text + "'";
+                    //выбираем программу курса
+                    SqlCommand prog = connecting.CreateCommand();
+                    prog.CommandText = "SELECT Program FROM NewCourse WHERE ID='" + idcourse.ExecuteScalar() + "'";
+                    //выбираем профессию по курсу
+                    SqlCommand prof = connecting.CreateCommand();
+                    prof.CommandText = "SELECT Profeciya FROM NewCourse WHERE ID='" + idcourse.ExecuteScalar() + "'";
+                    //выбираем квалификацию по курсу
+                    SqlCommand kvalif = connecting.CreateCommand();
+                    kvalif.CommandText = "SELECT Kvalification FROM NewCourse WHERE ID='" + idcourse.ExecuteScalar() + "'";
+                    //выбираем продолжительность курса
+                    SqlCommand chasov = connecting.CreateCommand();
+                    chasov.CommandText = "SELECT KolChas FROM NewCourse WHERE ID='" + idcourse.ExecuteScalar() + "'";
+                    //выбираем дату начала
+                    SqlCommand datestart = connecting.CreateCommand();
+                    datestart.CommandText = "SELECT DateStart FROM NewCourse WHERE ID='" + idcourse.ExecuteScalar() + "'";
+                    //выбираем дату окончания
+                    SqlCommand dateend = connecting.CreateCommand();
+                    dateend.CommandText = "SELECT Program FROM NewCourse WHERE ID='" + idcourse.ExecuteScalar() + "'";
+                    //выбираем смету
+                    SqlCommand smeta = connecting.CreateCommand();
+                    smeta.CommandText = "SELECT Smeta FROM NewCourse WHERE ID='" + idcourse.ExecuteScalar() + "'";
+
+
+                    
+                    // Создаём объект приложения
+                    Word.Application app = new Word.Application();
+
+                    //путь к шаблону
+                    string source = @"D:\SDO\shablon\shabdpo.docx";
+
+                    // Открываем
+                    doc = app.Documents.Open(source);
+                    doc.Activate();
+                    doc.Bookmarks["number"].Range.Text = cmd.ExecuteScalar().ToString();
+                    doc.Bookmarks["year"].Range.Text = DateTime.Now.Year.ToString();
+                    doc.Bookmarks["datenow"].Range.Text = DateTime.Now.ToShortDateString();
+                    doc.Bookmarks["fio"].Range.Text = TbSurname.Text + "  " + TbName.Text + "  " + TbPatronymic.Text;
+                    doc.Bookmarks["program"].Range.Text = Convert.ToString(prog.ExecuteScalar());
+                    doc.Bookmarks["speciality"].Range.Text = Convert.ToString(prof.ExecuteScalar());
+                    doc.Bookmarks["kvalif"].Range.Text = Convert.ToString(kvalif.ExecuteScalar());
+                    doc.Bookmarks["chasov"].Range.Text = Convert.ToString(chasov.ExecuteScalar());
+                    doc.Bookmarks["datestart"].Range.Text = Convert.ToString(datestart.ExecuteScalar());
+                    doc.Bookmarks["dateend"].Range.Text = Convert.ToString(dateend.ExecuteScalar());
+                    doc.Bookmarks["smeta"].Range.Text = Convert.ToString(smeta.ExecuteScalar());
+                    doc.Bookmarks["zakazfio"].Range.Text = TbSurname.Text + "  " + TbName.Text + "  " + TbPatronymic.Text;
+                    doc.Bookmarks["adres"].Range.Text = TbAdressProg.Text;
+                    doc.Bookmarks["series"].Range.Text = TbSeriesCertificate.Text;
+                    doc.Bookmarks["nomer"].Range.Text = TbNumberCertificate.Text;
+                    doc.Bookmarks["dateissued"].Range.Text = Convert.ToDateTime(PaspDateIssued.Text).ToShortDateString();
+                    doc.Bookmarks["issued"].Range.Text = TbIssued.Text;
+                    doc.Bookmarks["phone"].Range.Text = TbPhone.Text;
+                    //  doc.Bookmarks["date"].Range.Text = Convert.ToDateTime(DateTime.Now).ToShortDateString();
+
+                    
+                    MessageBox.Show("Файл сформирован");
+
+
+                    SaveFileDialog sfd = new SaveFileDialog();
+
+                    //выбираем путь для сохранения
+                    sfd.InitialDirectory = @"D:\SDO\dogovora\";
+
+                    string path = "";
+
+                    if (sfd.ShowDialog() == DialogResult.OK)
+                    {
+                        path = sfd.FileName;
+                        doc.SaveAs2(path);
+                        MessageBox.Show("Файл сохранен");
+
+
+                    }
+
+
+
+
+                    
+                  //  doc.Close();
+                   
+                    connecting.Close();
+
+                }
+            }
+
+            catch (Exception ex)
+            {
+                // Если произошла ошибка, то закрываем документ и выводим информацию
+
+                MessageBox.Show("Во время выполнения произошла ошибка" + ex);
+
+            }
+
+        }
+
+        private void BtnPO_Click(object sender, EventArgs e)
+        {
+            // Создаём объект документа
+            Word.Document doc = null;
+            try
+            {
+                using (SqlConnection connecting = new SqlConnection(Program.connection))
+                {
+                    connecting.Open();
+
+
+                    SqlCommand cmd = connecting.CreateCommand();
+
+                    //Изменение данных о слушателе
+
+                    cmd.CommandText = "SELECT MAX(IDStudent) FROM Student";
+                    //  MessageBox.Show(WriteCommand.ExecuteScalar().ToString());
+                    //выбираем курс
+                    SqlCommand idcourse = connecting.CreateCommand();
+                    idcourse.CommandText = "SELECT ID FROM NewCourse WHERE [Group] ='" + CbGroup.Text + "'";
+                    //выбираем программу курса
+                    SqlCommand prog = connecting.CreateCommand();
+                    prog.CommandText = "SELECT Program FROM NewCourse WHERE ID='" + idcourse.ExecuteScalar() + "'";
+                    //выбираем профессию по курсу
+                    SqlCommand prof = connecting.CreateCommand();
+                    prof.CommandText = "SELECT Profeciya FROM NewCourse WHERE ID='" + idcourse.ExecuteScalar() + "'";
+                    //выбираем квалификацию по курсу
+                   
+                    //выбираем продолжительность курса
+                    SqlCommand chasov = connecting.CreateCommand();
+                    chasov.CommandText = "SELECT KolChas FROM NewCourse WHERE ID='" + idcourse.ExecuteScalar() + "'";
+                    //выбираем дату начала
+                    SqlCommand datestart = connecting.CreateCommand();
+                    datestart.CommandText = "SELECT DateStart FROM NewCourse WHERE ID='" + idcourse.ExecuteScalar() + "'";
+                    //выбираем дату окончания
+                    SqlCommand dateend = connecting.CreateCommand();
+                    dateend.CommandText = "SELECT Program FROM NewCourse WHERE ID='" + idcourse.ExecuteScalar() + "'";
+                    //выбираем смету
+                    SqlCommand smeta = connecting.CreateCommand();
+                    smeta.CommandText = "SELECT Smeta FROM NewCourse WHERE ID='" + idcourse.ExecuteScalar() + "'";
+
+
+
+                    // Создаём объект приложения
+                    Word.Application app = new Word.Application();
+
+                    //путь к шаблону
+                    string source = @"D:\SDO\shablon\shabdpo.docx";
+
+                    // Открываем
+                    doc = app.Documents.Open(source);
+                    doc.Activate();
+                    doc.Bookmarks["number"].Range.Text = cmd.ExecuteScalar().ToString();
+                    doc.Bookmarks["year"].Range.Text = DateTime.Now.Year.ToString();
+                    doc.Bookmarks["datenow"].Range.Text = DateTime.Now.ToShortDateString();
+                    doc.Bookmarks["fio"].Range.Text = TbSurname.Text + "  " + TbName.Text + "  " + TbPatronymic.Text;
+                    doc.Bookmarks["program"].Range.Text = Convert.ToString(prog.ExecuteScalar());
+                    doc.Bookmarks["speciality"].Range.Text = Convert.ToString(prof.ExecuteScalar());
+                    
+                    doc.Bookmarks["chasov"].Range.Text = Convert.ToString(chasov.ExecuteScalar());
+                    doc.Bookmarks["datestart"].Range.Text = Convert.ToString(datestart.ExecuteScalar());
+                    doc.Bookmarks["dateend"].Range.Text = Convert.ToString(dateend.ExecuteScalar());
+                    doc.Bookmarks["smeta"].Range.Text = Convert.ToString(smeta.ExecuteScalar());
+                    doc.Bookmarks["zakazfio"].Range.Text = TbSurname.Text + "  " + TbName.Text + "  " + TbPatronymic.Text;
+                    doc.Bookmarks["adres"].Range.Text = TbAdressProg.Text;
+                    doc.Bookmarks["series"].Range.Text = TbSeriesCertificate.Text;
+                    doc.Bookmarks["nomer"].Range.Text = TbNumberCertificate.Text;
+                    doc.Bookmarks["dateissued"].Range.Text = Convert.ToDateTime(PaspDateIssued.Text).ToShortDateString();
+                    doc.Bookmarks["issued"].Range.Text = TbIssued.Text;
+                    doc.Bookmarks["phone"].Range.Text = TbPhone.Text;
+                  
+
+
+                    MessageBox.Show("Файл сформирован");
+
+                    SaveFileDialog sfd = new SaveFileDialog();
+
+                    //выбираем путь для сохранения
+                    sfd.InitialDirectory = @"D:\SDO\dogovora\";
+
+                    string path = "";
+
+                    if (sfd.ShowDialog() == DialogResult.OK)
+                    {
+                        path = sfd.FileName;
+                        doc.SaveAs2(path);
+                        MessageBox.Show("Файл сохранен");
+
+
+                    }
+
+
+                    app.Visible = true;
+                    //  doc.Close();
+
+                    connecting.Close();
+
+                }
+            }
+
+            catch (Exception ex)
+            {
+                // Если произошла ошибка, то закрываем документ и выводим информацию
+
+                MessageBox.Show("Во время выполнения произошла ошибка" + ex);
+
+            }
 
         }
     }

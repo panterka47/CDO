@@ -38,14 +38,14 @@
             this.BtnEdit = new System.Windows.Forms.Button();
             this.BtnAdd = new System.Windows.Forms.Button();
             this.GridCourse = new System.Windows.Forms.DataGridView();
-            this.newCourseBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.newCourseBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
             this.cDODataSet4 = new ЦДО.BD.CDODataSet();
+            this.newCourseBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.newCourseBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.newCourseBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.newCourseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.newCourseBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.newCourseTableAdapter2 = new ЦДО.BD.CDODataSetTableAdapters.NewCourseTableAdapter();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,8 +58,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridCourse)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDODataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource)).BeginInit();
@@ -168,7 +169,6 @@
             this.GridCourse.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.GridCourse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridCourse.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13,
             this.dataGridViewTextBoxColumn14,
@@ -178,7 +178,7 @@
             this.dataGridViewTextBoxColumn18,
             this.dataGridViewTextBoxColumn19,
             this.dataGridViewTextBoxColumn20});
-            this.GridCourse.DataSource = this.newCourseBindingSource4;
+            this.GridCourse.DataSource = this.newCourseBindingSource5;
             this.GridCourse.Location = new System.Drawing.Point(23, 129);
             this.GridCourse.Name = "GridCourse";
             this.GridCourse.RowTemplate.Height = 24;
@@ -186,15 +186,20 @@
             this.GridCourse.TabIndex = 63;
             this.GridCourse.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridCourse_CellClick);
             // 
-            // newCourseBindingSource4
+            // newCourseBindingSource5
             // 
-            this.newCourseBindingSource4.DataMember = "NewCourse";
-            this.newCourseBindingSource4.DataSource = this.cDODataSet4;
+            this.newCourseBindingSource5.DataMember = "NewCourse";
+            this.newCourseBindingSource5.DataSource = this.cDODataSet4;
             // 
             // cDODataSet4
             // 
             this.cDODataSet4.DataSetName = "CDODataSet";
             this.cDODataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // newCourseBindingSource4
+            // 
+            this.newCourseBindingSource4.DataMember = "NewCourse";
+            this.newCourseBindingSource4.DataSource = this.cDODataSet4;
             // 
             // newCourseBindingSource3
             // 
@@ -215,13 +220,6 @@
             // newCourseTableAdapter2
             // 
             this.newCourseTableAdapter2.ClearBeforeFill = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn11.HeaderText = "№ п/п";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn12
             // 
@@ -281,8 +279,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1393, 685);
+            this.ClientSize = new System.Drawing.Size(1393, 706);
             this.Controls.Add(this.GridCourse);
             this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.BtnBack);
@@ -297,8 +296,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridCourse)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cDODataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.newCourseBindingSource)).EndInit();
@@ -351,7 +351,7 @@
         private BD.CDODataSet cDODataSet4;
         private System.Windows.Forms.BindingSource newCourseBindingSource4;
         private BD.CDODataSetTableAdapters.NewCourseTableAdapter newCourseTableAdapter2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.BindingSource newCourseBindingSource5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;

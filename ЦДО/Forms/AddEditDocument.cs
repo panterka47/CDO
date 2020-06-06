@@ -88,11 +88,11 @@ namespace ЦДО.Forms
 
                     //Изменение данных о слушателе
                     SqlCommand WriteCommand;
-                    WriteCommand = new SqlCommand("UPDATE [Documents] SET TypeDoc = @typedoc, Group = @group, IdSutent=@idstudent, StatusDoc=@statusdoc, Utrata = @utrata, Obmen = @obmen, Unichtog = @unichtog, SeriesDoc= @seriesdoc, NumberDoc = @numberdoc, RegNumber = @regnumber  WHERE ID = @ID", connecting);
+                    WriteCommand = new SqlCommand("UPDATE [Documents] SET TypeDoc = @typedoc, [Group] = @group, IdStudent=@idstudent, StatusDoc=@statusdoc, Utrata = @utrata, Obmen = @obmen, Unichtog = @unichtog, SeriesDoc= @seriesdoc, NumberDoc = @numberdoc, RegNumber = @regnumber  WHERE ID = @ID", connecting);
 
                     WriteCommand.Parameters.AddWithValue("typedoc", CbTypeDoc.Text);
                     WriteCommand.Parameters.AddWithValue("group", CbGroup.Text);
-                    WriteCommand.Parameters.AddWithValue("idsutent", TbStudent.Text);
+                    WriteCommand.Parameters.AddWithValue("idstudent", TbStudent.Text);
                     WriteCommand.Parameters.AddWithValue("statusdoc", CbStatusDoc.Text);
                     WriteCommand.Parameters.AddWithValue("utrata", CbUtrata.Text);
                     WriteCommand.Parameters.AddWithValue("obmen", CbObmen.Text);
@@ -109,6 +109,10 @@ namespace ЦДО.Forms
 
 
                 }
+                Documents ifrm = new Documents();
+                ifrm.Show();
+                this.Hide();
+
             }
             catch (Exception ex)
             {

@@ -52,6 +52,10 @@
             this.BtnProgEdit = new System.Windows.Forms.Button();
             this.BtnTypeEdit = new System.Windows.Forms.Button();
             this.BtnTypePractikEdit = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.TbGroup = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btnAddGroup = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -321,12 +325,59 @@
             this.BtnTypePractikEdit.UseVisualStyleBackColor = false;
             this.BtnTypePractikEdit.Click += new System.EventHandler(this.BtnTypePractikEdit_Click);
             // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(61, 891);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(266, 65);
+            this.label11.TabIndex = 58;
+            this.label11.Text = "Название группы";
+            // 
+            // TbGroup
+            // 
+            this.TbGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TbGroup.Location = new System.Drawing.Point(367, 888);
+            this.TbGroup.Multiline = true;
+            this.TbGroup.Name = "TbGroup";
+            this.TbGroup.Size = new System.Drawing.Size(367, 82);
+            this.TbGroup.TabIndex = 57;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.ForeColor = System.Drawing.Color.Red;
+            this.label12.Location = new System.Drawing.Point(60, 824);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(113, 32);
+            this.label12.TabIndex = 56;
+            this.label12.Text = "Группы";
+            // 
+            // btnAddGroup
+            // 
+            this.btnAddGroup.BackColor = System.Drawing.Color.Blue;
+            this.btnAddGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAddGroup.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAddGroup.Location = new System.Drawing.Point(798, 891);
+            this.btnAddGroup.Name = "btnAddGroup";
+            this.btnAddGroup.Size = new System.Drawing.Size(192, 57);
+            this.btnAddGroup.TabIndex = 59;
+            this.btnAddGroup.Text = "Добавить";
+            this.btnAddGroup.UseVisualStyleBackColor = false;
+            this.btnAddGroup.Click += new System.EventHandler(this.button2_Click);
+            // 
             // AddEditEducation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1002, 857);
+            this.ClientSize = new System.Drawing.Size(1002, 997);
+            this.Controls.Add(this.btnAddGroup);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.TbGroup);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.BtnTypePractikEdit);
             this.Controls.Add(this.BtnTypeEdit);
             this.Controls.Add(this.BtnProgEdit);
@@ -386,5 +437,9 @@
         public System.Windows.Forms.TextBox TbKolChas;
         public System.Windows.Forms.ComboBox CbDocEducat;
         public System.Windows.Forms.TextBox TbTypePractik;
+        private System.Windows.Forms.Label label11;
+        public System.Windows.Forms.TextBox TbGroup;
+        private System.Windows.Forms.Label label12;
+        public System.Windows.Forms.Button btnAddGroup;
     }
 }

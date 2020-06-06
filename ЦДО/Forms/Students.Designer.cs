@@ -31,6 +31,7 @@ namespace ЦДО
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Students));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -57,6 +58,8 @@ namespace ЦДО
             this.label2 = new System.Windows.Forms.Label();
             this.TbReserch = new System.Windows.Forms.TextBox();
             this.btnPoisk = new System.Windows.Forms.Button();
+            this.rbSurname = new System.Windows.Forms.RadioButton();
+            this.rbGroup = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridStudent)).BeginInit();
@@ -268,7 +271,7 @@ namespace ЦДО
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(30, 665);
+            this.label2.Location = new System.Drawing.Point(25, 712);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(194, 25);
             this.label2.TabIndex = 59;
@@ -277,7 +280,7 @@ namespace ЦДО
             // TbReserch
             // 
             this.TbReserch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TbReserch.Location = new System.Drawing.Point(239, 662);
+            this.TbReserch.Location = new System.Drawing.Point(234, 709);
             this.TbReserch.Name = "TbReserch";
             this.TbReserch.Size = new System.Drawing.Size(448, 30);
             this.TbReserch.TabIndex = 60;
@@ -287,7 +290,7 @@ namespace ЦДО
             this.btnPoisk.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnPoisk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnPoisk.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnPoisk.Location = new System.Drawing.Point(742, 655);
+            this.btnPoisk.Location = new System.Drawing.Point(1084, 694);
             this.btnPoisk.Name = "btnPoisk";
             this.btnPoisk.Size = new System.Drawing.Size(175, 45);
             this.btnPoisk.TabIndex = 61;
@@ -295,12 +298,39 @@ namespace ЦДО
             this.btnPoisk.UseVisualStyleBackColor = false;
             this.btnPoisk.Click += new System.EventHandler(this.btnPoisk_Click);
             // 
+            // rbSurname
+            // 
+            this.rbSurname.AutoSize = true;
+            this.rbSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rbSurname.Location = new System.Drawing.Point(719, 711);
+            this.rbSurname.Name = "rbSurname";
+            this.rbSurname.Size = new System.Drawing.Size(151, 29);
+            this.rbSurname.TabIndex = 62;
+            this.rbSurname.TabStop = true;
+            this.rbSurname.Text = "по Фамилии";
+            this.rbSurname.UseVisualStyleBackColor = true;
+            // 
+            // rbGroup
+            // 
+            this.rbGroup.AutoSize = true;
+            this.rbGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rbGroup.Location = new System.Drawing.Point(898, 710);
+            this.rbGroup.Name = "rbGroup";
+            this.rbGroup.Size = new System.Drawing.Size(125, 29);
+            this.rbGroup.TabIndex = 63;
+            this.rbGroup.TabStop = true;
+            this.rbGroup.Text = "по Группе";
+            this.rbGroup.UseVisualStyleBackColor = true;
+            // 
             // Students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1387, 742);
+            this.ClientSize = new System.Drawing.Size(1387, 813);
+            this.Controls.Add(this.rbGroup);
+            this.Controls.Add(this.rbSurname);
             this.Controls.Add(this.btnPoisk);
             this.Controls.Add(this.TbReserch);
             this.Controls.Add(this.label2);
@@ -311,6 +341,7 @@ namespace ЦДО
             this.Controls.Add(this.BtnAdd);
             this.Controls.Add(this.GridStudent);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Students";
             this.Text = "Слушатели";
             this.Load += new System.EventHandler(this.Students_Load);
@@ -393,5 +424,7 @@ namespace ЦДО
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TbReserch;
         private System.Windows.Forms.Button btnPoisk;
+        private System.Windows.Forms.RadioButton rbSurname;
+        private System.Windows.Forms.RadioButton rbGroup;
     }
 }

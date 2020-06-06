@@ -266,6 +266,7 @@
             this.BtnAddDoc.TabIndex = 20;
             this.BtnAddDoc.Text = "Добавить";
             this.BtnAddDoc.UseVisualStyleBackColor = false;
+            this.BtnAddDoc.Click += new System.EventHandler(this.BtnCourseNew_Click);
             // 
             // CbStatusDoc
             // 
@@ -437,6 +438,7 @@
             this.BtnEditDoc.TabIndex = 36;
             this.BtnEditDoc.Text = "Изменить";
             this.BtnEditDoc.UseVisualStyleBackColor = false;
+            this.BtnEditDoc.Click += new System.EventHandler(this.BtnEditDoc_Click);
             // 
             // dateTimedateissued
             // 
@@ -459,6 +461,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1082, 854);
             this.Controls.Add(this.label12);

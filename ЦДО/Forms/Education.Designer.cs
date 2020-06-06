@@ -32,51 +32,61 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Education));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridCourse = new System.Windows.Forms.DataGridView();
-            this.cDODataSet = new ЦДО.BD.CDODataSet();
-            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.courseTableAdapter = new ЦДО.BD.CDODataSetTableAdapters.CourseTableAdapter();
             this.iDCourseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameCourseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cDODataSet = new ЦДО.BD.CDODataSet();
+            this.courseTableAdapter = new ЦДО.BD.CDODataSetTableAdapters.CourseTableAdapter();
             this.BtnEditCourse = new System.Windows.Forms.Button();
             this.BtnAddCourse = new System.Windows.Forms.Button();
             this.dataGridProgram = new System.Windows.Forms.DataGridView();
-            this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.programTableAdapter = new ЦДО.BD.CDODataSetTableAdapters.ProgramTableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameProgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.programTableAdapter = new ЦДО.BD.CDODataSetTableAdapters.ProgramTableAdapter();
             this.BtnEditProgam = new System.Windows.Forms.Button();
             this.BtnAddProgram = new System.Windows.Forms.Button();
             this.dataGridTypeProg = new System.Windows.Forms.DataGridView();
-            this.typeProgBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.typeProgTableAdapter = new ЦДО.BD.CDODataSetTableAdapters.TypeProgTableAdapter();
             this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kolChasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDocDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeProgBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.typeProgTableAdapter = new ЦДО.BD.CDODataSetTableAdapters.TypeProgTableAdapter();
             this.BtnEditTypeProg = new System.Windows.Forms.Button();
             this.BtnAddTypeProg = new System.Windows.Forms.Button();
             this.dataGridTypePractik = new System.Windows.Forms.DataGridView();
-            this.typePractikBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.typePractikTableAdapter = new ЦДО.BD.CDODataSetTableAdapters.TypePractikTableAdapter();
             this.iDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namePractikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typePractikBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.typePractikTableAdapter = new ЦДО.BD.CDODataSetTableAdapters.TypePractikTableAdapter();
             this.BtnEditTypePractik = new System.Windows.Forms.Button();
             this.BtnAddTypePractik = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnBack = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cDODataSet1 = new ЦДО.BD.CDODataSet();
+            this.groupBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupTableAdapter = new ЦДО.BD.CDODataSetTableAdapters.GroupTableAdapter();
+            this.nameGroupDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDCourseDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnGroup = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCourse)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProgram)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTypeProg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTypePractik)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typePractikBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -100,6 +110,15 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Обучение";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ЦДО.Properties.Resources.значок1;
+            this.pictureBox1.Location = new System.Drawing.Point(1050, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // dataGridCourse
             // 
             this.dataGridCourse.AutoGenerateColumns = false;
@@ -109,26 +128,12 @@
             this.iDCourseDataGridViewTextBoxColumn,
             this.nameCourseDataGridViewTextBoxColumn});
             this.dataGridCourse.DataSource = this.courseBindingSource;
-            this.dataGridCourse.Location = new System.Drawing.Point(39, 153);
+            this.dataGridCourse.Location = new System.Drawing.Point(39, 126);
             this.dataGridCourse.Name = "dataGridCourse";
             this.dataGridCourse.RowTemplate.Height = 24;
             this.dataGridCourse.Size = new System.Drawing.Size(695, 150);
             this.dataGridCourse.TabIndex = 2;
             this.dataGridCourse.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCourse_CellClick);
-            // 
-            // cDODataSet
-            // 
-            this.cDODataSet.DataSetName = "CDODataSet";
-            this.cDODataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // courseBindingSource
-            // 
-            this.courseBindingSource.DataMember = "Course";
-            this.courseBindingSource.DataSource = this.cDODataSet;
-            // 
-            // courseTableAdapter
-            // 
-            this.courseTableAdapter.ClearBeforeFill = true;
             // 
             // iDCourseDataGridViewTextBoxColumn
             // 
@@ -144,12 +149,26 @@
             this.nameCourseDataGridViewTextBoxColumn.Name = "nameCourseDataGridViewTextBoxColumn";
             this.nameCourseDataGridViewTextBoxColumn.Width = 400;
             // 
+            // courseBindingSource
+            // 
+            this.courseBindingSource.DataMember = "Course";
+            this.courseBindingSource.DataSource = this.cDODataSet;
+            // 
+            // cDODataSet
+            // 
+            this.cDODataSet.DataSetName = "CDODataSet";
+            this.cDODataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // courseTableAdapter
+            // 
+            this.courseTableAdapter.ClearBeforeFill = true;
+            // 
             // BtnEditCourse
             // 
             this.BtnEditCourse.BackColor = System.Drawing.SystemColors.Highlight;
             this.BtnEditCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnEditCourse.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnEditCourse.Location = new System.Drawing.Point(844, 245);
+            this.BtnEditCourse.Location = new System.Drawing.Point(844, 216);
             this.BtnEditCourse.Name = "BtnEditCourse";
             this.BtnEditCourse.Size = new System.Drawing.Size(252, 60);
             this.BtnEditCourse.TabIndex = 56;
@@ -162,7 +181,7 @@
             this.BtnAddCourse.BackColor = System.Drawing.SystemColors.Highlight;
             this.BtnAddCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnAddCourse.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnAddCourse.Location = new System.Drawing.Point(844, 153);
+            this.BtnAddCourse.Location = new System.Drawing.Point(844, 124);
             this.BtnAddCourse.Name = "BtnAddCourse";
             this.BtnAddCourse.Size = new System.Drawing.Size(252, 60);
             this.BtnAddCourse.TabIndex = 55;
@@ -179,21 +198,12 @@
             this.iDDataGridViewTextBoxColumn,
             this.nameProgDataGridViewTextBoxColumn});
             this.dataGridProgram.DataSource = this.programBindingSource;
-            this.dataGridProgram.Location = new System.Drawing.Point(39, 353);
+            this.dataGridProgram.Location = new System.Drawing.Point(39, 306);
             this.dataGridProgram.Name = "dataGridProgram";
             this.dataGridProgram.RowTemplate.Height = 24;
             this.dataGridProgram.Size = new System.Drawing.Size(695, 150);
             this.dataGridProgram.TabIndex = 57;
             this.dataGridProgram.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProgram_CellClick);
-            // 
-            // programBindingSource
-            // 
-            this.programBindingSource.DataMember = "Program";
-            this.programBindingSource.DataSource = this.cDODataSet;
-            // 
-            // programTableAdapter
-            // 
-            this.programTableAdapter.ClearBeforeFill = true;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -209,12 +219,21 @@
             this.nameProgDataGridViewTextBoxColumn.Name = "nameProgDataGridViewTextBoxColumn";
             this.nameProgDataGridViewTextBoxColumn.Width = 400;
             // 
+            // programBindingSource
+            // 
+            this.programBindingSource.DataMember = "Program";
+            this.programBindingSource.DataSource = this.cDODataSet;
+            // 
+            // programTableAdapter
+            // 
+            this.programTableAdapter.ClearBeforeFill = true;
+            // 
             // BtnEditProgam
             // 
             this.BtnEditProgam.BackColor = System.Drawing.SystemColors.Highlight;
             this.BtnEditProgam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnEditProgam.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnEditProgam.Location = new System.Drawing.Point(844, 445);
+            this.BtnEditProgam.Location = new System.Drawing.Point(844, 396);
             this.BtnEditProgam.Name = "BtnEditProgam";
             this.BtnEditProgam.Size = new System.Drawing.Size(252, 60);
             this.BtnEditProgam.TabIndex = 59;
@@ -227,7 +246,7 @@
             this.BtnAddProgram.BackColor = System.Drawing.SystemColors.Highlight;
             this.BtnAddProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnAddProgram.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnAddProgram.Location = new System.Drawing.Point(844, 353);
+            this.BtnAddProgram.Location = new System.Drawing.Point(844, 304);
             this.BtnAddProgram.Name = "BtnAddProgram";
             this.BtnAddProgram.Size = new System.Drawing.Size(252, 60);
             this.BtnAddProgram.TabIndex = 58;
@@ -246,21 +265,12 @@
             this.kolChasDataGridViewTextBoxColumn,
             this.typeDocDataGridViewTextBoxColumn});
             this.dataGridTypeProg.DataSource = this.typeProgBindingSource;
-            this.dataGridTypeProg.Location = new System.Drawing.Point(39, 561);
+            this.dataGridTypeProg.Location = new System.Drawing.Point(39, 485);
             this.dataGridTypeProg.Name = "dataGridTypeProg";
             this.dataGridTypeProg.RowTemplate.Height = 24;
             this.dataGridTypeProg.Size = new System.Drawing.Size(695, 150);
             this.dataGridTypeProg.TabIndex = 60;
             this.dataGridTypeProg.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridTypeProg_CellClick);
-            // 
-            // typeProgBindingSource
-            // 
-            this.typeProgBindingSource.DataMember = "TypeProg";
-            this.typeProgBindingSource.DataSource = this.cDODataSet;
-            // 
-            // typeProgTableAdapter
-            // 
-            this.typeProgTableAdapter.ClearBeforeFill = true;
             // 
             // iDDataGridViewTextBoxColumn1
             // 
@@ -289,12 +299,21 @@
             this.typeDocDataGridViewTextBoxColumn.Name = "typeDocDataGridViewTextBoxColumn";
             this.typeDocDataGridViewTextBoxColumn.Width = 300;
             // 
+            // typeProgBindingSource
+            // 
+            this.typeProgBindingSource.DataMember = "TypeProg";
+            this.typeProgBindingSource.DataSource = this.cDODataSet;
+            // 
+            // typeProgTableAdapter
+            // 
+            this.typeProgTableAdapter.ClearBeforeFill = true;
+            // 
             // BtnEditTypeProg
             // 
             this.BtnEditTypeProg.BackColor = System.Drawing.SystemColors.Highlight;
             this.BtnEditTypeProg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnEditTypeProg.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnEditTypeProg.Location = new System.Drawing.Point(844, 651);
+            this.BtnEditTypeProg.Location = new System.Drawing.Point(844, 575);
             this.BtnEditTypeProg.Name = "BtnEditTypeProg";
             this.BtnEditTypeProg.Size = new System.Drawing.Size(252, 60);
             this.BtnEditTypeProg.TabIndex = 62;
@@ -307,7 +326,7 @@
             this.BtnAddTypeProg.BackColor = System.Drawing.SystemColors.Highlight;
             this.BtnAddTypeProg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnAddTypeProg.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnAddTypeProg.Location = new System.Drawing.Point(844, 559);
+            this.BtnAddTypeProg.Location = new System.Drawing.Point(844, 483);
             this.BtnAddTypeProg.Name = "BtnAddTypeProg";
             this.BtnAddTypeProg.Size = new System.Drawing.Size(252, 60);
             this.BtnAddTypeProg.TabIndex = 61;
@@ -324,21 +343,12 @@
             this.iDDataGridViewTextBoxColumn2,
             this.namePractikDataGridViewTextBoxColumn});
             this.dataGridTypePractik.DataSource = this.typePractikBindingSource;
-            this.dataGridTypePractik.Location = new System.Drawing.Point(39, 756);
+            this.dataGridTypePractik.Location = new System.Drawing.Point(39, 670);
             this.dataGridTypePractik.Name = "dataGridTypePractik";
             this.dataGridTypePractik.RowTemplate.Height = 24;
             this.dataGridTypePractik.Size = new System.Drawing.Size(695, 150);
             this.dataGridTypePractik.TabIndex = 63;
             this.dataGridTypePractik.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridTypePractik_CellClick);
-            // 
-            // typePractikBindingSource
-            // 
-            this.typePractikBindingSource.DataMember = "TypePractik";
-            this.typePractikBindingSource.DataSource = this.cDODataSet;
-            // 
-            // typePractikTableAdapter
-            // 
-            this.typePractikTableAdapter.ClearBeforeFill = true;
             // 
             // iDDataGridViewTextBoxColumn2
             // 
@@ -354,12 +364,21 @@
             this.namePractikDataGridViewTextBoxColumn.Name = "namePractikDataGridViewTextBoxColumn";
             this.namePractikDataGridViewTextBoxColumn.Width = 200;
             // 
+            // typePractikBindingSource
+            // 
+            this.typePractikBindingSource.DataMember = "TypePractik";
+            this.typePractikBindingSource.DataSource = this.cDODataSet;
+            // 
+            // typePractikTableAdapter
+            // 
+            this.typePractikTableAdapter.ClearBeforeFill = true;
+            // 
             // BtnEditTypePractik
             // 
             this.BtnEditTypePractik.BackColor = System.Drawing.SystemColors.Highlight;
             this.BtnEditTypePractik.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnEditTypePractik.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnEditTypePractik.Location = new System.Drawing.Point(844, 846);
+            this.BtnEditTypePractik.Location = new System.Drawing.Point(844, 760);
             this.BtnEditTypePractik.Name = "BtnEditTypePractik";
             this.BtnEditTypePractik.Size = new System.Drawing.Size(252, 60);
             this.BtnEditTypePractik.TabIndex = 65;
@@ -372,7 +391,7 @@
             this.BtnAddTypePractik.BackColor = System.Drawing.SystemColors.Highlight;
             this.BtnAddTypePractik.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnAddTypePractik.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnAddTypePractik.Location = new System.Drawing.Point(844, 754);
+            this.BtnAddTypePractik.Location = new System.Drawing.Point(844, 668);
             this.BtnAddTypePractik.Name = "BtnAddTypePractik";
             this.BtnAddTypePractik.Size = new System.Drawing.Size(252, 60);
             this.BtnAddTypePractik.TabIndex = 64;
@@ -380,21 +399,12 @@
             this.BtnAddTypePractik.UseVisualStyleBackColor = false;
             this.BtnAddTypePractik.Click += new System.EventHandler(this.BtnAddTypePractik_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ЦДО.Properties.Resources.значок1;
-            this.pictureBox1.Location = new System.Drawing.Point(1050, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // BtnBack
             // 
             this.BtnBack.BackColor = System.Drawing.SystemColors.Highlight;
             this.BtnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnBack.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnBack.Location = new System.Drawing.Point(826, 923);
+            this.BtnBack.Location = new System.Drawing.Point(831, 1000);
             this.BtnBack.Name = "BtnBack";
             this.BtnBack.Size = new System.Drawing.Size(130, 43);
             this.BtnBack.TabIndex = 67;
@@ -407,7 +417,7 @@
             this.BtnExit.BackColor = System.Drawing.SystemColors.Highlight;
             this.BtnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BtnExit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnExit.Location = new System.Drawing.Point(994, 923);
+            this.BtnExit.Location = new System.Drawing.Point(979, 1000);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(130, 43);
             this.BtnExit.TabIndex = 66;
@@ -415,12 +425,69 @@
             this.BtnExit.UseVisualStyleBackColor = false;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameGroupDataGridViewTextBoxColumn,
+            this.iDCourseDataGridViewTextBoxColumn1});
+            this.dataGridView1.DataSource = this.groupBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(39, 841);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(695, 150);
+            this.dataGridView1.TabIndex = 68;
+            // 
+            // cDODataSet1
+            // 
+            this.cDODataSet1.DataSetName = "CDODataSet";
+            this.cDODataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // groupBindingSource
+            // 
+            this.groupBindingSource.DataMember = "Group";
+            this.groupBindingSource.DataSource = this.cDODataSet1;
+            // 
+            // groupTableAdapter
+            // 
+            this.groupTableAdapter.ClearBeforeFill = true;
+            // 
+            // nameGroupDataGridViewTextBoxColumn
+            // 
+            this.nameGroupDataGridViewTextBoxColumn.DataPropertyName = "NameGroup";
+            this.nameGroupDataGridViewTextBoxColumn.HeaderText = "NameGroup";
+            this.nameGroupDataGridViewTextBoxColumn.Name = "nameGroupDataGridViewTextBoxColumn";
+            // 
+            // iDCourseDataGridViewTextBoxColumn1
+            // 
+            this.iDCourseDataGridViewTextBoxColumn1.DataPropertyName = "IDCourse";
+            this.iDCourseDataGridViewTextBoxColumn1.HeaderText = "IDCourse";
+            this.iDCourseDataGridViewTextBoxColumn1.Name = "iDCourseDataGridViewTextBoxColumn1";
+            // 
+            // BtnGroup
+            // 
+            this.BtnGroup.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BtnGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnGroup.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnGroup.Location = new System.Drawing.Point(844, 859);
+            this.BtnGroup.Name = "BtnGroup";
+            this.BtnGroup.Size = new System.Drawing.Size(252, 60);
+            this.BtnGroup.TabIndex = 69;
+            this.BtnGroup.Text = "Добавить";
+            this.BtnGroup.UseVisualStyleBackColor = false;
+            this.BtnGroup.Click += new System.EventHandler(this.BtnGroup_Click);
+            // 
             // Education
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1182, 978);
+            this.ClientSize = new System.Drawing.Size(1182, 1055);
+            this.Controls.Add(this.BtnGroup);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BtnBack);
             this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.BtnEditTypePractik);
@@ -438,20 +505,24 @@
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Education";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Обучение";
             this.Load += new System.EventHandler(this.Education_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCourse)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProgram)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTypeProg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeProgBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTypePractik)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.typePractikBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDODataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -494,5 +565,12 @@
         private System.Windows.Forms.Button BtnAddTypePractik;
         private System.Windows.Forms.Button BtnBack;
         private System.Windows.Forms.Button BtnExit;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private BD.CDODataSet cDODataSet1;
+        private System.Windows.Forms.BindingSource groupBindingSource;
+        private BD.CDODataSetTableAdapters.GroupTableAdapter groupTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameGroupDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDCourseDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.Button BtnGroup;
     }
 }
